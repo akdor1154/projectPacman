@@ -95,8 +95,8 @@ void Main_Task( void *p_arg )
 #endif 	
 
 	/* Init the LED controller - enable software control */
-	LED3_Control_Set_Channel( LED3_Control_USE_IN1_AND_IN2 );
-	LED4_Control_Set_Channel( LED4_Control_USE_IN1_AND_IN2 );
+	//LED3_Control_Set_Channel( LED3_Control_USE_IN1_AND_IN2 );
+	//LED4_Control_Set_Channel( LED4_Control_USE_IN1_AND_IN2 );
 
     OS_RATE_HZ tenthSecond = OSCfg_TickRate_Hz/10;
     
@@ -120,8 +120,14 @@ void Main_Task( void *p_arg )
         
 		led3_toggler_Write(!led3_toggler_Read());
         led4_toggler_Write(!led4_toggler_Read());
-        usbprint("led3 is %u, pwmlevel is %u\n",led3_toggler_Read(),pwmLevel);
         
+        usbprint("led3 is %u, pwmlevel is %u\n",led3_toggler_Read(),pwmLevel);
+        US_Trigger_Register_Write(1);
+        OSTimeDly(5*tenthSecond,
+            OS_OPT_TIME_DLY,
+            &err);
+        
+        usbprint("distance: %u",US_Echo_Register_Read());
 			
 	}
 	
