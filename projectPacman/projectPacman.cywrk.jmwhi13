@@ -6,20 +6,19 @@
 <CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
 <userData>
 <dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
-<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Components">
 <TreeKeys>
 <v>Source</v>
 <v>Components</v>
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\Micrium\uCOS-III\Ports\ARM-Cortex-M3\GNU\os_cpu_a.s">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\Header Files">
 <ExpandedNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
 <v>projectPacman\pp\TopDesign.cysch</v>
 <v>projectPacman\pp\pp.cydwr</v>
-<v>projectPacman\pp\APP-CFG</v>
 <v>projectPacman\pp\APP-CFG\app_cfg.h</v>
 <v>projectPacman\pp\APP-CFG\cpu_cfg.h</v>
 <v>projectPacman\pp\APP-CFG\includes.h</v>
@@ -27,7 +26,6 @@
 <v>projectPacman\pp\APP-CFG\os_app_hooks.h</v>
 <v>projectPacman\pp\APP-CFG\os_cfg.h</v>
 <v>projectPacman\pp\APP-CFG\os_cfg_app.h</v>
-<v>projectPacman\pp\Header Files</v>
 <v>projectPacman\pp\Header Files\device.h</v>
 <v>projectPacman\pp\Header Files\Task_Defs.h</v>
 <v>projectPacman\pp\Micrium</v>
@@ -405,16 +403,7 @@
 <v>projectPacman\pp\TopDesign.cysch</v>
 <v>projectPacman\pp\pp.cydwr</v>
 <v>projectPacman\pp\APP-CFG</v>
-<v>projectPacman\pp\APP-CFG\app_cfg.h</v>
-<v>projectPacman\pp\APP-CFG\cpu_cfg.h</v>
-<v>projectPacman\pp\APP-CFG\includes.h</v>
-<v>projectPacman\pp\APP-CFG\os_app_hooks.c</v>
-<v>projectPacman\pp\APP-CFG\os_app_hooks.h</v>
-<v>projectPacman\pp\APP-CFG\os_cfg.h</v>
-<v>projectPacman\pp\APP-CFG\os_cfg_app.h</v>
 <v>projectPacman\pp\Header Files</v>
-<v>projectPacman\pp\Header Files\device.h</v>
-<v>projectPacman\pp\Header Files\Task_Defs.h</v>
 <v>projectPacman\pp\Micrium</v>
 <v>projectPacman\pp\Micrium\BSP</v>
 <v>projectPacman\pp\Micrium\uC-CPU</v>
@@ -445,7 +434,7 @@
 <v>projectPacman\pp\Micrium\uCOS-III\Ports\ARM-Cortex-M3\GNU\os_cpu_c.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\PixelRegChooser">
 <ExpandedNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
@@ -456,6 +445,7 @@
 <v>projectPacman\pp\LED_Control_v1_00\LED Control_v1_00.pdf</v>
 <v>projectPacman\pp\LED_Control_v1_00\LED_Control_v1_00.cysch</v>
 <v>projectPacman\pp\LED_Control_v1_00\LED_Control_v1_00.cysym</v>
+<v>projectPacman\pp\PixelRegChooser\PixelRegChooser.v</v>
 <v>projectPacman\pp\TopDesign</v>
 <v>projectPacman\pp\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
@@ -469,6 +459,7 @@
 <v>projectPacman\pp\LED_Control_v1_00\LED Control_v1_00.pdf</v>
 <v>projectPacman\pp\LED_Control_v1_00\LED_Control_v1_00.cysch</v>
 <v>projectPacman\pp\LED_Control_v1_00\LED_Control_v1_00.cysym</v>
+<v>projectPacman\pp\PixelRegChooser</v>
 <v>projectPacman\pp\TopDesign</v>
 <v>projectPacman\pp\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
@@ -477,205 +468,14 @@
 <ExpandedNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
-<v>projectPacman\pp\CortexM3</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_AMux.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_Ext_CP_Clk.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_INT.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_IRQ.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_theACLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_INT.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_IRQ.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_theACLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\B1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\B2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Bootloadable_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\bsp.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_HREF.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_PCLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_Powerdown.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_Reset.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_VSYNC.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_XCLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cm3Start.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_High_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_Low_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_VRef.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_VRef_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_High_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_High_ISR_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_Low_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_Low_ISR_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_VRef.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_VRef_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_3_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_a.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_bsp.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_c.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_core.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cybootloader.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyDmac.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyFlash.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyLib.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cymetadata.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cyPm.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CySpc.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cyutils.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\D3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\D4.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\DAC.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\DAC_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Debouncer_Clock.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\I2C.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\I2C_INT.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\I2C_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\LED3_Control.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\led3_toggler.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\LED4_Control.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\led4_toggler.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\lib_ascii.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\lib_math.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\lib_mem.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\lib_str.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\main.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Main_Task.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_app_hooks.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_cfg_app.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_core.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_cpu_a.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_cpu_c.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_dbg.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_flag.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_int.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_mem.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_msg.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_mutex.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_pend_multi.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_prio.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_q.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_sem.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_stat.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_task.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_tick.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_time.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_tmr.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_var.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P0_0.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P0_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P0_2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P0_3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P0_4.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P12_5_4.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P6_0.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P6_5.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P6_6.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_1_Clock.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_1_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2_Clock.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SW2_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SW3_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Timer_1_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Timer_1MHz.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Timer_1MHz_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Timer_Clock_1MHz.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\UART.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\UART_BOOT.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\UART_INT.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\UART_IntClock.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\UART_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\UART_RX_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\UART_TX_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_audio.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_boot.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_cdc.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_cls.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_descr.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_Dm.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_Dp.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_drv.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_episr.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_hid.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_midi.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_pm.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_std.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_vnd.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\usbprint.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.cyacd</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.elf</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.hex</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.map</v>
 <v>projectPacman\pp\pp.rpt</v>
 <v>projectPacman\pp\pp_timing.html</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
-<v>projectPacman\pp\CortexM3</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_AMux.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_Ext_CP_Clk.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_INT.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_IRQ.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_DelSig_theACLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_INT.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_IRQ.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ADC_SAR_2_theACLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\B1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\B2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Bootloadable_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\bsp.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_HREF.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_PCLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_Powerdown.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_Reset.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_VSYNC.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_XCLK.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cm3Start.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_High_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_Low_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_VRef.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_VRef_PM.lst</v>
+<v>projectPacman\pp\pp.rpt</v>
+<v>projectPacman\pp\pp_timing.html</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -692,14 +492,18 @@
 <v>projectPacman\pp\System Reference Guide v4_0</v>
 <v>projectPacman\pp\ADC_DelSig_v3_0</v>
 <v>projectPacman\pp\ADC_SAR_v2_10</v>
+<v>projectPacman\pp\and_v1_0</v>
 <v>projectPacman\pp\Bootloadable_v1_20</v>
 <v>projectPacman\pp\Comp_v2_0</v>
 <v>projectPacman\pp\cy_clock_v2_10</v>
 <v>projectPacman\pp\cy_constant_v1_0</v>
 <v>projectPacman\pp\cy_isr_v1_70</v>
 <v>projectPacman\pp\cy_pins_v1_90</v>
+<v>projectPacman\pp\cy_srff_v1_0</v>
 <v>projectPacman\pp\CyControlReg_v1_70</v>
+<v>projectPacman\pp\CyStatusReg_v1_80</v>
 <v>projectPacman\pp\Debouncer_v1_0</v>
+<v>projectPacman\pp\demux_v1_10</v>
 <v>projectPacman\pp\EZI2C_v1_90</v>
 <v>projectPacman\pp\Gnd_v1_0</v>
 <v>projectPacman\pp\LED_Control_v1_00</v>
@@ -724,14 +528,18 @@
 <v>projectPacman\pp\System Reference Guide v4_0</v>
 <v>projectPacman\pp\ADC_DelSig_v3_0</v>
 <v>projectPacman\pp\ADC_SAR_v2_10</v>
+<v>projectPacman\pp\and_v1_0</v>
 <v>projectPacman\pp\Bootloadable_v1_20</v>
 <v>projectPacman\pp\Comp_v2_0</v>
 <v>projectPacman\pp\cy_clock_v2_10</v>
 <v>projectPacman\pp\cy_constant_v1_0</v>
 <v>projectPacman\pp\cy_isr_v1_70</v>
 <v>projectPacman\pp\cy_pins_v1_90</v>
+<v>projectPacman\pp\cy_srff_v1_0</v>
 <v>projectPacman\pp\CyControlReg_v1_70</v>
+<v>projectPacman\pp\CyStatusReg_v1_80</v>
 <v>projectPacman\pp\Debouncer_v1_0</v>
+<v>projectPacman\pp\demux_v1_10</v>
 <v>projectPacman\pp\EZI2C_v1_90</v>
 <v>projectPacman\pp\Gnd_v1_0</v>
 <v>projectPacman\pp\LED_Control_v1_00</v>
@@ -757,20 +565,7 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\pp.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\pp.cydsn\main.c" />
-<name v=".\pp.cydsn\pp.cydwr" />
-<name v=".\Micrium\Software\EvalBoards\CY8CKIT-050\BSP\bsp.c" />
-<name v=".\Micrium\Software\uCOS-III\Source\os_core.c" />
-<name v=".\Micrium\Software\uCOS-III\Source\os.h" />
-<name v=".\pp.cydsn\APP-CFG\os_app_hooks.c" />
-<name v=".\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<name v=".\pp.cydsn\APP-CFG\cpu_cfg.h" />
-<name v=".\pp.cydsn\APP-CFG\includes.h" />
-<name v=".\pp.cydsn\Task_Defs.h" />
-<name v=".\Micrium\Software\uC-CPU\cpu_core.c" />
-<name v=".\Micrium\Software\uC-CPU\cpu_core.h" />
-<name v=".\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_c.c" />
-<name v=".\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_a.s" />
+<name v=".\pp.cydsn\PixelRegChooser\PixelRegChooser.v" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
