@@ -12,14 +12,6 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
-<file name=".\CortexM3\ARM_GCC_473\Debug\cpu_a.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_a.s" />
-</file>
-<file name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_a.s" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_cpu_a.o">
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu_a.s" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu_a.s" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\bsp.o">
 <dep name="..\Micrium\Software\EvalBoards\CY8CKIT-050\BSP\bsp.h" />
 <dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
@@ -75,424 +67,6 @@
 <dep name="..\Micrium\Software\EvalBoards\CY8CKIT-050\BSP\cpu_bsp.c" />
 </file>
 <file name="..\Micrium\Software\EvalBoards\CY8CKIT-050\BSP\cpu_bsp.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\cpu_c.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_c.c" />
-</file>
-<file name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_c.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\cpu_core.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.c" />
-</file>
-<file name="..\Micrium\Software\uC-CPU\cpu_core.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\lib_ascii.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.c" />
-</file>
-<file name="..\Micrium\Software\uC-LIB\lib_ascii.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\lib_math.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_math.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_math.c" />
-</file>
-<file name="..\Micrium\Software\uC-LIB\lib_math.h" />
-<file name="..\Micrium\Software\uC-LIB\lib_math.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\lib_mem.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.c" />
-</file>
-<file name="..\Micrium\Software\uC-LIB\lib_mem.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\lib_str.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.c" />
-</file>
-<file name="..\Micrium\Software\uC-LIB\lib_str.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_cpu_c.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu_c.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu_c.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_cfg_app.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name=".\APP-CFG\os_cfg_app.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_cfg_app.c" />
-</file>
-<file name=".\APP-CFG\os_cfg_app.h" />
-<file name="..\Micrium\Software\uCOS-III\Source\os_cfg_app.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_core.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_core.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_core.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_dbg.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_dbg.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_dbg.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_flag.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_flag.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_flag.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_int.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_int.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_int.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_mem.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_mem.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_mem.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_msg.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_msg.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_msg.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_mutex.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_mutex.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_mutex.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_pend_multi.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_pend_multi.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_pend_multi.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_prio.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_prio.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_prio.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_q.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_q.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_q.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_sem.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_sem.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_sem.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_stat.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_stat.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_stat.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_task.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_task.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_task.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_tick.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_tick.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_tick.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_time.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_time.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_time.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_tmr.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_tmr.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_tmr.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_var.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_var.c" />
-</file>
-<file name="..\Micrium\Software\uCOS-III\Source\os_var.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\os_app_hooks.o">
-<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
-<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
-<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
-<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
-<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
-<dep name=".\APP-CFG\app_cfg.h" />
-<dep name=".\APP-CFG\cpu_cfg.h" />
-<dep name=".\APP-CFG\os_app_hooks.h" />
-<dep name=".\APP-CFG\os_cfg.h" />
-<dep name=".\APP-CFG\os_app_hooks.c" />
-</file>
-<file name=".\APP-CFG\os_app_hooks.h" />
-<file name=".\APP-CFG\os_app_hooks.c" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\Main_Task.o">
 <dep name="..\Micrium\Software\EvalBoards\CY8CKIT-050\BSP\bsp.h" />
 <dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
@@ -529,16 +103,14 @@
 <dep name=".\Generated_Source\PSoC5\B2.h" />
 <dep name=".\Generated_Source\PSoC5\B2_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Bootloadable_1.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\CameraD_aliases.h" />
@@ -620,13 +192,17 @@
 <dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\int_pixelReady.h" />
 <dep name=".\Generated_Source\PSoC5\led3_toggler.h" />
 <dep name=".\Generated_Source\PSoC5\led4_toggler.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegLSB.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegMSB.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
 <dep name=".\Main_Task.c" />
 <dep name=".\Task_Defs.h" />
 <dep name=".\usbprint.h" />
 </file>
+<file name="..\Micrium\Software\uC-LIB\lib_math.h" />
 <file name=".\APP-CFG\includes.h" />
 <file name=".\Generated_Source\PSoC5\ADC_DelSig.h" />
 <file name=".\Generated_Source\PSoC5\ADC_DelSig_AMux.h" />
@@ -647,16 +223,14 @@
 <file name=".\Generated_Source\PSoC5\B2.h" />
 <file name=".\Generated_Source\PSoC5\B2_aliases.h" />
 <file name=".\Generated_Source\PSoC5\Bootloadable_1.h" />
-<file name=".\Generated_Source\PSoC5\Cam_HREF.h" />
-<file name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Cam_HSYNC.h" />
+<file name=".\Generated_Source\PSoC5\Cam_HSYNC_aliases.h" />
 <file name=".\Generated_Source\PSoC5\Cam_PCLK.h" />
 <file name=".\Generated_Source\PSoC5\Cam_PCLK_aliases.h" />
 <file name=".\Generated_Source\PSoC5\Cam_Powerdown.h" />
 <file name=".\Generated_Source\PSoC5\Cam_Powerdown_aliases.h" />
 <file name=".\Generated_Source\PSoC5\Cam_Reset.h" />
 <file name=".\Generated_Source\PSoC5\Cam_Reset_aliases.h" />
-<file name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
-<file name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
 <file name=".\Generated_Source\PSoC5\Cam_XCLK.h" />
 <file name=".\Generated_Source\PSoC5\Cam_XCLK_aliases.h" />
 <file name=".\Generated_Source\PSoC5\CameraD_aliases.h" />
@@ -735,8 +309,11 @@
 <file name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
 <file name=".\Generated_Source\PSoC5\cypins.h" />
 <file name=".\Generated_Source\PSoC5\cytypes.h" />
+<file name=".\Generated_Source\PSoC5\int_pixelReady.h" />
 <file name=".\Generated_Source\PSoC5\led3_toggler.h" />
 <file name=".\Generated_Source\PSoC5\led4_toggler.h" />
+<file name=".\Generated_Source\PSoC5\pixelRegLSB.h" />
+<file name=".\Generated_Source\PSoC5\pixelRegMSB.h" />
 <file name=".\Generated_Source\PSoC5\project.h" />
 <file name=".\Main_Task.c" />
 <file name=".\Task_Defs.h" />
@@ -777,16 +354,14 @@
 <dep name=".\Generated_Source\PSoC5\B2.h" />
 <dep name=".\Generated_Source\PSoC5\B2_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Bootloadable_1.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\CameraD_aliases.h" />
@@ -868,8 +443,11 @@
 <dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\int_pixelReady.h" />
 <dep name=".\Generated_Source\PSoC5\led3_toggler.h" />
 <dep name=".\Generated_Source\PSoC5\led4_toggler.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegLSB.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegMSB.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
 <dep name=".\Task_Defs.h" />
 <dep name=".\main.c" />
@@ -895,16 +473,14 @@
 <dep name=".\Generated_Source\PSoC5\B2.h" />
 <dep name=".\Generated_Source\PSoC5\B2_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Bootloadable_1.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\CameraD_aliases.h" />
@@ -986,8 +562,11 @@
 <dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\int_pixelReady.h" />
 <dep name=".\Generated_Source\PSoC5\led3_toggler.h" />
 <dep name=".\Generated_Source\PSoC5\led4_toggler.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegLSB.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegMSB.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
 <dep name=".\usbprint.c" />
 <dep name=".\usbprint.h" />
@@ -1259,17 +838,17 @@
 <dep name=".\Generated_Source\PSoC5\Bootloadable_1.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\Bootloadable_1.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\Cam_HREF.o">
-<dep name=".\Generated_Source\PSoC5\Cam_HREF.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\Cam_HSYNC.o">
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC5\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF.c" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC.c" />
 </file>
-<file name=".\Generated_Source\PSoC5\Cam_HREF.c" />
+<file name=".\Generated_Source\PSoC5\Cam_HSYNC.c" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\Cam_PCLK.o">
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK_aliases.h" />
@@ -1303,17 +882,6 @@
 <dep name=".\Generated_Source\PSoC5\Cam_Reset.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\Cam_Reset.c" />
-<file name=".\CortexM3\ARM_GCC_473\Debug\Cam_VSYNC.o">
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cypins.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.c" />
-</file>
-<file name=".\Generated_Source\PSoC5\Cam_VSYNC.c" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\Cam_XCLK.o">
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK_aliases.h" />
@@ -1703,16 +1271,14 @@
 <dep name=".\Generated_Source\PSoC5\B2.h" />
 <dep name=".\Generated_Source\PSoC5\B2_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Bootloadable_1.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\CameraD_aliases.h" />
@@ -1794,8 +1360,11 @@
 <dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\int_pixelReady.h" />
 <dep name=".\Generated_Source\PSoC5\led3_toggler.h" />
 <dep name=".\Generated_Source\PSoC5\led4_toggler.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegLSB.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegMSB.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
 <dep name=".\Generated_Source\PSoC5\LED3_Control.c" />
 </file>
@@ -1820,16 +1389,14 @@
 <dep name=".\Generated_Source\PSoC5\B2.h" />
 <dep name=".\Generated_Source\PSoC5\B2_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Bootloadable_1.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\CameraD_aliases.h" />
@@ -1911,8 +1478,11 @@
 <dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\int_pixelReady.h" />
 <dep name=".\Generated_Source\PSoC5\led3_toggler.h" />
 <dep name=".\Generated_Source\PSoC5\led4_toggler.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegLSB.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegMSB.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
 <dep name=".\Generated_Source\PSoC5\LED4_Control.c" />
 </file>
@@ -2440,16 +2010,14 @@
 <dep name=".\Generated_Source\PSoC5\B2.h" />
 <dep name=".\Generated_Source\PSoC5\B2_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Bootloadable_1.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_PCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Powerdown_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_Reset_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
-<dep name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK.h" />
 <dep name=".\Generated_Source\PSoC5\Cam_XCLK_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\CameraD_aliases.h" />
@@ -2531,8 +2099,11 @@
 <dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC5\cypins.h" />
 <dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\int_pixelReady.h" />
 <dep name=".\Generated_Source\PSoC5\led3_toggler.h" />
 <dep name=".\Generated_Source\PSoC5\led4_toggler.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegLSB.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegMSB.h" />
 <dep name=".\Generated_Source\PSoC5\project.h" />
 <dep name=".\Generated_Source\PSoC5\USB_pm.c" />
 </file>
@@ -2617,6 +2188,19 @@
 <dep name=".\Generated_Source\PSoC5\cyutils.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\cyutils.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\int_pixelReady.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\int_pixelReady.h" />
+<dep name=".\Generated_Source\PSoC5\int_pixelReady.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\int_pixelReady.c" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\led3_toggler.o">
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
@@ -2635,8 +2219,32 @@
 <dep name=".\Generated_Source\PSoC5\led4_toggler.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\led4_toggler.c" />
-<file name="..\..\uc\NewDesign.cydsn\Main_Task.c" />
-<file name="..\..\uc\NewDesign.cydsn\usbprint.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\pixelRegLSB.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegLSB.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegLSB.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\pixelRegLSB.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\pixelRegMSB.o">
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegMSB.h" />
+<dep name=".\Generated_Source\PSoC5\pixelRegMSB.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\pixelRegMSB.c" />
 <file name=".\CortexM3\ARM_GCC_473\Debug\CyBootAsmGnu.o">
 <dep name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
 <dep name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
@@ -2647,6 +2255,459 @@
 <file name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
 <file name=".\Generated_Source\PSoC5\CyBootAsmGnu.s" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\cpu_a.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_a.s" />
+</file>
+<file name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_a.s" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_cpu_a.o">
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu_a.s" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu_a.s" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\cpu_c.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_c.c" />
+</file>
+<file name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_c.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\cpu_core.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.c" />
+</file>
+<file name="..\Micrium\Software\uC-CPU\cpu_core.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\lib_ascii.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.c" />
+</file>
+<file name="..\Micrium\Software\uC-LIB\lib_ascii.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\lib_math.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_math.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_math.c" />
+</file>
+<file name="..\Micrium\Software\uC-LIB\lib_math.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\lib_mem.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.c" />
+</file>
+<file name="..\Micrium\Software\uC-LIB\lib_mem.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\lib_str.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.c" />
+</file>
+<file name="..\Micrium\Software\uC-LIB\lib_str.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_cpu_c.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu_c.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu_c.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_cfg_app.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name=".\APP-CFG\os_cfg_app.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_cfg_app.c" />
+</file>
+<file name=".\APP-CFG\os_cfg_app.h" />
+<file name="..\Micrium\Software\uCOS-III\Source\os_cfg_app.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_core.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_core.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_core.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_dbg.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_dbg.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_dbg.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_flag.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_flag.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_flag.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_int.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_int.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_int.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_mem.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_mem.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_mem.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_msg.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_msg.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_msg.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_mutex.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_mutex.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_mutex.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_pend_multi.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_pend_multi.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_pend_multi.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_prio.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_prio.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_prio.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_q.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_q.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_q.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_sem.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_sem.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_sem.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_stat.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_stat.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_stat.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_task.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_task.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_task.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_tick.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_tick.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_tick.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_time.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_time.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_time.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_tmr.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_tmr.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_tmr.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_var.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_var.c" />
+</file>
+<file name="..\Micrium\Software\uCOS-III\Source\os_var.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\os_app_hooks.o">
+<dep name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_core.h" />
+<dep name="..\Micrium\Software\uC-CPU\cpu_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_ascii.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_def.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_mem.h" />
+<dep name="..\Micrium\Software\uC-LIB\lib_str.h" />
+<dep name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os.h" />
+<dep name="..\Micrium\Software\uCOS-III\Source\os_type.h" />
+<dep name=".\APP-CFG\app_cfg.h" />
+<dep name=".\APP-CFG\cpu_cfg.h" />
+<dep name=".\APP-CFG\os_app_hooks.h" />
+<dep name=".\APP-CFG\os_cfg.h" />
+<dep name=".\APP-CFG\os_app_hooks.c" />
+</file>
+<file name=".\APP-CFG\os_app_hooks.h" />
+<file name=".\APP-CFG\os_app_hooks.c" />
+<file name=".\Generated_Source\PSoC5\Cam_HREF.h" />
+<file name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
+<file name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\Cam_HREF.o">
+<dep name=".\Generated_Source\PSoC5\Cam_HREF.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HREF_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_HREF.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\Cam_HREF.c" />
+<file name=".\CortexM3\ARM_GCC_473\Debug\Cam_VSYNC.o">
+<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_VSYNC_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\Cam_VSYNC.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\Cam_VSYNC.c" />
+<file name="..\..\uc\NewDesign.cydsn\Main_Task.c" />
+<file name="..\..\uc\NewDesign.cydsn\usbprint.c" />
 </CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
 </dependency_info>
 </CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
@@ -2779,8 +2840,6 @@
 <dep name=".\CortexM3\ARM_GCC_473\Debug\Cam_Reset.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\Cam_Powerdown.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\Cam_PCLK.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\Cam_HREF.o" />
-<dep name=".\CortexM3\ARM_GCC_473\Debug\Cam_VSYNC.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\UART_IntClock.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\ADC_DelSig_AMux.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\ADC_DelSig_Ext_CP_Clk.o" />
@@ -2800,6 +2859,10 @@
 <dep name=".\CortexM3\ARM_GCC_473\Debug\cyPm.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\CySpc.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\cyutils.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\int_pixelReady.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\Cam_HSYNC.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\pixelRegMSB.o" />
+<dep name=".\CortexM3\ARM_GCC_473\Debug\pixelRegLSB.o" />
 <dep name=".\CortexM3\ARM_GCC_473\Debug\pp.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_473\Debug\CyComponentLibrary.a" />
 </file>
@@ -2960,6 +3023,10 @@
 <name_val_pair name=".\usbprint.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-LIB &quot;&quot;-I &quot;&quot;..\Micrium\Software\EvalBoards\CY8CKIT-050\BSP &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Source &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU &quot;&quot;-I &quot;&quot;.\APP-CFG &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-Probe\Target\Communication\DCC &quot;&quot;-I &quot;&quot;C:\tmp\git-test\projectPacman\projectPacman\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name="..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU\os_cpu_a.s" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-g &quot;&quot;-alh=${OutputDir}/${CompileFile}.lst &quot;" />
 <name_val_pair name="..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU\cpu_a.s" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-g &quot;&quot;-alh=${OutputDir}/${CompileFile}.lst &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC5\int_pixelReady.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-LIB &quot;&quot;-I &quot;&quot;..\Micrium\Software\EvalBoards\CY8CKIT-050\BSP &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Source &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU &quot;&quot;-I &quot;&quot;.\APP-CFG &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-Probe\Target\Communication\DCC &quot;&quot;-I &quot;&quot;C:\tmp\git-test\projectPacman\projectPacman\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC5\Cam_HSYNC.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-LIB &quot;&quot;-I &quot;&quot;..\Micrium\Software\EvalBoards\CY8CKIT-050\BSP &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Source &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU &quot;&quot;-I &quot;&quot;.\APP-CFG &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-Probe\Target\Communication\DCC &quot;&quot;-I &quot;&quot;C:\tmp\git-test\projectPacman\projectPacman\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC5\pixelRegMSB.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-LIB &quot;&quot;-I &quot;&quot;..\Micrium\Software\EvalBoards\CY8CKIT-050\BSP &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Source &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU &quot;&quot;-I &quot;&quot;.\APP-CFG &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-Probe\Target\Communication\DCC &quot;&quot;-I &quot;&quot;C:\tmp\git-test\projectPacman\projectPacman\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC5\pixelRegLSB.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-CPU &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-LIB &quot;&quot;-I &quot;&quot;..\Micrium\Software\EvalBoards\CY8CKIT-050\BSP &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Source &quot;&quot;-I &quot;&quot;..\Micrium\Software\uCOS-III\Ports\ARM-Cortex-M3\Generic\GNU &quot;&quot;-I &quot;&quot;.\APP-CFG &quot;&quot;-I &quot;&quot;..\Micrium\Software\uC-Probe\Target\Communication\DCC &quot;&quot;-I &quot;&quot;C:\tmp\git-test\projectPacman\projectPacman\Micrium\Software\uC-CPU\ARM-Cortex-M3\GNU &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="&quot;-.appdatapath&quot; &quot;C:\Users\jmwhi13\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0&quot; &quot;-.fdsnotice&quot; &quot;-.fdswarpdepfile=warp_dependencies.txt&quot; &quot;-.fdselabdepfile=elab_dependencies.txt&quot; &quot;-.fdsbldfile=generated_files.txt&quot; &quot;-p&quot; &quot;C:\tmp\git-test\projectPacman\projectPacman\pp.cydsn\pp.cyprj&quot; &quot;-d&quot; &quot;CY8C5868AXI-LP032&quot; &quot;-s&quot; &quot;C:\tmp\git-test\projectPacman\projectPacman\pp.cydsn\Generated_Source\PSoC5&quot; &quot;--&quot; &quot;-yv2&quot; &quot;-v3&quot; &quot;-ygs&quot; &quot;-q10&quot; &quot;-o2&quot; &quot;-.fftcfgtype=LE&quot; " />
@@ -2975,7 +3042,7 @@
 </CyGuid_597c5b74-0c46-4204-8b7f-96f3570671dc>
 </dataGuid>
 <dataGuid v="718b6b01-68ba-4a17-b632-d38dc61ebb3b">
-<CyGuid_718b6b01-68ba-4a17-b632-d38dc61ebb3b type_name="CyDesigner.Gde.Schematic.Symbolcatalog.CyComponentCatalogControl+CyCompCatalogData" version="1" tab="Default">
+<CyGuid_718b6b01-68ba-4a17-b632-d38dc61ebb3b type_name="CyDesigner.Gde.Schematic.Symbolcatalog.CyComponentCatalogControl+CyCompCatalogData" version="1" tab="Cypress">
 <tree_states_tab_names>
 <v>Cypress</v>
 <v>Default</v>
@@ -3012,15 +3079,9 @@
 <v>Cypress Component Catalog\Digital\Logic\And [v1.0]</v>
 <v>Cypress Component Catalog\Digital\Logic\Bufoe [v1.10]</v>
 <v>Cypress Component Catalog\Digital\Logic\D Flip Flop [v1.30]</v>
-<v>Cypress Component Catalog\Digital\Logic\D Flip Flop w/ Enable [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\De-Multiplexer [v1.10]</v>
-<v>Cypress Component Catalog\Digital\Logic\Digital Constant [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\Logic High '1' [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\Logic Low '0' [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\Lookup Table [v1.50]</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Default Component Catalog\Components\LED_Control [v1.0]">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Default Component Catalog\Components">
 <ExpandedNodeIds>
 <v>Default Component Catalog</v>
 <v>Default Component Catalog\Components</v>
@@ -3053,6 +3114,7 @@
 <CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtProjectPSoCExe+CyCodeGenDepUserInfo" version="1">
 <deps_list>
 <v>.\TopDesign\TopDesign.cysch</v>
+<v>.\TopDesign</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.cysym</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.pdf</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.v</v>
@@ -5001,82 +5063,13 @@
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\aliases.h</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\pins.c</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\pins.h</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.cyprimitive</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.cysym</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.pdf</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.cystate</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\custom.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cygeneralcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cygeneralcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyinputcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyinputcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cymappingcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cymappingcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyoutputcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyoutputcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinaliasdialog.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinaliasdialog.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinscontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinscontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyporcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyporcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cytypecontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cytypecontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\Resource1.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyclockingcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyclockingcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cygeneralcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyinputcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cymappingcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyoutputcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinaliasdialog.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinscontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyporcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cytypecontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\Resource1.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyclockingcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\aliases.h</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\pins.c</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\pins.h</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.cyprimitive</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.cysym</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.pdf</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.cystate</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\custom.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cygeneralcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cygeneralcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyinputcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyinputcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cymappingcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cymappingcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyoutputcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyoutputcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinaliasdialog.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinaliasdialog.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinscontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinscontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyporcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyporcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cytypecontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cytypecontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\Resource1.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyclockingcontrol.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyclockingcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cygeneralcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyinputcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cymappingcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyoutputcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinaliasdialog.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinscontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyporcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cytypecontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\Resource1.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyclockingcontrol.resx</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\aliases.h</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\pins.c</v>
-<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\pins.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.primitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC5\API\intc.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC5\API\intc.h</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_10\cy_clock_v2_10.cyprimitive</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_10\cy_clock_v2_10.cysym</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_10\cy_clock_v2_10.pdf</v>
@@ -5096,6 +5089,76 @@
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.cyprimitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\cy_pins_v1_90.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cygeneralcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cygeneralcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyinputcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyinputcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cymappingcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cymappingcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyoutputcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyoutputcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinaliasdialog.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinaliasdialog.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinscontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinscontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyporcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyporcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cytypecontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cytypecontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\Resource1.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyclockingcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyclockingcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cygeneralcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyinputcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cymappingcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyoutputcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinaliasdialog.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cypinscontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyporcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cytypecontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\Resource1.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\Custom\cyclockingcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\aliases.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\pins.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v1_90\PSoC5\API\pins.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.v</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.cydmacap</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.cycdx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\API\CyStatusReg.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\API\CyStatusReg.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\cybitfieldcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\cybitfieldcontrol.designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\StatusRegParameters.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\Resource.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\cybitfieldcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\Resource.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.v</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.cydmacap</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.cycdx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\API\CyStatusReg.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\API\CyStatusReg.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\cybitfieldcontrol.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\cybitfieldcontrol.designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\StatusRegParameters.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\Resource.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\cybitfieldcontrol.resx</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\Custom\Resource.resx</v>
+<v>.\PixelRegControl\PixelRegControl.cysym</v>
+<v>.\PixelRegControl\PixelRegControl.v</v>
 <v>.\pp.cydwr</v>
 <v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v4_0\PSoC5\API\cm3gcc.ld</v>
 <v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v4_0\PSoC5\API\Cm3RealView.scat</v>
@@ -5365,6 +5428,15 @@
 <v>.\Generated_Source\PSoC5\Cm3Iar.icf</v>
 <v>.\Generated_Source\PSoC5\CyBootAsmIar.s</v>
 <v>.\Generated_Source\PSoC5\project.h</v>
+<v>.\Generated_Source\PSoC5\int_pixelReady.c</v>
+<v>.\Generated_Source\PSoC5\int_pixelReady.h</v>
+<v>.\Generated_Source\PSoC5\Cam_HSYNC_aliases.h</v>
+<v>.\Generated_Source\PSoC5\Cam_HSYNC.c</v>
+<v>.\Generated_Source\PSoC5\Cam_HSYNC.h</v>
+<v>.\Generated_Source\PSoC5\pixelRegMSB.c</v>
+<v>.\Generated_Source\PSoC5\pixelRegMSB.h</v>
+<v>.\Generated_Source\PSoC5\pixelRegLSB.c</v>
+<v>.\Generated_Source\PSoC5\pixelRegLSB.h</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -5387,17 +5459,18 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\not_v1_0\not_v1_0.v</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Timer_v2_50\B_Timer_v2_50.v</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.v</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="130528183086328403" />
+<deps_time v="130529744207147746" />
 <top_block v="TopDesign" />
-<last_generation v="0" />
+<last_generation v="1" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="130528196506158403" />
+<deps_time v="130529744491477746" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 </userData>
