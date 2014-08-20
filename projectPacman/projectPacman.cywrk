@@ -8,6 +8,7 @@
 <files />
 <projects>
 <name_val_pair name="pp" v=".\pp.cydsn\pp.cyprj" />
+<name_val_pair name="Design01" v=".\Design01.cydsn\Design01.cyprj" />
 </projects>
 <workspace_id v="bbfd2c13-319f-47b6-a065-cfa8b1b52eb4" />
 <WriteAppVersionLastSavedWith v="3.0.0.1539" />
