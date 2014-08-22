@@ -49,7 +49,9 @@
 /* Include application function declarations and defines */
 #include <Task_Defs.h>
 
+#include "usbprint.h"
 
+OS_ERR global_err;
 
 /*
  * Function:	main
@@ -62,13 +64,16 @@
  *
  * Return:		None (OSStart API never returns)
  */
-
-
-
+uint16_t lastPixel;
+uint8_t* lastPixelMSB;
+uint8_t* lastPixelLSB;
 void main( void )
 {
     OS_ERR  err;
-	
+    global_err = 0;
+	lastPixel = 0;
+    lastPixelMSB = (uint8_t*)&lastPixel;
+    lastPixelLSB = lastPixelMSB+1;
 	/* Perform BSP pre-initialization (post-init occurs in MainTask) */
     BSP_PreInit();
 
@@ -81,11 +86,14 @@ void main( void )
     
     CYGlobalIntEnable;
     
+    SW2_Interrupt_Start();
+    int_pixelReady_Start();
+    
     USB_Start(0,USB_DWR_VDDD_OPERATION);
     while(!USB_GetConfiguration());
     USB_CDC_Init();
     
-    
+    err = 0;
 	/* Create the task - it will not run until OSStart */
 	OSTaskCreate(
 		&Main_Task_TCB,
@@ -101,7 +109,37 @@ void main( void )
 		NO_TCB_EXT,
 		OS_OPT_TASK_STK_CHK,
 		&err );
-		
+    
+    err = 0;
+    usbprint("mainerr: %u",err);
+    /*OSTaskCreate(
+		&error_TCB,
+		ERROR_TASK,
+		error_print_task,
+		NO_TASK_ARG,
+		ERROR_PRIORITY,
+		error_stack,
+		ERROR_STACK_LIMIT,
+		ERROR_STACK_SIZE,
+		NO_TASK_Q,
+		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
+		NO_TCB_EXT,
+		OS_OPT_TASK_STK_CHK,
+		&err );
+    
+    led1_toggler_Write((
+        //(err == OS_ERR_NONE) |
+        (err == OS_ERR_PRIO_INVALID)
+        //(err == OS_ERR_STK_INVALID) |
+        //(err == OS_ERR_STK_SIZE_INVALID) |
+        //(err == OS_ERR_TASK_CREATE_ISR) |
+        //(err == OS_ERR_TASK_INVALID) |
+        //(err == OS_ERR_TCB_INVALID)
+        //(err == OS_ERR_ILLEGAL_CREATE_RUN_TIME)
+    ));*/
+    usbprint("errorerr: %u",err);
+    
+    
 	/* Start multitasking (give control to uC/OS-III) - never returns */
     OSStart( &err );                                            
 	

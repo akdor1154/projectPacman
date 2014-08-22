@@ -55,6 +55,8 @@
 OS_TCB	Main_Task_TCB;
 CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
 
+extern uint16_t lastPixel;
+
 /*
  * Function:		Main_Task
  *
@@ -77,7 +79,8 @@ CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
 void Main_Task( void *p_arg )
 {
 	OS_ERR err;			/* Hold OS call return code */
-	
+	CPU_TS ts;
+    
 	(void)p_arg;		/* no-op prevents warning about unused p_arg */
 	
 	/* Perform BSP post-initialization functions */
@@ -94,34 +97,48 @@ void Main_Task( void *p_arg )
     CPU_IntDisMeasMaxCurReset();
 #endif 	
 
-	/* Init the LED controller - enable software control */
-	LED3_Control_Set_Channel( LED3_Control_USE_IN1_AND_IN2 );
-	LED4_Control_Set_Channel( LED4_Control_USE_IN1_AND_IN2 );
 
     OS_RATE_HZ tenthSecond = OSCfg_TickRate_Hz/10;
     
     uint8_t pwmLevel = 0;
     uint8_t pwmStep = UINT8_MAX/16;
     
+    PWM_1_Start();
+    PWM_2_Start();
     
 	while (1) {
 		/* Delay 1s */
-		OSTimeDly(
+		/*OSTimeDly(
 			tenthSecond,
            	OS_OPT_TIME_DLY,
-			&err );
+			&err );*/
 		
+        usbprint("waiting...\n");
+        OSTaskSemPend(
+            0,
+            OS_OPT_PEND_BLOCKING,
+            &ts,
+            &err
+        );
+        usbprint("error: %u\n",err);
+        
+        
 		/* Toggle the LED3 */
+        
         
         PWM_1_WriteCompare(pwmLevel);
         PWM_2_WriteCompare(UINT8_MAX-pwmLevel);
         pwmLevel += pwmStep;
         
         
-		led3_toggler_Write(!led3_toggler_Read());
-        led4_toggler_Write(!led4_toggler_Read());
+		//led3_toggler_Write(!led3_toggler_Read());
+        //led4_toggler_Write(!led4_toggler_Read());
         usbprint("led3 is %u, pwmlevel is %u\n",led3_toggler_Read(),pwmLevel);
-        
+        usbprint("last pixel value was %u\n", lastPixel);
+        uint8_t pixelMSB = pixelRegMSB_Read();
+        uint8_t pixelLSB = pixelRegLSB_Read();
+        usbprint("pixel bytes are %u and %u\n",pixelMSB,pixelLSB);
+    
 			
 	}
 	

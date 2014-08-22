@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: SW2_Interrupt.c  
+* File Name: int_pixelReady.c  
 * Version 1.70
 *
 *  Description:
@@ -18,19 +18,17 @@
 
 #include <cydevice_trm.h>
 #include <CyLib.h>
-#include <SW2_Interrupt.h>
+#include <int_pixelReady.h>
 
-#if !defined(SW2_Interrupt__REMOVED) /* Check for removal by optimization */
+#if !defined(int_pixelReady__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-/* `#START SW2_Interrupt_intc` */
-#include <includes.h>
-#include <Task_Defs.h>
-OS_ERR sw2err;
-extern OS_ERR global_err;
-#include <usbprint.h>
+/* `#START int_pixelReady_intc` */
+#include <device.h>
+extern uint8_t* lastPixelLSB;
+extern uint8_t* lastPixelMSB;
 /* `#END` */
 
 #ifndef CYINT_IRQ_BASE
@@ -45,7 +43,7 @@ CY_ISR_PROTO(IntDefaultHandler);
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_Start
+* Function Name: int_pixelReady_Start
 ********************************************************************************
 *
 * Summary:
@@ -58,24 +56,24 @@ CY_ISR_PROTO(IntDefaultHandler);
 *   None
 *
 *******************************************************************************/
-void SW2_Interrupt_Start(void)
+void int_pixelReady_Start(void)
 {
     /* For all we know the interrupt is active. */
-    SW2_Interrupt_Disable();
+    int_pixelReady_Disable();
 
-    /* Set the ISR to point to the SW2_Interrupt Interrupt. */
-    SW2_Interrupt_SetVector(&SW2_Interrupt_Interrupt);
+    /* Set the ISR to point to the int_pixelReady Interrupt. */
+    int_pixelReady_SetVector(&int_pixelReady_Interrupt);
 
     /* Set the priority. */
-    SW2_Interrupt_SetPriority((uint8)SW2_Interrupt_INTC_PRIOR_NUMBER);
+    int_pixelReady_SetPriority((uint8)int_pixelReady_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    SW2_Interrupt_Enable();
+    int_pixelReady_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_StartEx
+* Function Name: int_pixelReady_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -88,24 +86,24 @@ void SW2_Interrupt_Start(void)
 *   None
 *
 *******************************************************************************/
-void SW2_Interrupt_StartEx(cyisraddress address)
+void int_pixelReady_StartEx(cyisraddress address)
 {
     /* For all we know the interrupt is active. */
-    SW2_Interrupt_Disable();
+    int_pixelReady_Disable();
 
-    /* Set the ISR to point to the SW2_Interrupt Interrupt. */
-    SW2_Interrupt_SetVector(address);
+    /* Set the ISR to point to the int_pixelReady Interrupt. */
+    int_pixelReady_SetVector(address);
 
     /* Set the priority. */
-    SW2_Interrupt_SetPriority((uint8)SW2_Interrupt_INTC_PRIOR_NUMBER);
+    int_pixelReady_SetPriority((uint8)int_pixelReady_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    SW2_Interrupt_Enable();
+    int_pixelReady_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_Stop
+* Function Name: int_pixelReady_Stop
 ********************************************************************************
 *
 * Summary:
@@ -117,22 +115,22 @@ void SW2_Interrupt_StartEx(cyisraddress address)
 *   None
 *
 *******************************************************************************/
-void SW2_Interrupt_Stop(void)
+void int_pixelReady_Stop(void)
 {
     /* Disable this interrupt. */
-    SW2_Interrupt_Disable();
+    int_pixelReady_Disable();
 
     /* Set the ISR to point to the passive one. */
-    SW2_Interrupt_SetVector(&IntDefaultHandler);
+    int_pixelReady_SetVector(&IntDefaultHandler);
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_Interrupt
+* Function Name: int_pixelReady_Interrupt
 ********************************************************************************
 *
 * Summary:
-*   The default Interrupt Service Routine for SW2_Interrupt.
+*   The default Interrupt Service Routine for int_pixelReady.
 *
 *   Add custom code between the coments to keep the next version of this file
 *   from over writting your code.
@@ -143,37 +141,25 @@ void SW2_Interrupt_Stop(void)
 *   None
 *
 *******************************************************************************/
-CY_ISR(SW2_Interrupt_Interrupt)
+CY_ISR(int_pixelReady_Interrupt)
 {
     /*  Place your Interrupt code here. */
-    /* `#START SW2_Interrupt_Interrupt` */
-
-    CPU_SR_ALLOC();
+    /* `#START int_pixelReady_Interrupt` */
+    *lastPixelLSB = pixelRegLSB_Read();
+    *lastPixelMSB = pixelRegMSB_Read();
     
-    CPU_CRITICAL_ENTER();
-    OSIntEnter();
-    CPU_CRITICAL_EXIT();
-    
-    //stuff
-    OSTaskSemPost(
-        &Main_Task_TCB,
-        OS_OPT_POST_NONE,
-        &sw2err
-    );
-    global_err = 1;
-    OSIntExit();
     /* `#END` */
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_SetVector
+* Function Name: int_pixelReady_SetVector
 ********************************************************************************
 *
 * Summary:
-*   Change the ISR vector for the Interrupt. Note calling SW2_Interrupt_Start
+*   Change the ISR vector for the Interrupt. Note calling int_pixelReady_Start
 *   will override any effect this method would have had. To set the vector 
-*   before the component has been started use SW2_Interrupt_StartEx instead.
+*   before the component has been started use int_pixelReady_StartEx instead.
 *
 * Parameters:
 *   address: Address of the ISR to set in the interrupt vector table.
@@ -182,18 +168,18 @@ CY_ISR(SW2_Interrupt_Interrupt)
 *   None
 *
 *******************************************************************************/
-void SW2_Interrupt_SetVector(cyisraddress address)
+void int_pixelReady_SetVector(cyisraddress address)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    ramVectorTable[CYINT_IRQ_BASE + (uint32)SW2_Interrupt__INTC_NUMBER] = address;
+    ramVectorTable[CYINT_IRQ_BASE + (uint32)int_pixelReady__INTC_NUMBER] = address;
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_GetVector
+* Function Name: int_pixelReady_GetVector
 ********************************************************************************
 *
 * Summary:
@@ -206,25 +192,25 @@ void SW2_Interrupt_SetVector(cyisraddress address)
 *   Address of the ISR in the interrupt vector table.
 *
 *******************************************************************************/
-cyisraddress SW2_Interrupt_GetVector(void)
+cyisraddress int_pixelReady_GetVector(void)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    return ramVectorTable[CYINT_IRQ_BASE + (uint32)SW2_Interrupt__INTC_NUMBER];
+    return ramVectorTable[CYINT_IRQ_BASE + (uint32)int_pixelReady__INTC_NUMBER];
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_SetPriority
+* Function Name: int_pixelReady_SetPriority
 ********************************************************************************
 *
 * Summary:
-*   Sets the Priority of the Interrupt. Note calling SW2_Interrupt_Start
-*   or SW2_Interrupt_StartEx will override any effect this method 
+*   Sets the Priority of the Interrupt. Note calling int_pixelReady_Start
+*   or int_pixelReady_StartEx will override any effect this method 
 *   would have had. This method should only be called after 
-*   SW2_Interrupt_Start or SW2_Interrupt_StartEx has been called. To set 
+*   int_pixelReady_Start or int_pixelReady_StartEx has been called. To set 
 *   the initial priority for the component use the cydwr file in the tool.
 *
 * Parameters:
@@ -234,14 +220,14 @@ cyisraddress SW2_Interrupt_GetVector(void)
 *   None
 *
 *******************************************************************************/
-void SW2_Interrupt_SetPriority(uint8 priority)
+void int_pixelReady_SetPriority(uint8 priority)
 {
-    *SW2_Interrupt_INTC_PRIOR = priority << 5;
+    *int_pixelReady_INTC_PRIOR = priority << 5;
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_GetPriority
+* Function Name: int_pixelReady_GetPriority
 ********************************************************************************
 *
 * Summary:
@@ -254,19 +240,19 @@ void SW2_Interrupt_SetPriority(uint8 priority)
 *   Priority of the interrupt. 0 - 7, 0 being the highest.
 *
 *******************************************************************************/
-uint8 SW2_Interrupt_GetPriority(void)
+uint8 int_pixelReady_GetPriority(void)
 {
     uint8 priority;
 
 
-    priority = *SW2_Interrupt_INTC_PRIOR >> 5;
+    priority = *int_pixelReady_INTC_PRIOR >> 5;
 
     return priority;
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_Enable
+* Function Name: int_pixelReady_Enable
 ********************************************************************************
 *
 * Summary:
@@ -279,15 +265,15 @@ uint8 SW2_Interrupt_GetPriority(void)
 *   None
 *
 *******************************************************************************/
-void SW2_Interrupt_Enable(void)
+void int_pixelReady_Enable(void)
 {
     /* Enable the general interrupt. */
-    *SW2_Interrupt_INTC_SET_EN = SW2_Interrupt__INTC_MASK;
+    *int_pixelReady_INTC_SET_EN = int_pixelReady__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_GetState
+* Function Name: int_pixelReady_GetState
 ********************************************************************************
 *
 * Summary:
@@ -300,15 +286,15 @@ void SW2_Interrupt_Enable(void)
 *   1 if enabled, 0 if disabled.
 *
 *******************************************************************************/
-uint8 SW2_Interrupt_GetState(void)
+uint8 int_pixelReady_GetState(void)
 {
     /* Get the state of the general interrupt. */
-    return ((*SW2_Interrupt_INTC_SET_EN & (uint32)SW2_Interrupt__INTC_MASK) != 0u) ? 1u:0u;
+    return ((*int_pixelReady_INTC_SET_EN & (uint32)int_pixelReady__INTC_MASK) != 0u) ? 1u:0u;
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_Disable
+* Function Name: int_pixelReady_Disable
 ********************************************************************************
 *
 * Summary:
@@ -321,15 +307,15 @@ uint8 SW2_Interrupt_GetState(void)
 *   None
 *
 *******************************************************************************/
-void SW2_Interrupt_Disable(void)
+void int_pixelReady_Disable(void)
 {
     /* Disable the general interrupt. */
-    *SW2_Interrupt_INTC_CLR_EN = SW2_Interrupt__INTC_MASK;
+    *int_pixelReady_INTC_CLR_EN = int_pixelReady__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_SetPending
+* Function Name: int_pixelReady_SetPending
 ********************************************************************************
 *
 * Summary:
@@ -343,14 +329,14 @@ void SW2_Interrupt_Disable(void)
 *   None
 *
 *******************************************************************************/
-void SW2_Interrupt_SetPending(void)
+void int_pixelReady_SetPending(void)
 {
-    *SW2_Interrupt_INTC_SET_PD = SW2_Interrupt__INTC_MASK;
+    *int_pixelReady_INTC_SET_PD = int_pixelReady__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: SW2_Interrupt_ClearPending
+* Function Name: int_pixelReady_ClearPending
 ********************************************************************************
 *
 * Summary:
@@ -363,9 +349,9 @@ void SW2_Interrupt_SetPending(void)
 *   None
 *
 *******************************************************************************/
-void SW2_Interrupt_ClearPending(void)
+void int_pixelReady_ClearPending(void)
 {
-    *SW2_Interrupt_INTC_CLR_PD = SW2_Interrupt__INTC_MASK;
+    *int_pixelReady_INTC_CLR_PD = int_pixelReady__INTC_MASK;
 }
 
 #endif /* End check for removal by optimization */
