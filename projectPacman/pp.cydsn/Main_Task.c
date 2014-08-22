@@ -56,7 +56,7 @@ OS_TCB	Main_Task_TCB;
 CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
 
 extern uint16_t lastPixel;
-
+extern unsigned int pixelCount;
 /*
  * Function:		Main_Task
  *
@@ -138,6 +138,7 @@ void Main_Task( void *p_arg )
         uint8_t pixelMSB = pixelRegMSB_Read();
         uint8_t pixelLSB = pixelRegLSB_Read();
         usbprint("pixel bytes are %u and %u\n",pixelMSB,pixelLSB);
+        usbprint("pixelcount is %u",pixelCount);
     
 			
 	}

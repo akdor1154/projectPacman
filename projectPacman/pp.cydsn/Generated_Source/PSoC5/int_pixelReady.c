@@ -29,6 +29,7 @@
 #include <device.h>
 extern uint8_t* lastPixelLSB;
 extern uint8_t* lastPixelMSB;
+extern unsigned int pixelCount;
 /* `#END` */
 
 #ifndef CYINT_IRQ_BASE
@@ -147,7 +148,7 @@ CY_ISR(int_pixelReady_Interrupt)
     /* `#START int_pixelReady_Interrupt` */
     *lastPixelLSB = pixelRegLSB_Read();
     *lastPixelMSB = pixelRegMSB_Read();
-    
+    pixelCount++;
     /* `#END` */
 }
 

@@ -67,6 +67,8 @@ OS_ERR global_err;
 uint16_t lastPixel;
 uint8_t* lastPixelMSB;
 uint8_t* lastPixelLSB;
+unsigned int pixelCount;
+
 void main( void )
 {
     OS_ERR  err;
@@ -74,6 +76,10 @@ void main( void )
 	lastPixel = 0;
     lastPixelMSB = (uint8_t*)&lastPixel;
     lastPixelLSB = lastPixelMSB+1;
+    
+    pixelCount = 0;
+    
+    
 	/* Perform BSP pre-initialization (post-init occurs in MainTask) */
     BSP_PreInit();
 
