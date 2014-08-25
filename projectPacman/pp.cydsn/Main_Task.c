@@ -55,7 +55,9 @@
 OS_TCB	Main_Task_TCB;
 CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
 
-extern uint16_t lastPixel;
+extern uint8_t lastPixelY;
+extern uint8_t lastPixelCb;
+extern uint8_t lastPixelCr;
 extern unsigned int pixelCount;
 /*
  * Function:		Main_Task
@@ -134,12 +136,14 @@ void Main_Task( void *p_arg )
 		//led3_toggler_Write(!led3_toggler_Read());
         //led4_toggler_Write(!led4_toggler_Read());
         usbprint("led3 is %u, pwmlevel is %u\n",led3_toggler_Read(),pwmLevel);
-        usbprint("last pixel value was %u\n", lastPixel);
-        uint8_t pixelMSB = pixelRegMSB_Read();
-        uint8_t pixelLSB = pixelRegLSB_Read();
-        usbprint("pixel bytes are %u and %u\n",pixelMSB,pixelLSB);
+        lastPixelY = pixelRegY_Read();
+        lastPixelCb = pixelRegCb_Read();
+        lastPixelCr = pixelRegCr_Read();
+        usbprint("last pixel value was %u,%u,%u\n", lastPixelY,lastPixelCb,lastPixelCr);
         usbprint("pixelcount is %u",pixelCount);
-    
+        
+        uint8_t pclk_count = pclk_test_reg_Read();
+        usbprint("pclk count is %u\n",pclk_count);
 			
 	}
 	

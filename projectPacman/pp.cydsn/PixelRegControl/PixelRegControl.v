@@ -16,8 +16,12 @@
 // Component: PixelRegControl
 module PixelRegControl (
 	output wire [7:0] d_out,
-    output wire out_clk_reg1,
-    output wire out_clk_reg2,
+    output wire out_clk_y,
+    output wire out_clk_cb,
+    output wire out_clk_cr,
+    output reg [7:0] out_y;
+    output reg [7:0] out_cb;
+    output reg [7:0] out_cr;
     output wire ready_int,
 	input wire [7:0] d_in,
 	input wire href,
@@ -27,41 +31,79 @@ module PixelRegControl (
 
 //`#start body` -- edit after this line, do not edit this line
 
-reg outSelect;
-reg out_reg1_enable;
-reg out_reg2_enable;
+reg [1:0] outSelect;
+reg out_y_enable;
+reg out_cb_enable;
+reg out_cr_enable;
 reg ready_int_enable;
+reg lastHref;
+reg diffHref;
+reg inframe;
 
 assign d_out = d_in;
 
-assign out_clk_reg1 = out_reg1_enable & pclk;
-assign out_clk_reg2 = out_reg2_enable & pclk;
-assign ready_int = ready_int & pclk;
+assign out_clk_y = out_y_enable & pclk & href;
+assign out_clk_cb = out_cb_enable & pclk & href;
+assign out_clk_cr = out_cr_enable & pclk & href;
+assign ready_int = ready_int_enable & pclk & href;
+
+
 
 always @(posedge pclk) begin
-    if (href) begin
-        outSelect <= ~outSelect;
+    lastHref <= href;
+    if (lastHref != href) begin
+        diffHref <= 1'b1;
+    end else begin
+        diffHref <= 1'b0;
+    end
+    if (diffHref == 1'b1) begin
+        outSelect <= 2'b00;
+        inframe <= 1'b0;
+        out_y_enable <= 1'b0;
+        out_cb_enable <= 1'b0;
+        out_cr_enable <= 1'b0;
+        ready_int_enable <= 1'b0;
+    end else if (href) begin
         case(outSelect)
-            1'b0: begin
-                out_reg1_enable <= 1'b1;
-                out_reg2_enable <= 1'b0;
+            2'b00: begin
+                out_y_enable <= 1'b0;
+                out_cb_enable <= 1'b1;
+                out_cr_enable <= 1'b0;
                 ready_int_enable <= 1'b0;
+                outSelect <= 2'b01;
             end
-            1'b1: begin
-                out_reg1_enable <= 1'b0;
-                out_reg2_enable <= 1'b1;
+            2'b01: begin
+                out_y_enable <= 1'b1;
+                out_cb_enable <= 1'b0;
+                out_cr_enable <= 1'b0;
+                if (inframe) begin
+                    ready_int_enable <= 1'b1;
+                end else begin
+                    ready_int_enable <= 1'b0;
+                end
+                outSelect <= 2'b10;
+            end
+            2'b10: begin
+                out_y_enable <= 1'b0;
+                out_cb_enable <= 1'b0;
+                out_cr_enable <= 1'b1;
+                ready_int_enable <= 1'b0;
+                outSelect <= 2'b11;
+            end
+            2'b11: begin
+                out_y_enable <= 1'b1;
+                out_cb_enable <= 1'b0;
+                out_cr_enable <= 1'b0;
                 ready_int_enable <= 1'b1;
-            end
-            default: begin
-                out_reg1_enable <= 1'b0;
-                out_reg2_enable <= 1'b0;
-                ready_int_enable <= 1'b0;
+                inframe <= 1'b1;
+                outSelect <= 2'b00;
             end
         endcase
     end else begin
         outSelect <= outSelect;
-        out_reg1_enable <= 1'b0;
-        out_reg2_enable <= 1'b0;
+        out_y_enable <= 1'b0;
+        out_cb_enable <= 1'b0;
+        out_cr_enable <= 1'b0;
         ready_int_enable <= 1'b0;
     end
 end

@@ -27,8 +27,9 @@
 ********************************************************************************/
 /* `#START int_pixelReady_intc` */
 #include <device.h>
-extern uint8_t* lastPixelLSB;
-extern uint8_t* lastPixelMSB;
+extern uint8_t lastPixelY;
+extern uint8_t lastPixelCb;
+extern uint8_t lastPixelCr;
 extern unsigned int pixelCount;
 /* `#END` */
 
@@ -146,8 +147,9 @@ CY_ISR(int_pixelReady_Interrupt)
 {
     /*  Place your Interrupt code here. */
     /* `#START int_pixelReady_Interrupt` */
-    *lastPixelLSB = pixelRegLSB_Read();
-    *lastPixelMSB = pixelRegMSB_Read();
+    /*lastPixelY = pixelRegY_Read();
+    lastPixelCb = pixelRegCb_Read();
+    lastPixelCr = pixelRegCr_Read();*/
     pixelCount++;
     /* `#END` */
 }

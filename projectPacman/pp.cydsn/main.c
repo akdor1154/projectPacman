@@ -64,18 +64,19 @@ OS_ERR global_err;
  *
  * Return:		None (OSStart API never returns)
  */
-uint16_t lastPixel;
-uint8_t* lastPixelMSB;
-uint8_t* lastPixelLSB;
+
+uint8_t lastPixelY;
+uint8_t lastPixelCb;
+uint8_t lastPixelCr;
 unsigned int pixelCount;
 
 void main( void )
 {
     OS_ERR  err;
     global_err = 0;
-	lastPixel = 0;
-    lastPixelMSB = (uint8_t*)&lastPixel;
-    lastPixelLSB = lastPixelMSB+1;
+	lastPixelY = 0;
+	lastPixelCb = 0;
+	lastPixelCr = 0;
     
     pixelCount = 0;
     
