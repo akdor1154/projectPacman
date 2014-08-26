@@ -136,9 +136,9 @@ void Main_Task( void *p_arg )
 		//led3_toggler_Write(!led3_toggler_Read());
         //led4_toggler_Write(!led4_toggler_Read());
         usbprint("led3 is %u, pwmlevel is %u\n",led3_toggler_Read(),pwmLevel);
-        lastPixelY = pixelRegY_Read();
+        /*lastPixelY = pixelRegY_Read();
         lastPixelCb = pixelRegCb_Read();
-        lastPixelCr = pixelRegCr_Read();
+        lastPixelCr = pixelRegCr_Read();*/
         usbprint("last pixel value was %u,%u,%u\n", lastPixelY,lastPixelCb,lastPixelCr);
         usbprint("pixelcount is %u",pixelCount);
         
