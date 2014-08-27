@@ -148,8 +148,8 @@ CY_ISR(int_pixelReady_Interrupt)
     /*  Place your Interrupt code here. */
     /* `#START int_pixelReady_Interrupt` */
     lastPixelY = pixelRegY_Read();
-    lastPixelCb = pixelRegCb_Read();
-    lastPixelCr = pixelRegCr_Read();
+    /*lastPixelCb = pixelRegCb_Read();
+    lastPixelCr = pixelRegCr_Read();*/
     pixelCount++;
     /* `#END` */
 }

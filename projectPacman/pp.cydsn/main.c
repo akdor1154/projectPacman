@@ -70,6 +70,9 @@ uint8_t lastPixelCb;
 uint8_t lastPixelCr;
 unsigned int pixelCount;
 
+int8_t YTestpix;
+int8_t* YTest;
+
 void main( void )
 {
     OS_ERR  err;
@@ -80,6 +83,8 @@ void main( void )
     
     pixelCount = 0;
     
+    YTestpix=0;
+    YTest = &YTestpix;
     
 	/* Perform BSP pre-initialization (post-init occurs in MainTask) */
     BSP_PreInit();
@@ -94,7 +99,7 @@ void main( void )
     CYGlobalIntEnable;
     
     SW2_Interrupt_Start();
-    int_pixelReady_Start();
+    //int_pixelReady_Start();
     
     USB_Start(0,USB_DWR_VDDD_OPERATION);
     while(!USB_GetConfiguration());

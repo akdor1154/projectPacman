@@ -84,7 +84,7 @@ always @(posedge pclk) begin
             end
         endcase
     end else begin
-        out_y <= 8'b00000001;
+        out_y <= 8'b00000010;
         out_cb <= 8'b00000010;
         out_cr <= 8'b00000011;
         outSelect <= outSelect;

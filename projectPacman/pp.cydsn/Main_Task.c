@@ -59,6 +59,8 @@ extern uint8_t lastPixelY;
 extern uint8_t lastPixelCb;
 extern uint8_t lastPixelCr;
 extern unsigned int pixelCount;
+extern int8_t* YTest;
+
 /*
  * Function:		Main_Task
  *
@@ -108,6 +110,31 @@ void Main_Task( void *p_arg )
     PWM_1_Start();
     PWM_2_Start();
     
+    SensorADC_Start();
+    //SensorADC_StartConvert();
+    Count7_1_Start();
+    uint8_t adcResult = 0;
+    
+    
+    /* Variable declarations for DMA_1 */
+/* Move these variable declarations to the top of the function */
+uint8 DMA_1_Chan;
+uint8 DMA_1_TD[1];
+
+/* DMA Configuration for DMA_1 */
+    #define DMA_1_BYTES_PER_BURST 1
+    #define DMA_1_REQUEST_PER_BURST 1
+    #define DMA_1_SRC_BASE (CYDEV_PERIPH_BASE)
+    #define DMA_1_DST_BASE (CYDEV_SRAM_BASE)
+    DMA_1_Chan = DMA_1_DmaInitialize(DMA_1_BYTES_PER_BURST, DMA_1_REQUEST_PER_BURST, 
+        HI16(DMA_1_SRC_BASE), HI16(DMA_1_DST_BASE));
+    DMA_1_TD[0] = CyDmaTdAllocate();
+    CyDmaTdSetConfiguration(DMA_1_TD[0], 1, DMA_1_TD[0], TD_INC_DST_ADR);
+    CyDmaTdSetAddress(DMA_1_TD[0], LO16((uint32)pixelRegY_Status_PTR), LO16((uint32)YTest));
+    CyDmaChSetInitialTd(DMA_1_Chan, DMA_1_TD[0]);
+    CyDmaChEnable(DMA_1_Chan, 1);
+
+    
 	while (1) {
 		/* Delay 1s */
 		/*OSTimeDly(
@@ -144,7 +171,16 @@ void Main_Task( void *p_arg )
         
         uint8_t pclk_count = pclk_test_reg_Read();
         usbprint("pclk count is %u\n",pclk_count);
-			
+	    
+        if (SensorADC_IsEndConversion(SensorADC_RETURN_STATUS)) {
+            adcResult = (uint8_t)SensorADC_GetResult8();
+        } else {
+            adcResult = 3;
+        }
+        
+        usbprint("adc result: %u",adcResult);
+        usbprint("ytest: %hhu",*YTest);
+        
 	}
 	
 } /* Main_Task */
