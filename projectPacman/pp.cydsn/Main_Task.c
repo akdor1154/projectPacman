@@ -61,6 +61,13 @@ extern uint8_t lastPixelCr;
 extern unsigned int pixelCount;
 extern int8_t* YTest;
 
+extern uint8_t YTest1[480];
+extern uint8_t YTest2[480];
+
+extern uint8_t yPix;
+extern uint8_t cbPix;
+extern uint8_t crPix;
+
 /*
  * Function:		Main_Task
  *
@@ -114,26 +121,63 @@ void Main_Task( void *p_arg )
     //SensorADC_StartConvert();
     Count7_1_Start();
     uint8_t adcResult = 0;
-    
-    
-    /* Variable declarations for DMA_1 */
-/* Move these variable declarations to the top of the function */
-uint8 DMA_1_Chan;
-uint8 DMA_1_TD[1];
 
-/* DMA Configuration for DMA_1 */
-    #define DMA_1_BYTES_PER_BURST 1
-    #define DMA_1_REQUEST_PER_BURST 1
-    #define DMA_1_SRC_BASE (CYDEV_PERIPH_BASE)
-    #define DMA_1_DST_BASE (CYDEV_SRAM_BASE)
-    DMA_1_Chan = DMA_1_DmaInitialize(DMA_1_BYTES_PER_BURST, DMA_1_REQUEST_PER_BURST, 
-        HI16(DMA_1_SRC_BASE), HI16(DMA_1_DST_BASE));
-    DMA_1_TD[0] = CyDmaTdAllocate();
-    CyDmaTdSetConfiguration(DMA_1_TD[0], 1, DMA_1_TD[0], TD_INC_DST_ADR);
-    CyDmaTdSetAddress(DMA_1_TD[0], LO16((uint32)pixelRegY_Status_PTR), LO16((uint32)YTest));
-    CyDmaChSetInitialTd(DMA_1_Chan, DMA_1_TD[0]);
-    CyDmaChEnable(DMA_1_Chan, 1);
+    /* Variable declarations for yDMA */
+    /* Move these variable declarations to the top of the function */
+    uint8 yDMA_Chan;
+    uint8 yDMA_TD[1];
 
+    /* DMA Configuration for yDMA */
+    #define yDMA_BYTES_PER_BURST 1
+    #define yDMA_REQUEST_PER_BURST 1
+    #define yDMA_SRC_BASE (CYDEV_PERIPH_BASE)
+    #define yDMA_DST_BASE (CYDEV_SRAM_BASE)
+    yDMA_Chan = yDMA_DmaInitialize(yDMA_BYTES_PER_BURST, yDMA_REQUEST_PER_BURST, 
+        HI16(yDMA_SRC_BASE), HI16(yDMA_DST_BASE));
+    yDMA_TD[0] = CyDmaTdAllocate();
+    CyDmaTdSetConfiguration(yDMA_TD[0], 1, yDMA_TD[0], 0);
+    CyDmaTdSetAddress(yDMA_TD[0], LO16((uint32)pixelRegY_Status_PTR), LO16((uint32)&yPix));
+    CyDmaChSetInitialTd(yDMA_Chan, yDMA_TD[0]);
+    CyDmaChEnable(yDMA_Chan, 1);
+    
+    /* Variable declarations for cbDMA */
+    /* Move these variable declarations to the top of the function */
+    uint8 cbDMA_Chan;
+    uint8 cbDMA_TD[1];
+
+    /* DMA Configuration for cbDMA */
+    #define cbDMA_BYTES_PER_BURST 1
+    #define cbDMA_REQUEST_PER_BURST 1
+    #define cbDMA_SRC_BASE (CYDEV_PERIPH_BASE)
+    #define cbDMA_DST_BASE (CYDEV_SRAM_BASE)
+    cbDMA_Chan = cbDMA_DmaInitialize(cbDMA_BYTES_PER_BURST, cbDMA_REQUEST_PER_BURST, 
+        HI16(cbDMA_SRC_BASE), HI16(cbDMA_DST_BASE));
+    cbDMA_TD[0] = CyDmaTdAllocate();
+    CyDmaTdSetConfiguration(cbDMA_TD[0], 1, cbDMA_TD[0], 0);
+    CyDmaTdSetAddress(cbDMA_TD[0], LO16((uint32)pixelRegCb_Status_PTR), LO16((uint32)&cbPix));
+    CyDmaChSetInitialTd(cbDMA_Chan, cbDMA_TD[0]);
+    CyDmaChEnable(cbDMA_Chan, 1);
+
+    
+    /* Variable declarations for crDMA */
+    /* Move these variable declarations to the top of the function */
+    uint8 crDMA_Chan;
+    uint8 crDMA_TD[1];
+
+    /* DMA Configuration for crDMA */
+    #define crDMA_BYTES_PER_BURST 1
+    #define crDMA_REQUEST_PER_BURST 1
+    #define crDMA_SRC_BASE (CYDEV_PERIPH_BASE)
+    #define crDMA_DST_BASE (CYDEV_SRAM_BASE)
+    crDMA_Chan = crDMA_DmaInitialize(crDMA_BYTES_PER_BURST, crDMA_REQUEST_PER_BURST, 
+        HI16(crDMA_SRC_BASE), HI16(crDMA_DST_BASE));
+    crDMA_TD[0] = CyDmaTdAllocate();
+    CyDmaTdSetConfiguration(crDMA_TD[0], 1, crDMA_TD[0], 0);
+    CyDmaTdSetAddress(crDMA_TD[0], LO16((uint32)pixelRegCr_Status_PTR), LO16((uint32)&crPix));
+    CyDmaChSetInitialTd(crDMA_Chan, crDMA_TD[0]);
+    CyDmaChEnable(crDMA_Chan, 1);
+
+    
     
 	while (1) {
 		/* Delay 1s */
@@ -149,7 +193,7 @@ uint8 DMA_1_TD[1];
             &ts,
             &err
         );
-        usbprint("error: %u\n",err);
+        //usbprint("error: %u\n",err);
         
         
 		/* Toggle the LED3 */
@@ -159,27 +203,24 @@ uint8 DMA_1_TD[1];
         PWM_2_WriteCompare(UINT8_MAX-pwmLevel);
         pwmLevel += pwmStep;
         
+       
+        //usbprint("pixelcount is %u",pixelCount);
         
-		//led3_toggler_Write(!led3_toggler_Read());
-        //led4_toggler_Write(!led4_toggler_Read());
-        usbprint("led3 is %u, pwmlevel is %u\n",led3_toggler_Read(),pwmLevel);
-        /*lastPixelY = pixelRegY_Read();
-        lastPixelCb = pixelRegCb_Read();
-        lastPixelCr = pixelRegCr_Read();*/
-        usbprint("last pixel value was %u,%u,%u\n", lastPixelY,lastPixelCb,lastPixelCr);
-        usbprint("pixelcount is %u",pixelCount);
-        
-        uint8_t pclk_count = pclk_test_reg_Read();
-        usbprint("pclk count is %u\n",pclk_count);
-	    
+        //uint8_t pclk_count = pclk_test_reg_Read();
+        //usbprint("pclk count is %u\n",pclk_count);
+	    /*
         if (SensorADC_IsEndConversion(SensorADC_RETURN_STATUS)) {
             adcResult = (uint8_t)SensorADC_GetResult8();
         } else {
             adcResult = 3;
         }
-        
+        */
+        /*
         usbprint("adc result: %u",adcResult);
         usbprint("ytest: %hhu",*YTest);
+        */
+        
+        usbprint("%u,%u,%u\n",yPix,cbPix,crPix);
         
 	}
 	

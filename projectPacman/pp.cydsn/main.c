@@ -65,26 +65,21 @@ OS_ERR global_err;
  * Return:		None (OSStart API never returns)
  */
 
-uint8_t lastPixelY;
-uint8_t lastPixelCb;
-uint8_t lastPixelCr;
 unsigned int pixelCount;
 
-int8_t YTestpix;
-int8_t* YTest;
+uint8_t yPix;
+uint8_t cbPix;
+uint8_t crPix;
+
+
 
 void main( void )
 {
     OS_ERR  err;
     global_err = 0;
-	lastPixelY = 0;
-	lastPixelCb = 0;
-	lastPixelCr = 0;
     
     pixelCount = 0;
     
-    YTestpix=0;
-    YTest = &YTestpix;
     
 	/* Perform BSP pre-initialization (post-init occurs in MainTask) */
     BSP_PreInit();
@@ -99,7 +94,8 @@ void main( void )
     CYGlobalIntEnable;
     
     SW2_Interrupt_Start();
-    //int_pixelReady_Start();
+    int_pixelReady_Start();
+    
     
     USB_Start(0,USB_DWR_VDDD_OPERATION);
     while(!USB_GetConfiguration());

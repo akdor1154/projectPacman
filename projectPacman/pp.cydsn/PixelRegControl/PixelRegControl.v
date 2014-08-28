@@ -41,25 +41,16 @@ always @(posedge pclk) begin
     if (lastHref != href) begin
         outSelect <= 2'b00;
         inframe <= 1'b0;
-        out_y <= out_y;
-        out_cb <= out_cb;
-        out_cr <= out_cr;
         ready_int_enable <= 1'b0;
     end else if (href) begin
         case(outSelect)
             2'b00: begin
-                out_y <= out_y;
                 out_cb <= d_in;
-                out_cr <= out_cr;
-                inframe <= inframe;
                 ready_int_enable <= 1'b0;
                 outSelect <= 2'b01;
             end
             2'b01: begin
                 out_y <= d_in;
-                out_cb <= out_cb;
-                out_cr <= out_cr;
-                inframe <= inframe;
                 if (inframe)
                     ready_int_enable <= 1'b1;
                 else
@@ -67,26 +58,18 @@ always @(posedge pclk) begin
                 outSelect <= 2'b10;
             end
             2'b10: begin
-                out_y <= out_y;
-                out_cb <= out_cb;
                 out_cr <= d_in;
-                inframe <= inframe;
                 ready_int_enable <= 1'b0;
                 outSelect <= 2'b11;
             end
             2'b11: begin
                 out_y <= d_in;
-                out_cb <= out_cb;
-                out_cr <= out_cr;
                 inframe <= 1'b1;
                 ready_int_enable <= 1'b1;
                 outSelect <= 2'b00;
             end
         endcase
     end else begin
-        out_y <= 8'b00000010;
-        out_cb <= 8'b00000010;
-        out_cr <= 8'b00000011;
         outSelect <= outSelect;
         inframe <= 1'b0;
         ready_int_enable <= 1'b0;

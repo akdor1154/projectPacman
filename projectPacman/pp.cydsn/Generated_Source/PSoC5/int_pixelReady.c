@@ -26,10 +26,9 @@
 *  Place your includes, defines and code here 
 ********************************************************************************/
 /* `#START int_pixelReady_intc` */
-#include <device.h>
-extern uint8_t lastPixelY;
-extern uint8_t lastPixelCb;
-extern uint8_t lastPixelCr;
+#include <includes.h>
+#include <Task_Defs.h>
+OS_ERR sw2err;
 extern unsigned int pixelCount;
 /* `#END` */
 
@@ -147,10 +146,22 @@ CY_ISR(int_pixelReady_Interrupt)
 {
     /*  Place your Interrupt code here. */
     /* `#START int_pixelReady_Interrupt` */
-    lastPixelY = pixelRegY_Read();
     /*lastPixelCb = pixelRegCb_Read();
     lastPixelCr = pixelRegCr_Read();*/
+    /*CPU_SR_ALLOC();
+    
+    CPU_CRITICAL_ENTER();
+    OSIntEnter();
+    CPU_CRITICAL_EXIT();
+    
+    //stuff
+    OSTaskSemPost(
+        &Main_Task_TCB,
+        OS_OPT_POST_NONE,
+        &sw2err
+    );*/
     pixelCount++;
+    //OSIntExit();
     /* `#END` */
 }
 
