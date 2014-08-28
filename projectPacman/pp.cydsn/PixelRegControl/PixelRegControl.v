@@ -18,11 +18,11 @@ module PixelRegControl (
     output reg [7:0] out_y,
     output reg [7:0] out_cb,
     output reg [7:0] out_cr,
-    output reg inframe,
     output wire ready_int,
+    output reg in_line,
 	input wire [7:0] d_in,
-	input wire href,
-	input wire pclk
+	input wire pclk,
+	input wire href
 );
 
 
@@ -38,40 +38,41 @@ assign ready_int = ready_int_enable & ~pclk & href;
 
 always @(posedge pclk) begin
     lastHref <= href;
-    if (lastHref != href) begin
-        outSelect <= 2'b00;
-        inframe <= 1'b0;
+    if ((lastHref == 1'b0) & (href == 1'b1)) begin
+        out_y <= d_in;
         ready_int_enable <= 1'b0;
+        in_line <= 1'b0;
+        outSelect <= 2'b01;
     end else if (href) begin
         case(outSelect)
             2'b00: begin
-                out_cb <= d_in;
+                out_y <= d_in;
                 ready_int_enable <= 1'b0;
                 outSelect <= 2'b01;
             end
             2'b01: begin
-                out_y <= d_in;
-                if (inframe)
+                out_cb <= d_in;
+                if (in_line)
                     ready_int_enable <= 1'b1;
                 else
                     ready_int_enable <= 1'b0;
                 outSelect <= 2'b10;
             end
             2'b10: begin
-                out_cr <= d_in;
+                out_y <= d_in;
                 ready_int_enable <= 1'b0;
                 outSelect <= 2'b11;
             end
             2'b11: begin
-                out_y <= d_in;
-                inframe <= 1'b1;
+                out_cr <= 8'b10101010;
+                in_line <= 1'b1;
                 ready_int_enable <= 1'b1;
                 outSelect <= 2'b00;
             end
         endcase
     end else begin
         outSelect <= outSelect;
-        inframe <= 1'b0;
+        in_line <= 1'b0;
         ready_int_enable <= 1'b0;
     end
 end
