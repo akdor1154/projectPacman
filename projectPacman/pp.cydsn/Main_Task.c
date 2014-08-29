@@ -123,7 +123,7 @@ void Main_Task( void *p_arg )
 #ifdef CPU_CFG_INT_DIS_MEAS_EN
     CPU_IntDisMeasMaxCurReset();
 #endif
-
+    usbprint("blah\n\n");
     CameraConfig();
 
     

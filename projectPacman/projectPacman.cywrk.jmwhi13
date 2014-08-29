@@ -6,14 +6,14 @@
 <CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
 <userData>
 <dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
-<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Components">
 <TreeKeys>
 <v>Source</v>
 <v>Components</v>
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\Micrium\uCOS-III\Ports\ARM-Cortex-M3\GNU\os_cpu.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\Header Files">
 <ExpandedNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
@@ -26,7 +26,6 @@
 <v>projectPacman\pp\APP-CFG\os_app_hooks.h</v>
 <v>projectPacman\pp\APP-CFG\os_cfg.h</v>
 <v>projectPacman\pp\APP-CFG\os_cfg_app.h</v>
-<v>projectPacman\pp\Header Files</v>
 <v>projectPacman\pp\Header Files\camera.h</v>
 <v>projectPacman\pp\Header Files\device.h</v>
 <v>projectPacman\pp\Header Files\Task_Defs.h</v>
@@ -191,9 +190,6 @@
 <v>projectPacman\pp\pp.cydwr</v>
 <v>projectPacman\pp\APP-CFG</v>
 <v>projectPacman\pp\Header Files</v>
-<v>projectPacman\pp\Header Files\camera.h</v>
-<v>projectPacman\pp\Header Files\device.h</v>
-<v>projectPacman\pp\Header Files\Task_Defs.h</v>
 <v>projectPacman\pp\Micrium</v>
 <v>projectPacman\pp\Micrium\BSP</v>
 <v>projectPacman\pp\Micrium\uC-CPU</v>
@@ -234,9 +230,11 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_XCLK</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\CameraD</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\cami2c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\cami2c\cami2c.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\cami2c\cami2c.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\PixelRegControl\PixelRegControl.v">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp">
 <ExpandedNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
@@ -252,6 +250,9 @@
 <v>projectPacman\pp\PixelRegControl</v>
 <v>projectPacman\pp\PixelRegControl\PixelRegControl.cysym</v>
 <v>projectPacman\pp\PixelRegControl\PixelRegControl.v</v>
+<v>projectPacman\pp\PixelRegRGB</v>
+<v>projectPacman\pp\PixelRegRGB\PixelRegRGB.cysym</v>
+<v>projectPacman\pp\PixelRegRGB\PixelRegRGB.v</v>
 <v>projectPacman\pp\TopDesign</v>
 <v>projectPacman\pp\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
@@ -270,6 +271,9 @@
 <v>projectPacman\pp\PixelRegControl</v>
 <v>projectPacman\pp\PixelRegControl\PixelRegControl.cysym</v>
 <v>projectPacman\pp\PixelRegControl\PixelRegControl.v</v>
+<v>projectPacman\pp\PixelRegRGB</v>
+<v>projectPacman\pp\PixelRegRGB\PixelRegRGB.cysym</v>
+<v>projectPacman\pp\PixelRegRGB\PixelRegRGB.v</v>
 <v>projectPacman\pp\TopDesign</v>
 <v>projectPacman\pp\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
@@ -480,7 +484,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Count7_1_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_a.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_bsp.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_c.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -572,13 +575,13 @@
 <name v=".\pp.cydsn\Generated_Source\PSoC5\SW2_Interrupt.c" />
 <name v=".\pp.cydsn\Main_Task.c" />
 <name v=".\pp.cydsn\main.c" />
-<name v=".\pp.cydsn\PixelRegChooser\PixelRegChooser.v" />
 <name v=".\pp.cydsn\Generated_Source\PSoC5\int_pixelReady.c" />
 <name v=".\pp.cydsn\camera.c" />
 <name v=".\pp.cydsn\camera.h" />
 <name v=".\pp.cydsn\device.h" />
 <name v=".\Micrium\Software\uCOS-III\Source\os.h" />
-<name v=".\pp.cydsn\APP-CFG\os_app_hooks.c" />
+<name v=".\pp.cydsn\PixelRegRGB\PixelRegRGB.cysym" />
+<name v=".\pp.cydsn\PixelRegRGB\PixelRegRGB.v" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

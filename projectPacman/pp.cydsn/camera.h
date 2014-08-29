@@ -15,13 +15,10 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-// This Function pulses the Clock line
-void pump();
-void endSeq();
-void startSeq();
-void SccbWritePhase1(uint8 id, uint8 addr);
-void SccbWrite(uint8 id, uint8 addr, uint8 byte);
-uint8_t SccbRead(uint8 id, uint8 addr );
+#include <stdint.h>
+    
+void SccbWrite(uint8_t addr, uint8_t byte);
+uint8_t SccbRead(uint8_t addr );
 
 void CameraConfig();
 
