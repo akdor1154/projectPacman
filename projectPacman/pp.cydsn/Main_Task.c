@@ -50,6 +50,7 @@
 #include <Task_Defs.h>
 
 #include "usbprint.h"
+#include "camera.h"
 
 /* Main_Task TCB, start function and stack */
 OS_TCB	Main_Task_TCB;
@@ -91,9 +92,24 @@ void Main_Task( void *p_arg )
 {
 	OS_ERR err;			/* Hold OS call return code */
 	CPU_TS ts;
-    
 	(void)p_arg;		/* no-op prevents warning about unused p_arg */
-	
+    OS_RATE_HZ tenthSecond = OSCfg_TickRate_Hz/10;
+    
+    uint8_t pwmLevel;
+    uint8_t pwmStep;
+    uint8_t adcResult;
+    
+    uint8 yDMA_Chan;
+    uint8 yDMA_TD[1];
+    uint8 cbDMA_Chan;
+    uint8 cbDMA_TD[1];
+    uint8 crDMA_Chan;
+    uint8 crDMA_TD[1];
+    
+    uint8_t magicToggle;
+    
+    
+    
 	/* Perform BSP post-initialization functions */
 	BSP_PostInit();
     
@@ -106,13 +122,13 @@ void Main_Task( void *p_arg )
 
 #ifdef CPU_CFG_INT_DIS_MEAS_EN
     CPU_IntDisMeasMaxCurReset();
-#endif 	
+#endif
 
+    CameraConfig();
 
-    OS_RATE_HZ tenthSecond = OSCfg_TickRate_Hz/10;
     
-    uint8_t pwmLevel = 0;
-    uint8_t pwmStep = UINT8_MAX/16;
+    pwmLevel = 0;
+    pwmStep = UINT8_MAX/16;
     
     PWM_1_Start();
     PWM_2_Start();
@@ -120,12 +136,11 @@ void Main_Task( void *p_arg )
     SensorADC_Start();
     //SensorADC_StartConvert();
     Count7_1_Start();
-    uint8_t adcResult = 0;
+    adcResult = 0;
 
     /* Variable declarations for yDMA */
     /* Move these variable declarations to the top of the function */
-    uint8 yDMA_Chan;
-    uint8 yDMA_TD[1];
+
 
     /* DMA Configuration for yDMA */
     #define yDMA_BYTES_PER_BURST 1
@@ -142,8 +157,6 @@ void Main_Task( void *p_arg )
     
     /* Variable declarations for cbDMA */
     /* Move these variable declarations to the top of the function */
-    uint8 cbDMA_Chan;
-    uint8 cbDMA_TD[1];
 
     /* DMA Configuration for cbDMA */
     #define cbDMA_BYTES_PER_BURST 1
@@ -161,8 +174,6 @@ void Main_Task( void *p_arg )
     
     /* Variable declarations for crDMA */
     /* Move these variable declarations to the top of the function */
-    uint8 crDMA_Chan;
-    uint8 crDMA_TD[1];
 
     /* DMA Configuration for crDMA */
     #define crDMA_BYTES_PER_BURST 1
@@ -177,7 +188,7 @@ void Main_Task( void *p_arg )
     CyDmaChSetInitialTd(crDMA_Chan, crDMA_TD[0]);
     CyDmaChEnable(crDMA_Chan, 1);
 
-    
+    magicToggle=1;
     
 	while (1) {
 		/* Delay 1s */
@@ -219,8 +230,10 @@ void Main_Task( void *p_arg )
         usbprint("adc result: %u",adcResult);
         usbprint("ytest: %hhu",*YTest);
         */
-        
+        magicToggle = ~magicToggle;
         usbprint("%u,%u,%u\n",yPix,cbPix,crPix);
+        
+        
         
 	}
 	

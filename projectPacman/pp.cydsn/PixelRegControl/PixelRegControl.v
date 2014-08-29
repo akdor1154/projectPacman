@@ -64,7 +64,7 @@ always @(posedge pclk) begin
                 outSelect <= 2'b11;
             end
             2'b11: begin
-                out_cr <= 8'b10101010;
+                out_cr <= d_in;
                 in_line <= 1'b1;
                 ready_int_enable <= 1'b1;
                 outSelect <= 2'b00;

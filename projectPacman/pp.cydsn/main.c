@@ -71,139 +71,7 @@ uint8_t yPix;
 uint8_t cbPix;
 uint8_t crPix;
 
-// This Function pulses the Clock line
-void pump() {
-    CyDelayUs(3);
-    ClockLine_Write(1);
-    CyDelayUs(5);
-    ClockLine_Write(0);
-    CyDelayUs(3);
-}
 
-void endSeq() {
-    ClockLine_Write(1);  //End Sequence
-    CyDelayUs(3);
-    DataLine_Write(1);
-    CyDelayUs(50);
-}
-
-void startSeq() {
-    DataLine_Write(0); // Start Transmission
-    CyDelayUs(3);
-    ClockLine_Write(0);
-    CyDelayUs(5);
-}
-
-void SccbWritePhase1(uint8 id, uint8 addr) {
-    int i;
-    
-    // Phase 1 Write
-    startSeq();
-    
-    for( i=sizeof(id)*CHAR_BIT-1; i>=0;--i) {
-    // write the device id
-        int bit = (id>>i) & 1;
-        DataLine_Write(bit);
-        pump();
-    }
-    
-    DataLine_Write(0); // Don't Care bit
-    pump();
-    // Phase 2 Write
-    for( i=sizeof(addr)*CHAR_BIT-1; i>=0; --i) {
-        // write the register
-        int bit = (addr>>i) & 1;
-        DataLine_Write(bit);
-        pump();
-    }    
-    
-    DataLine_Write(0); // Don't Care bit
-    pump();
-}
-
-void SccbWrite(uint8 id, uint8 addr, uint8 byte) {
-    SccbWritePhase1(id, addr);
-    int i;
-    for( i=sizeof(byte)*CHAR_BIT-1; i>=0;--i) {
-        // write the register
-        int bit = (byte>>i) & 1;
-        DataLine_Write(bit);
-        pump();
-    }    
-    
-    DataLine_Write(0); // Don't Care bit
-    pump();
-    endSeq();
-}
-
-uint8_t SccbRead(uint8 id, uint8 addr ) {
-    int i;
-    uint8_t sccbOut = 0;
-    SccbWritePhase1(id, addr);
-    endSeq();
-    startSeq();
-    
-    //Phase 1 Read
-    id++; // for read
-    for( i=sizeof(id)*CHAR_BIT-1; i>=0;--i) // write the device id+1 for read
-    {
-        int bit = (id>>i) & 1;
-        DataLine_Write(bit);
-        pump();
-    }
-    
-    //Phase 2 read
-    // read data 
-    pump(); //don't care bit
-    
-    for( i=7; i>=0;--i) {
-       
-        sccbOut = sccbOut | ((DataLine_Read()&0x1)<<i);
-        CyDelayUs(15);
-        pump();
-    }
-    
-    DataLine_Write(1);
-    pump();
-    DataLine_Write(0);
-    CyDelayUs(4);   
- 
-    endSeq();
-    return sccbOut;
-}
-
-void CameraConfig()
-{
-    // No reset pins
-    Cam_Powerdown_Write(0);
-    Cam_Reset_Write(1);
-
-   
-    //SccbRead(0x42, 0x1d); // Manufacturer number
-    SccbWrite(0x42,0x15,0x20); // No PCLK during HREF low
-    SccbWrite(0x42,0x11,0x8f); // clock output
-    SccbWrite(0x42,0x12,0x25); // Output is CIF, BAYER RAW is 21
-    SccbWrite(0x42,0x13,0x87); // Auto Gain Control, Auto White Balance, Auto Exposure
-    SccbWrite(0x42,0x2b,0x08); //8 dummy pixels 
-    SccbWrite(0x42,0x1e,0x31); //enable vertical flip and mirror 
-    
-    /*
-    SccbWrite(0x60,0x12,0x80); // initiates soft reset
-    CyDelay(20);
-    SccbWrite(0x60,0x12,0x00); // Binning 08 is 1/8 binning
-    SccbWrite(0x60,0x11,0x7f); // Output clock divider
-    SccbWrite(0x60,0x32,0xc0); //pixel clock divider 1/4
-    SccbWrite(0x60,0x15,0x20); // PCLK output only when HREF high
-    SccbWrite(0x60,0x80,0x11); //Color bar enable (Test pattern?)
-    //SccbWrite(0x60,0x0c,0x0d); //  enable custom output
-    //SccbWrite(0x60,0x61,0x1e); // 240
-   // SccbWrite(0x60,0x60,0x19); // 240
-    //SccbWrite(0x60,0x1b,0x05); //pixel shift
-    //SccbWrite(0x60,0x09,0x04); //Slave Mode
-    //SccbRead(0x60,0x12);
-    */
-  
-}
 
 
 
@@ -219,7 +87,6 @@ void main( void )
 	/* Perform BSP pre-initialization (post-init occurs in MainTask) */
     BSP_PreInit();
     
-    //CameraConfig();
     
 	/* Initialize the uC/CPU services */
     CPU_Init();
@@ -232,7 +99,6 @@ void main( void )
     
     SW2_Interrupt_Start();
     int_pixelReady_Start();
-    
     
     USB_Start(0,USB_DWR_VDDD_OPERATION);
     while(!USB_GetConfiguration());
