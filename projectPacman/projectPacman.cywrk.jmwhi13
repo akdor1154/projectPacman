@@ -109,6 +109,9 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\Clock_2\Clock_2.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Clock_3\Clock_3.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Clock_3\Clock_3.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Clock_4</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Clock_4\Clock_4.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Clock_4\Clock_4.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ClockLine</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ClockLine\ClockLine.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ClockLine\ClockLine.h</v>
@@ -136,6 +139,21 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\LED2\LED2.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\LED2\LED2.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\LED2\LED2_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1F</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1F\Motor1F.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1F\Motor1F.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1F\Motor1F_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1FE</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1FE\Motor1FE.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1FE\Motor1FE.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1FE\Motor1FE_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1R</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1R\Motor1R.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1R\Motor1R.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1R\Motor1R_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\MotorDirection</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\MotorDirection\MotorDirection.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\MotorDirection\MotorDirection.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\p28\p28.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\p28\p28.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\p28\p28_aliases.h</v>
@@ -159,6 +177,10 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\pixelRegR</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\pixelRegR\pixelRegR.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\pixelRegR\pixelRegR.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\PWM_3</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\PWM_3\PWM_3.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\PWM_3\PWM_3.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\PWM_3\PWM_3_PM.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\rDMA</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\rDMA\rDMA_dma.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\rDMA\rDMA_dma.h</v>
@@ -234,7 +256,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_Powerdown</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_Reset</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_XCLK</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\CameraD</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp">
@@ -309,6 +330,7 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_3.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_4.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ClockLine.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cm3Start.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1.lst</v>
@@ -363,6 +385,10 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\lib_str.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\main.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Main_Task.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Motor1F.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Motor1FE.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Motor1R.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\MotorDirection.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_app_hooks.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_cfg_app.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_core.lst</v>
@@ -401,6 +427,8 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2_Clock.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_3.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_3_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\rDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SensorADC.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SensorADC_Bypass.lst</v>
@@ -465,6 +493,7 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_3.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_4.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ClockLine.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cm3Start.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1.lst</v>
@@ -485,8 +514,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_3_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Count7_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Count7_1_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_a.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_bsp.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

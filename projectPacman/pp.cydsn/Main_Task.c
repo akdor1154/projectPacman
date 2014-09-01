@@ -129,6 +129,8 @@ void Main_Task( void *p_arg )
     PWM_1_Start();
     PWM_2_Start();
     
+    PWM_3_Start();
+    
     //SensorADC_Start();
     //SensorADC_StartConvert();
     //Count7_1_Start();
