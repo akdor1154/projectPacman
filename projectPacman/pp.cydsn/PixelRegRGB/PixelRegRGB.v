@@ -15,10 +15,10 @@
 // Generated on 08/29/2014 at 17:58
 // Component: PixelRegRGB
 module PixelRegRGB (
-	output [4:0] b,
-	output [5:0] g,
-	output [4:0] r,
-	output  ready_int,
+	output reg [4:0] b,
+	output reg [5:0] g,
+	output reg [4:0] r,
+	output ready_int,
 	input  [7:0] d_in,
 	input   href,
 	input   pclk
@@ -39,14 +39,14 @@ always @(posedge pclk) begin
     lastHref <= href;
     if ((lastHref == 1'b0) & (href == 1'b1)) begin
         r <= d_in[7:3];
-        g[5:3] <= d_in[2:0]
+        g[5:3] <= d_in[2:0];
         ready_int_enable <= 1'b0;
         outSelect <= 1'b1;
     end else if (href) begin
         case(outSelect)
             1'b0: begin
                 r <= d_in[7:3];
-                g[5:3] <= d_in[2:0]
+                g[5:3] <= d_in[2:0];
                 ready_int_enable <= 1'b0;
                 outSelect <= 1'b1;
             end

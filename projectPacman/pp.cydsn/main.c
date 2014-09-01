@@ -67,9 +67,9 @@ OS_ERR global_err;
 
 unsigned int pixelCount;
 
-uint8_t yPix;
-uint8_t cbPix;
-uint8_t crPix;
+uint8_t rPix;
+uint8_t gPix;
+uint8_t bPix;
 
 
 

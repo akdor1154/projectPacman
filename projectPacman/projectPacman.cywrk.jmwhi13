@@ -88,6 +88,9 @@
 <v>projectPacman\pp\Source Files\usbprint.h</v>
 <v>projectPacman\pp\Generated_Source</v>
 <v>projectPacman\pp\Generated_Source\PSoC5</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\bDMA</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\bDMA\bDMA_dma.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\bDMA\bDMA_dma.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_HREF\Cam_HREF.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_HREF\Cam_HREF.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_HREF\Cam_HREF_aliases.h</v>
@@ -100,9 +103,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\cami2c\cami2c_PM.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\cami2c\cami2c_PVT.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\cami2c\cami2c_SLAVE.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\cbDMA</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\cbDMA\cbDMA_dma.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\cbDMA\cbDMA_dma.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Clock_1\Clock_1.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Clock_1\Clock_1.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Clock_2\Clock_2.c</v>
@@ -117,9 +117,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\Count7_1\Count7_1.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Count7_1\Count7_1.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Count7_1\Count7_1_PM.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\crDMA</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\crDMA\crDMA_dma.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\crDMA\crDMA_dma.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\D1</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\D1\D1.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\D1\D1.h</v>
@@ -128,6 +125,9 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\DataLine\DataLine.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\DataLine\DataLine.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\DataLine\DataLine_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\gDMA</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\gDMA\gDMA_dma.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\gDMA\gDMA_dma.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\int_pixelReady</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\led1_toggler</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\led1_toggler\led1_toggler.c</v>
@@ -150,12 +150,20 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\p43_ledenable\p43_ledenable_aliases.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\pclk_test_reg\pclk_test_reg.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\pclk_test_reg\pclk_test_reg.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegCb\pixelRegCb.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegCb\pixelRegCb.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegCr\pixelRegCr.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegCr\pixelRegCr.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegY\pixelRegY.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegY\pixelRegY.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegB</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegB\pixelRegB.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegB\pixelRegB.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegG</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegG\pixelRegG.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegG\pixelRegG.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegR</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegR\pixelRegR.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\pixelRegR\pixelRegR.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\rDMA</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\rDMA\rDMA_dma.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\rDMA\rDMA_dma.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RTest</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RTest\RTest_aliases.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\SensorADC</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\SensorADC\SensorADC.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\SensorADC\SensorADC.h</v>
@@ -177,11 +185,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\testPin\testPin.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\testPin\testPin.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\testPin\testPin_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\yDMA</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\yDMA\yDMA_dma.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\yDMA\yDMA_dma.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\YTest</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\YTest\YTest_aliases.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>projectPacman</v>
@@ -222,6 +225,9 @@
 <v>projectPacman\pp\Generated_Source\PSoC5</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\B1</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\B2</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\bDMA</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\bDMA\bDMA_dma.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\bDMA\bDMA_dma.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Bootloadable_1</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_HREF</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_PCLK</v>
@@ -229,9 +235,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_Reset</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Cam_XCLK</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\CameraD</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\cami2c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\cami2c\cami2c.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\cami2c\cami2c.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp">
@@ -288,6 +291,7 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\B1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\B2.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\bDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Bootloadable_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\bsp.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_HREF.lst</v>
@@ -302,7 +306,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cami2c_MASTER.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cami2c_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cami2c_SLAVE.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cbDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_3.lst</v>
@@ -330,7 +333,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_bsp.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_c.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_core.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\crDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cybootloader.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyDmac.lst</v>
@@ -349,6 +351,7 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\DataLine.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Debouncer_Clock.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\error_print_task.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\gDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\int_pixelReady.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\led1_toggler.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\LED2.lst</v>
@@ -389,15 +392,16 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\p42.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\p43_ledenable.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\pclk_test_reg.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\pixelRegCb.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\pixelRegCr.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\pixelRegY.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\pixelRegB.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\pixelRegG.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\pixelRegR.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_1_Clock.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_1_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2_Clock.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2_PM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\rDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SensorADC.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SensorADC_Bypass.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SensorADC_INT.lst</v>
@@ -427,7 +431,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_std.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_vnd.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\usbprint.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\yDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.cyacd</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.elf</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.hex</v>
@@ -444,6 +447,7 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\B1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\B2.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\bDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Bootloadable_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\bsp.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cam_HREF.lst</v>
@@ -458,7 +462,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cami2c_MASTER.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cami2c_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cami2c_SLAVE.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cbDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_3.lst</v>

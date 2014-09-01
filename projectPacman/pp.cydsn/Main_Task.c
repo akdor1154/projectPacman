@@ -56,18 +56,14 @@
 OS_TCB	Main_Task_TCB;
 CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
 
-extern uint8_t lastPixelY;
-extern uint8_t lastPixelCb;
-extern uint8_t lastPixelCr;
 extern unsigned int pixelCount;
-extern int8_t* YTest;
 
 extern uint8_t YTest1[480];
 extern uint8_t YTest2[480];
 
-extern uint8_t yPix;
-extern uint8_t cbPix;
-extern uint8_t crPix;
+extern uint8_t rPix;
+extern uint8_t gPix;
+extern uint8_t bPix;
 
 /*
  * Function:		Main_Task
@@ -99,12 +95,12 @@ void Main_Task( void *p_arg )
     uint8_t pwmStep;
     uint8_t adcResult;
     
-    uint8 yDMA_Chan;
-    uint8 yDMA_TD[1];
-    uint8 cbDMA_Chan;
-    uint8 cbDMA_TD[1];
-    uint8 crDMA_Chan;
-    uint8 crDMA_TD[1];
+    uint8 rDMA_Chan;
+    uint8 rDMA_TD[1];
+    uint8 gDMA_Chan;
+    uint8 gDMA_TD[1];
+    uint8 bDMA_Chan;
+    uint8 bDMA_TD[1];
     
     uint8_t magicToggle;
     
@@ -133,60 +129,52 @@ void Main_Task( void *p_arg )
     PWM_1_Start();
     PWM_2_Start();
     
-    SensorADC_Start();
+    //SensorADC_Start();
     //SensorADC_StartConvert();
-    Count7_1_Start();
+    //Count7_1_Start();
     adcResult = 0;
 
     /* Variable declarations for yDMA */
     /* Move these variable declarations to the top of the function */
 
+    #define DMA_SRC_BASE (CYDEV_PERIPH_BASE)
+    #define DMA_DST_BASE (CYDEV_SRAM_BASE)
+    #define DMA_BYTES_PER_BURST 1
+    #define DMA_REQUEST_PER_BURST 1
 
     /* DMA Configuration for yDMA */
-    #define yDMA_BYTES_PER_BURST 1
-    #define yDMA_REQUEST_PER_BURST 1
-    #define yDMA_SRC_BASE (CYDEV_PERIPH_BASE)
-    #define yDMA_DST_BASE (CYDEV_SRAM_BASE)
-    yDMA_Chan = yDMA_DmaInitialize(yDMA_BYTES_PER_BURST, yDMA_REQUEST_PER_BURST, 
-        HI16(yDMA_SRC_BASE), HI16(yDMA_DST_BASE));
-    yDMA_TD[0] = CyDmaTdAllocate();
-    CyDmaTdSetConfiguration(yDMA_TD[0], 1, yDMA_TD[0], 0);
-    CyDmaTdSetAddress(yDMA_TD[0], LO16((uint32)pixelRegY_Status_PTR), LO16((uint32)&yPix));
-    CyDmaChSetInitialTd(yDMA_Chan, yDMA_TD[0]);
-    CyDmaChEnable(yDMA_Chan, 1);
+    rDMA_Chan = rDMA_DmaInitialize(DMA_BYTES_PER_BURST, DMA_REQUEST_PER_BURST, 
+        HI16(DMA_SRC_BASE), HI16(DMA_DST_BASE));
+    rDMA_TD[0] = CyDmaTdAllocate();
+    CyDmaTdSetConfiguration(rDMA_TD[0], 1, rDMA_TD[0], 0);
+    CyDmaTdSetAddress(rDMA_TD[0], LO16((uint32)pixelRegR_Status_PTR), LO16((uint32)&rPix));
+    CyDmaChSetInitialTd(rDMA_Chan, rDMA_TD[0]);
+    CyDmaChEnable(rDMA_Chan, 1);
     
     /* Variable declarations for cbDMA */
     /* Move these variable declarations to the top of the function */
 
     /* DMA Configuration for cbDMA */
-    #define cbDMA_BYTES_PER_BURST 1
-    #define cbDMA_REQUEST_PER_BURST 1
-    #define cbDMA_SRC_BASE (CYDEV_PERIPH_BASE)
-    #define cbDMA_DST_BASE (CYDEV_SRAM_BASE)
-    cbDMA_Chan = cbDMA_DmaInitialize(cbDMA_BYTES_PER_BURST, cbDMA_REQUEST_PER_BURST, 
-        HI16(cbDMA_SRC_BASE), HI16(cbDMA_DST_BASE));
-    cbDMA_TD[0] = CyDmaTdAllocate();
-    CyDmaTdSetConfiguration(cbDMA_TD[0], 1, cbDMA_TD[0], 0);
-    CyDmaTdSetAddress(cbDMA_TD[0], LO16((uint32)pixelRegCb_Status_PTR), LO16((uint32)&cbPix));
-    CyDmaChSetInitialTd(cbDMA_Chan, cbDMA_TD[0]);
-    CyDmaChEnable(cbDMA_Chan, 1);
+    gDMA_Chan = gDMA_DmaInitialize(DMA_BYTES_PER_BURST, DMA_REQUEST_PER_BURST, 
+        HI16(DMA_SRC_BASE), HI16(DMA_DST_BASE));
+    gDMA_TD[0] = CyDmaTdAllocate();
+    CyDmaTdSetConfiguration(gDMA_TD[0], 1, gDMA_TD[0], 0);
+    CyDmaTdSetAddress(gDMA_TD[0], LO16((uint32)pixelRegG_Status_PTR), LO16((uint32)&gPix));
+    CyDmaChSetInitialTd(gDMA_Chan, gDMA_TD[0]);
+    CyDmaChEnable(gDMA_Chan, 1);
 
     
     /* Variable declarations for crDMA */
     /* Move these variable declarations to the top of the function */
 
     /* DMA Configuration for crDMA */
-    #define crDMA_BYTES_PER_BURST 1
-    #define crDMA_REQUEST_PER_BURST 1
-    #define crDMA_SRC_BASE (CYDEV_PERIPH_BASE)
-    #define crDMA_DST_BASE (CYDEV_SRAM_BASE)
-    crDMA_Chan = crDMA_DmaInitialize(crDMA_BYTES_PER_BURST, crDMA_REQUEST_PER_BURST, 
-        HI16(crDMA_SRC_BASE), HI16(crDMA_DST_BASE));
-    crDMA_TD[0] = CyDmaTdAllocate();
-    CyDmaTdSetConfiguration(crDMA_TD[0], 1, crDMA_TD[0], 0);
-    CyDmaTdSetAddress(crDMA_TD[0], LO16((uint32)pixelRegCr_Status_PTR), LO16((uint32)&crPix));
-    CyDmaChSetInitialTd(crDMA_Chan, crDMA_TD[0]);
-    CyDmaChEnable(crDMA_Chan, 1);
+    bDMA_Chan = bDMA_DmaInitialize(DMA_BYTES_PER_BURST, DMA_REQUEST_PER_BURST, 
+        HI16(DMA_SRC_BASE), HI16(DMA_DST_BASE));
+    bDMA_TD[0] = CyDmaTdAllocate();
+    CyDmaTdSetConfiguration(bDMA_TD[0], 1, bDMA_TD[0], 0);
+    CyDmaTdSetAddress(bDMA_TD[0], LO16((uint32)pixelRegB_Status_PTR), LO16((uint32)&bPix));
+    CyDmaChSetInitialTd(bDMA_Chan, bDMA_TD[0]);
+    CyDmaChEnable(bDMA_Chan, 1);
 
     magicToggle=1;
     
@@ -231,8 +219,7 @@ void Main_Task( void *p_arg )
         usbprint("ytest: %hhu",*YTest);
         */
         magicToggle = ~magicToggle;
-        usbprint("%u,%u,%u\n",yPix,cbPix,crPix);
-        
+        usbprint("%u,%u,%u\n",rPix<<3,gPix<<2,bPix<<3);        
         
         
 	}
