@@ -6,14 +6,14 @@
 <CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
 <userData>
 <dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
-<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Components">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
 <TreeKeys>
 <v>Source</v>
 <v>Components</v>
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\Header Files">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp">
 <ExpandedNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
@@ -139,18 +139,30 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\LED2\LED2.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\LED2\LED2.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\LED2\LED2_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1F</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1F\Motor1F.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1F\Motor1F.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1F\Motor1F_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1FE</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1FE\Motor1FE.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1FE\Motor1FE.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1FE\Motor1FE_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1R</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1R\Motor1R.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1R\Motor1R.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1R\Motor1R_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Enable</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Enable\Motor1Enable.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Enable\Motor1Enable.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Enable\Motor1Enable_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1\Motor1Input1.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1\Motor1Input1.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1\Motor1Input1_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1N</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1N\Motor1Input1N.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1N\Motor1Input1N.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1N\Motor1Input1N_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Enable</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Enable\Motor2Enable.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Enable\Motor2Enable.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Enable\Motor2Enable_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input1</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input1\Motor2Input1.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input1\Motor2Input1.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input1\Motor2Input1_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input2N</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input2N\Motor2Input2N.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input2N\Motor2Input2N.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input2N\Motor2Input2N_aliases.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\MotorDirection</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\MotorDirection\MotorDirection.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\MotorDirection\MotorDirection.h</v>
@@ -330,25 +342,8 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_4.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ClockLine.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cm3Start.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_High_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_Low_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_VRef.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_VRef_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_High_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_High_ISR_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_Low_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_Low_ISR_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_VRef.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_VRef_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_3_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Count7_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Count7_1_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_a.lst</v>
@@ -368,8 +363,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\D1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\D3.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\D4.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\DAC.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\DAC_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\DataLine.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Debouncer_Clock.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\error_print_task.lst</v>
@@ -385,10 +378,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\lib_str.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\main.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Main_Task.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Motor1F.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Motor1FE.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Motor1R.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\MotorDirection.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_app_hooks.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_cfg_app.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_core.lst</v>
@@ -410,9 +399,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_time.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_tmr.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\os_var.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P0_2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P0_3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\P0_4.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\p28.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\p29.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\p42.lst</v>
@@ -427,8 +413,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2_Clock.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_2_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\PWM_3_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\rDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SensorADC.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SensorADC_Bypass.lst</v>
@@ -439,10 +423,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SW2_Interrupt.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\SW3_Interrupt.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\testPin.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Timer_1_Interrupt.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Timer_1MHz.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Timer_1MHz_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Timer_Clock_1MHz.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_audio.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\USB_boot.lst</v>
@@ -463,6 +443,139 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.elf</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.hex</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\pp.map</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\B1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\B2.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\bDMA_dma.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Bootloadable_1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\bsp.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Cam_HREF.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Cam_PCLK.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Cam_Powerdown.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Cam_Reset.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Cam_XCLK.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\camera.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cami2c.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cami2c_BOOT.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cami2c_INT.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cami2c_MASTER.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cami2c_PM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cami2c_SLAVE.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Clock_1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Clock_2.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Clock_3.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Clock_4.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ClockLine.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Cm3Start.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Count7_1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Count7_1_PM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cpu_a.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cpu_bsp.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cpu_c.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cpu_core.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CyBootAsmGnu.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cybootloader.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CyDmac.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cyfitter_cfg.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CyFlash.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CyLib.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cymetadata.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cyPm.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CySpc.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cyutils.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\D1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\D3.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\D4.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\DataLine.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Debouncer_Clock.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\error_print_task.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\gDMA_dma.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\int_pixelReady.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\led1_toggler.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\LED2.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\led3_toggler.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\led4_toggler.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\lib_ascii.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\lib_math.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\lib_mem.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\lib_str.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\main.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Main_Task.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor1Enable.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor1Input1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor1Input1N.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor2Enable.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor2Input1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor2Input2N.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\MotorDirection.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_app_hooks.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_cfg_app.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_core.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_cpu_a.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_cpu_c.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_dbg.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_flag.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_int.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_mem.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_msg.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_mutex.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_pend_multi.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_prio.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_q.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_sem.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_stat.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_task.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_tick.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_time.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_tmr.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_var.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\p28.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\p29.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\p42.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\p43_ledenable.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\pclk_test_reg.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\pixelRegB.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\pixelRegG.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\pixelRegR.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_1_Clock.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_1_PM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_2.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_2_Clock.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_2_PM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_3.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_3_PM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\rDMA_dma.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SensorADC.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SensorADC_Bypass.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SensorADC_INT.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SensorADC_IRQ.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SensorADC_PM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SensorADC_theACLK.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SW2_Interrupt.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SW3_Interrupt.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\testPin.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_audio.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_boot.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_cdc.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_cls.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_descr.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_Dm.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_Dp.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_drv.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_episr.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_hid.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_midi.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_pm.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_std.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\USB_vnd.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\usbprint.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\pp.cyacd</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\pp.elf</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\pp.hex</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\pp.map</v>
 <v>projectPacman\pp\pp.rpt</v>
 <v>projectPacman\pp\pp_timing.html</v>
 </ExpandedNodeIds>
@@ -493,27 +606,27 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Clock_4.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\ClockLine.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Cm3Start.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_High_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_Low_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_VRef.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_1_VRef_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_High_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_High_ISR_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_Low_ISR.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_Low_ISR_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_VRef.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_2_VRef_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Comp_3_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Count7_1.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\Count7_1_PM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_a.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_bsp.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_c.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cpu_core.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cybootloader.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyDmac.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyFlash.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CyLib.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cymetadata.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cyPm.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\CySpc.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\cyutils.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\D1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\D3.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Debug\Listing Files\D4.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -526,13 +639,12 @@
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
 <v>projectPacman\pp\PSoC 5 Architecture TRM</v>
-<v>projectPacman\pp\CY8C58LP Family Datasheet</v>
+<v>projectPacman\pp\CY8C52LP Family Datasheet</v>
 <v>projectPacman\pp\System Reference Guide v4_0</v>
 <v>projectPacman\pp\ADC_SAR_v2_10</v>
 <v>projectPacman\pp\and_v1_0</v>
 <v>projectPacman\pp\BasicCounter_v1_0</v>
 <v>projectPacman\pp\Bootloadable_v1_20</v>
-<v>projectPacman\pp\Comp_v2_0</v>
 <v>projectPacman\pp\Count7_v1_0</v>
 <v>projectPacman\pp\cy_clock_v2_10</v>
 <v>projectPacman\pp\cy_constant_v1_0</v>
@@ -549,22 +661,19 @@
 <v>projectPacman\pp\PWM_v3_0</v>
 <v>projectPacman\pp\Resistor_v1_0</v>
 <v>projectPacman\pp\SwitchSPST_v1_0</v>
-<v>projectPacman\pp\Timer_v2_50</v>
 <v>projectPacman\pp\USBFS_v2_60</v>
-<v>projectPacman\pp\VDAC8_v1_90</v>
 <v>projectPacman\pp\ZeroTerminal</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
 <v>projectPacman\pp\PSoC 5 Architecture TRM</v>
-<v>projectPacman\pp\CY8C58LP Family Datasheet</v>
+<v>projectPacman\pp\CY8C52LP Family Datasheet</v>
 <v>projectPacman\pp\System Reference Guide v4_0</v>
 <v>projectPacman\pp\ADC_SAR_v2_10</v>
 <v>projectPacman\pp\and_v1_0</v>
 <v>projectPacman\pp\BasicCounter_v1_0</v>
 <v>projectPacman\pp\Bootloadable_v1_20</v>
-<v>projectPacman\pp\Comp_v2_0</v>
 <v>projectPacman\pp\Count7_v1_0</v>
 <v>projectPacman\pp\cy_clock_v2_10</v>
 <v>projectPacman\pp\cy_constant_v1_0</v>
@@ -581,9 +690,7 @@
 <v>projectPacman\pp\PWM_v3_0</v>
 <v>projectPacman\pp\Resistor_v1_0</v>
 <v>projectPacman\pp\SwitchSPST_v1_0</v>
-<v>projectPacman\pp\Timer_v2_50</v>
 <v>projectPacman\pp\USBFS_v2_60</v>
-<v>projectPacman\pp\VDAC8_v1_90</v>
 <v>projectPacman\pp\ZeroTerminal</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
@@ -613,7 +720,7 @@
 <name v=".\pp.cydsn\PixelRegRGB\PixelRegRGB.cysym" />
 <name v=".\pp.cydsn\PixelRegRGB\PixelRegRGB.v" />
 </OpenDocs>
-<config v="" />
+<config v="Release" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
 </CyXmlSerializer>
