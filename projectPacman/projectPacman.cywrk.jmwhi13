@@ -26,8 +26,10 @@
 <v>projectPacman\pp\APP-CFG\os_app_hooks.h</v>
 <v>projectPacman\pp\APP-CFG\os_cfg.h</v>
 <v>projectPacman\pp\APP-CFG\os_cfg_app.h</v>
+<v>projectPacman\pp\Header Files</v>
 <v>projectPacman\pp\Header Files\camera.h</v>
 <v>projectPacman\pp\Header Files\device.h</v>
+<v>projectPacman\pp\Header Files\motorControl.h</v>
 <v>projectPacman\pp\Header Files\Task_Defs.h</v>
 <v>projectPacman\pp\Micrium</v>
 <v>projectPacman\pp\Micrium\BSP\CY8CKIT-050</v>
@@ -84,6 +86,7 @@
 <v>projectPacman\pp\Source Files\error_print_task.c</v>
 <v>projectPacman\pp\Source Files\main.c</v>
 <v>projectPacman\pp\Source Files\Main_Task.c</v>
+<v>projectPacman\pp\Source Files\motorControl.c</v>
 <v>projectPacman\pp\Source Files\usbprint.c</v>
 <v>projectPacman\pp\Source Files\usbprint.h</v>
 <v>projectPacman\pp\Generated_Source</v>
@@ -139,30 +142,26 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\LED2\LED2.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\LED2\LED2.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\LED2\LED2_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorInput1</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorInput1\LeftMotorInput1.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorInput1\LeftMotorInput1.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorInput1\LeftMotorInput1_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorInput1N</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorInput1N\LeftMotorInput1N.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorInput1N\LeftMotorInput1N.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorInput1N\LeftMotorInput1N_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorPWM</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorPWM\LeftMotorPWM.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorPWM\LeftMotorPWM.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\LeftMotorPWM\LeftMotorPWM_PM.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Motor1Enable</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Motor1Enable\Motor1Enable.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Motor1Enable\Motor1Enable.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Motor1Enable\Motor1Enable_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1\Motor1Input1.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1\Motor1Input1.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1\Motor1Input1_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1N</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1N\Motor1Input1N.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1N\Motor1Input1N.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor1Input1N\Motor1Input1N_aliases.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Motor2Enable</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Motor2Enable\Motor2Enable.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Motor2Enable\Motor2Enable.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Motor2Enable\Motor2Enable_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input1</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input1\Motor2Input1.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input1\Motor2Input1.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input1\Motor2Input1_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input2N</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input2N\Motor2Input2N.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input2N\Motor2Input2N.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Motor2Input2N\Motor2Input2N_aliases.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\MotorDirection</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\MotorDirection\MotorDirection.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\MotorDirection\MotorDirection.h</v>
@@ -189,13 +188,21 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\pixelRegR</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\pixelRegR\pixelRegR.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\pixelRegR\pixelRegR.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\PWM_3</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\PWM_3\PWM_3.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\PWM_3\PWM_3.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\PWM_3\PWM_3_PM.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\rDMA</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\rDMA\rDMA_dma.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\rDMA\rDMA_dma.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorInput1</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorInput1\RightMotorInput1.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorInput1\RightMotorInput1.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorInput1\RightMotorInput1_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorInput2N</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorInput2N\RightMotorInput2N.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorInput2N\RightMotorInput2N.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorInput2N\RightMotorInput2N_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorPWM</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorPWM\RightMotorPWM.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorPWM\RightMotorPWM.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\RightMotorPWM\RightMotorPWM_PM.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\RTest</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\RTest\RTest_aliases.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\SensorADC</v>
@@ -227,6 +234,10 @@
 <v>projectPacman\pp\pp.cydwr</v>
 <v>projectPacman\pp\APP-CFG</v>
 <v>projectPacman\pp\Header Files</v>
+<v>projectPacman\pp\Header Files\camera.h</v>
+<v>projectPacman\pp\Header Files\device.h</v>
+<v>projectPacman\pp\Header Files\motorControl.h</v>
+<v>projectPacman\pp\Header Files\Task_Defs.h</v>
 <v>projectPacman\pp\Micrium</v>
 <v>projectPacman\pp\Micrium\BSP</v>
 <v>projectPacman\pp\Micrium\uC-CPU</v>
@@ -253,6 +264,7 @@
 <v>projectPacman\pp\Source Files\error_print_task.c</v>
 <v>projectPacman\pp\Source Files\main.c</v>
 <v>projectPacman\pp\Source Files\Main_Task.c</v>
+<v>projectPacman\pp\Source Files\motorControl.c</v>
 <v>projectPacman\pp\Source Files\usbprint.c</v>
 <v>projectPacman\pp\Source Files\usbprint.h</v>
 <v>projectPacman\pp\Generated_Source</v>
@@ -263,11 +275,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\bDMA\bDMA_dma.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\bDMA\bDMA_dma.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Bootloadable_1</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Cam_HREF</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Cam_PCLK</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Cam_Powerdown</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Cam_Reset</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\Cam_XCLK</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp">
@@ -496,6 +503,10 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\LED2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\led3_toggler.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\led4_toggler.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\LeftMotorInput1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\LeftMotorInput1N.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\LeftMotorPWM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\LeftMotorPWM_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\lib_ascii.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\lib_math.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\lib_mem.lst</v>
@@ -503,11 +514,8 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\main.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Main_Task.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor1Enable.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor1Input1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor1Input1N.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor2Enable.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor2Input1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Motor2Input2N.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\motorControl.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\MotorDirection.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_app_hooks.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\os_cfg_app.lst</v>
@@ -544,9 +552,11 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_2.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_2_Clock.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_2_PM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\PWM_3_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\rDMA_dma.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\RightMotorInput1.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\RightMotorInput2N.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\RightMotorPWM.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\RightMotorPWM_PM.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SensorADC.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SensorADC_Bypass.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\SensorADC_INT.lst</v>
@@ -706,10 +716,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\pp.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\pp.cydsn\PixelRegControl\PixelRegControl.v" />
 <name v=".\pp.cydsn\pp.cydwr" />
-<name v=".\pp.cydsn\Generated_Source\PSoC5\SW2_Interrupt.c" />
+<name v=".\pp.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\pp.cydsn\Main_Task.c" />
 <name v=".\pp.cydsn\main.c" />
 <name v=".\pp.cydsn\Generated_Source\PSoC5\int_pixelReady.c" />
@@ -719,6 +727,8 @@
 <name v=".\Micrium\Software\uCOS-III\Source\os.h" />
 <name v=".\pp.cydsn\PixelRegRGB\PixelRegRGB.cysym" />
 <name v=".\pp.cydsn\PixelRegRGB\PixelRegRGB.v" />
+<name v=".\pp.cydsn\motorControl.c" />
+<name v=".\pp.cydsn\motorControl.h" />
 </OpenDocs>
 <config v="Release" />
 <AutoUpdate v="true" />

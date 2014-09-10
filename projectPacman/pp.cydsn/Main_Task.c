@@ -51,6 +51,7 @@
 
 #include "usbprint.h"
 #include "camera.h"
+#include "motorControl.h"
 
 /* Main_Task TCB, start function and stack */
 OS_TCB	Main_Task_TCB;
@@ -64,6 +65,7 @@ extern uint8_t YTest2[480];
 extern uint8_t rPix;
 extern uint8_t gPix;
 extern uint8_t bPix;
+extern motorState_t motorState;
 
 /*
  * Function:		Main_Task
@@ -90,6 +92,7 @@ void Main_Task( void *p_arg )
 	CPU_TS ts;
 	(void)p_arg;		/* no-op prevents warning about unused p_arg */
     OS_RATE_HZ tenthSecond = OSCfg_TickRate_Hz/10;
+    OS_RATE_HZ second = OSCfg_TickRate_Hz;
     
     uint8_t pwmLevel;
     uint8_t pwmStep;
@@ -129,8 +132,9 @@ void Main_Task( void *p_arg )
     PWM_1_Start();
     PWM_2_Start();
     
-    PWM_3_Start();
-    
+    LeftMotorPWM_Start();
+    RightMotorPWM_Start();
+    stopMoving();
     //SensorADC_Start();
     //SensorADC_StartConvert();
     //Count7_1_Start();
@@ -180,6 +184,8 @@ void Main_Task( void *p_arg )
 
     magicToggle=1;
     
+    motorState = 0;
+    
 	while (1) {
 		/* Delay 1s */
 		/*OSTimeDly(
@@ -194,35 +200,34 @@ void Main_Task( void *p_arg )
             &ts,
             &err
         );
-        //usbprint("error: %u\n",err);
         
         
-		/* Toggle the LED3 */
         
-        
-        PWM_1_WriteCompare(pwmLevel);
-        PWM_2_WriteCompare(UINT8_MAX-pwmLevel);
-        pwmLevel += pwmStep;
-        
-       
-        //usbprint("pixelcount is %u",pixelCount);
-        
-        //uint8_t pclk_count = pclk_test_reg_Read();
-        //usbprint("pclk count is %u\n",pclk_count);
 	    /*
         if (SensorADC_IsEndConversion(SensorADC_RETURN_STATUS)) {
             adcResult = (uint8_t)SensorADC_GetResult8();
         } else {
             adcResult = 3;
         }
-        */
-        /*
         usbprint("adc result: %u",adcResult);
-        usbprint("ytest: %hhu",*YTest);
         */
-        magicToggle = ~magicToggle;
-        usbprint("%u,%u,%u\n",rPix<<3,gPix<<2,bPix<<3);        
+        //usbprint("%u,%u,%u\n",rPix<<3,gPix<<2,bPix<<3);        
         
+        switch (motorState) {
+            case STATE_STOPPED: // stopped
+                startMoving();
+                break;
+            case STATE_SLOW: // //moving slow
+                goFullSpeed();
+                break;
+            case STATE_FAST:
+                setStraightSpeed(127);
+                OSTimeDly(2*second, OS_OPT_TIME_DLY, &err);
+                turnOnSpot();
+                OSTimeDly(second, OS_OPT_TIME_DLY, &err);
+                
+                break;
+        }
         
 	}
 	

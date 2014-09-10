@@ -66,7 +66,7 @@ OS_ERR global_err;
  */
 
 unsigned int pixelCount;
-
+uint8_t gotUSB;
 uint8_t rPix;
 uint8_t gPix;
 uint8_t bPix;
@@ -79,6 +79,8 @@ uint8_t bPix;
 void main( void )
 {
     OS_ERR  err;
+    int USBtimeout = 0;
+    
     global_err = 0;
     
     pixelCount = 0;
@@ -101,8 +103,14 @@ void main( void )
     int_pixelReady_Start();
     
     USB_Start(0,USB_DWR_VDDD_OPERATION);
-    while(!USB_GetConfiguration());
-    USB_CDC_Init();
+    for (USBtimeout = 0; USBtimeout <= 5; USBtimeout++) {    
+        if (USB_GetConfiguration()) {
+            USB_CDC_Init();
+            gotUSB = 1;
+            break;
+        }
+        CyDelay(500);
+    }
     
     err = 0;
 	/* Create the task - it will not run until OSStart */

@@ -14,7 +14,10 @@
 
 #include "usbprint.h"
 #include <project.h>
+
+extern uint8_t gotUSB;
 void usbprint(const char *fmt, ...) {
+    if (!gotUSB) return;
     char buffer[64];
     va_list args;
     va_start(args, fmt);
