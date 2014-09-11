@@ -156,8 +156,22 @@ void main( void )
         //(err == OS_ERR_TCB_INVALID)
         //(err == OS_ERR_ILLEGAL_CREATE_RUN_TIME)
     ));*/
-    usbprint("errorerr: %u",err);
     
+    
+    OSTaskCreate(
+		&Driving_Control_TCB,
+		DRIVING_CONTROL_TASK,
+		Driving_Control_Task,
+		NO_TASK_ARG,
+		DRIVING_CONTROL_PRIORITY,
+		Driving_Control_Stack,
+		DRIVING_CONTROL_STACK_LIMIT,
+		DRIVING_CONTROL_STACK_SIZE,
+		NO_TASK_Q,
+		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
+		NO_TCB_EXT,
+		OS_OPT_TASK_STK_CHK,
+		&err );
     
 	/* Start multitasking (give control to uC/OS-III) - never returns */
     OSStart( &err );                                            

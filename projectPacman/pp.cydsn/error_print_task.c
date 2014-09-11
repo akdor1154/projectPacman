@@ -33,7 +33,6 @@ extern OS_ERR global_err;
 void error_print_task( void *p_arg )
 {
 	OS_ERR err;			/* Hold OS call return code */
-	CPU_TS ts;
     
 	(void)p_arg;		/* no-op prevents warning about unused p_arg */
 

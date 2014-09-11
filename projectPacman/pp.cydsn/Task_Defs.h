@@ -69,15 +69,36 @@ OSTaskCreate arguments for all tasks
 - stack limit
 */
 #define MAIN_TASK				((CPU_CHAR *)"Main")
-#define MAIN_TASK_PRIORITY		(5)
+#define MAIN_TASK_PRIORITY		(4)
 #define MAIN_TASK_STACK_SIZE	(256)
 #define MAIN_TASK_STACK_LIMIT	(64)
 
+extern OS_TCB	Main_Task_TCB;
+extern CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
 
 #define ERROR_TASK              ((CPU_CHAR *)"eprint")
 #define ERROR_PRIORITY          (6)
 #define ERROR_STACK_SIZE        (256)
 #define ERROR_STACK_LIMIT       (64)
+
+//extern OS_TCB error_TCB;
+//extern CPU_STK  error_stack[ERROR_STACK_SIZE];
+
+#define DRIVING_TASK              ((CPU_CHAR *)"Driving")
+#define DRIVING_PRIORITY          (6)
+#define DRIVING_STACK_SIZE        (256)
+#define DRIVING_STACK_LIMIT       (192)
+
+extern OS_TCB   Driving_Task_TCB;
+extern CPU_STK  Driving_Task_Stack[DRIVING_STACK_SIZE];
+
+#define DRIVING_CONTROL_TASK      ((CPU_CHAR *)"Driving Control")
+#define DRIVING_CONTROL_PRIORITY  (3)
+#define DRIVING_CONTROL_STACK_SIZE   (64)
+#define DRIVING_CONTROL_STACK_LIMIT  (48)
+
+extern OS_TCB   Driving_Control_TCB;
+extern CPU_STK  Driving_Control_Stack[DRIVING_CONTROL_STACK_SIZE];
 
 /*
 Forward definitions of all task start functions.
@@ -86,12 +107,7 @@ void Main_Task( void * );
 
 void error_print_task(void*) ;
 
+void Driving_Task(void*) ;
 
-/*
-Extern definitions of all task TCBs and stacks.
-*/
-extern OS_TCB	Main_Task_TCB;
-extern CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
+void Driving_Control_Task(void*) ;
 
-extern OS_TCB error_TCB;
-extern CPU_STK  error_stack[ERROR_STACK_SIZE];

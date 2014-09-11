@@ -91,12 +91,8 @@ void Main_Task( void *p_arg )
 	OS_ERR err;			/* Hold OS call return code */
 	CPU_TS ts;
 	(void)p_arg;		/* no-op prevents warning about unused p_arg */
-    OS_RATE_HZ tenthSecond = OSCfg_TickRate_Hz/10;
-    OS_RATE_HZ second = OSCfg_TickRate_Hz;
     
-    uint8_t pwmLevel;
-    uint8_t pwmStep;
-    uint8_t adcResult;
+    //uint8_t adcResult;
     
     uint8 rDMA_Chan;
     uint8 rDMA_TD[1];
@@ -105,7 +101,7 @@ void Main_Task( void *p_arg )
     uint8 bDMA_Chan;
     uint8 bDMA_TD[1];
     
-    uint8_t magicToggle;
+    //uint8_t magicToggle;
     
     
     
@@ -124,21 +120,19 @@ void Main_Task( void *p_arg )
 #endif
     usbprint("blah\n\n");
     CameraConfig();
-
-    
-    pwmLevel = 0;
-    pwmStep = UINT8_MAX/16;
     
     PWM_1_Start();
     PWM_2_Start();
     
     LeftMotorPWM_Start();
     RightMotorPWM_Start();
-    stopMoving();
+    
+    changeMotorState(STATE_STOPPED);
+    
     //SensorADC_Start();
     //SensorADC_StartConvert();
     //Count7_1_Start();
-    adcResult = 0;
+    //adcResult = 0;
 
     /* Variable declarations for yDMA */
     /* Move these variable declarations to the top of the function */
@@ -182,11 +176,10 @@ void Main_Task( void *p_arg )
     CyDmaChSetInitialTd(bDMA_Chan, bDMA_TD[0]);
     CyDmaChEnable(bDMA_Chan, 1);
 
-    magicToggle=1;
     
     motorState = 0;
     
-	while (1) {
+	while (DEF_ON) {
 		/* Delay 1s */
 		/*OSTimeDly(
 			tenthSecond,
@@ -215,18 +208,13 @@ void Main_Task( void *p_arg )
         
         switch (motorState) {
             case STATE_STOPPED: // stopped
-                startMoving();
+                changeMotorState(STATE_DEMO);
                 break;
-            case STATE_SLOW: // //moving slow
-                goFullSpeed();
+            case STATE_DEMO:
+                changeMotorState(STATE_STOPPED);
                 break;
-            case STATE_FAST:
-                setStraightSpeed(127);
-                OSTimeDly(2*second, OS_OPT_TIME_DLY, &err);
-                turnOnSpot();
-                OSTimeDly(second, OS_OPT_TIME_DLY, &err);
-                
-                break;
+            default:
+                changeMotorState(STATE_STOPPED);
         }
         
 	}
