@@ -73,7 +73,7 @@ void setRightSpeed(int16_t speed) {
 
 void setStraightSpeed(uint8_t speed) {
     setLeftSpeed(speed);
-    setLeftSpeed(speed);
+    setRightSpeed(speed);
 }
 
 void turnOnSpot() {
