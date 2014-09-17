@@ -29,22 +29,26 @@ OS_TCB	error_TCB;
 CPU_STK	error_stack[ERROR_STACK_SIZE];
 
 extern OS_ERR global_err;
+extern uint8_t* proxLeft;
+extern uint8_t* proxRight;
+extern uint8_t* objectUnder;
+extern uint8_t* colourUnder;
 
 void error_print_task( void *p_arg )
 {
 	OS_ERR err;			/* Hold OS call return code */
+    CPU_TS ts;
     
 	(void)p_arg;		/* no-op prevents warning about unused p_arg */
-
     
-    OS_RATE_HZ tenthSecond = OSCfg_TickRate_Hz/10;
-    while (1) {
-    	OSTimeDly(
+    while (DEF_ON) {
+    	/*OSTimeDly(
         	tenthSecond,
            	OS_OPT_TIME_DLY,
-    	&err );
+    	&err );*/
+        OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
         
-        usbprint("global error: %u\n",global_err);
+        usbprint("proxLeft: %u\n proxRight: %u\n objectUnder:%u\n colourUnder:%u\n\n ",*proxLeft,*proxRight,*objectUnder,*colourUnder);
     }
     
     

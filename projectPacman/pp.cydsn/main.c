@@ -100,7 +100,10 @@ void main( void )
     CYGlobalIntEnable;
     
     SW2_Interrupt_Start();
+    SW3_Interrupt_Start();
     int_pixelReady_Start();
+    
+    analogReady_Start();
     
     USB_Start(0,USB_DWR_VDDD_OPERATION);
     for (USBtimeout = 0; USBtimeout <= 5; USBtimeout++) {    
@@ -131,7 +134,7 @@ void main( void )
     
     err = 0;
     usbprint("mainerr: %u",err);
-    /*OSTaskCreate(
+    OSTaskCreate(
 		&error_TCB,
 		ERROR_TASK,
 		error_print_task,
@@ -146,7 +149,9 @@ void main( void )
 		OS_OPT_TASK_STK_CHK,
 		&err );
     
-    led1_toggler_Write((
+    err = 0;
+    usbprint("errorerr: %u",err);
+    /*led1_toggler_Write((
         //(err == OS_ERR_NONE) |
         (err == OS_ERR_PRIO_INVALID)
         //(err == OS_ERR_STK_INVALID) |
@@ -167,6 +172,22 @@ void main( void )
 		Driving_Control_Stack,
 		DRIVING_CONTROL_STACK_LIMIT,
 		DRIVING_CONTROL_STACK_SIZE,
+		NO_TASK_Q,
+		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
+		NO_TCB_EXT,
+		OS_OPT_TASK_STK_CHK,
+		&err );
+    
+    
+    OSTaskCreate(
+		&Analog_Select_TCB,
+		ANALOG_SELECT_TASK,
+		Analog_Select_Task,
+		NO_TASK_ARG,
+		ANALOG_SELECT_PRIORITY,
+		Analog_Select_Stack,
+		ANALOG_SELECT_STACK_LIMIT,
+		ANALOG_SELECT_STACK_SIZE,
 		NO_TASK_Q,
 		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
 		NO_TCB_EXT,
