@@ -16,6 +16,4 @@
 
 OS_ERR err;
 
-void delaySeconds(uint16_t seconds) {
-    OSTimeDlyHMSM(0,0,seconds,0, OS_OPT_TIME_HMSM_NON_STRICT, &err);
-}
+inline void delaySeconds(uint16_t seconds);

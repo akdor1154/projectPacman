@@ -103,7 +103,10 @@ void main( void )
     SW3_Interrupt_Start();
     int_pixelReady_Start();
     
-    analogReady_Start();
+    colourChange_Start();
+    
+    
+    //analogReady_Start();
     
     USB_Start(0,USB_DWR_VDDD_OPERATION);
     for (USBtimeout = 0; USBtimeout <= 5; USBtimeout++) {    
@@ -172,22 +175,6 @@ void main( void )
 		Driving_Control_Stack,
 		DRIVING_CONTROL_STACK_LIMIT,
 		DRIVING_CONTROL_STACK_SIZE,
-		NO_TASK_Q,
-		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
-		NO_TCB_EXT,
-		OS_OPT_TASK_STK_CHK,
-		&err );
-    
-    
-    OSTaskCreate(
-		&Analog_Select_TCB,
-		ANALOG_SELECT_TASK,
-		Analog_Select_Task,
-		NO_TASK_ARG,
-		ANALOG_SELECT_PRIORITY,
-		Analog_Select_Stack,
-		ANALOG_SELECT_STACK_LIMIT,
-		ANALOG_SELECT_STACK_SIZE,
 		NO_TASK_Q,
 		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
 		NO_TCB_EXT,

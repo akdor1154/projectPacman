@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: SW3_Interrupt.c  
+* File Name: colourChange.c  
 * Version 1.70
 *
 *  Description:
@@ -18,14 +18,14 @@
 
 #include <cydevice_trm.h>
 #include <CyLib.h>
-#include <SW3_Interrupt.h>
+#include <colourChange.h>
 
-#if !defined(SW3_Interrupt__REMOVED) /* Check for removal by optimization */
+#if !defined(colourChange__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-/* `#START SW3_Interrupt_intc` */
+/* `#START colourChange_intc` */
 #include <includes.h>
 #include "Task_Defs.h"
 OS_ERR err;
@@ -43,7 +43,7 @@ CY_ISR_PROTO(IntDefaultHandler);
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_Start
+* Function Name: colourChange_Start
 ********************************************************************************
 *
 * Summary:
@@ -56,24 +56,24 @@ CY_ISR_PROTO(IntDefaultHandler);
 *   None
 *
 *******************************************************************************/
-void SW3_Interrupt_Start(void)
+void colourChange_Start(void)
 {
     /* For all we know the interrupt is active. */
-    SW3_Interrupt_Disable();
+    colourChange_Disable();
 
-    /* Set the ISR to point to the SW3_Interrupt Interrupt. */
-    SW3_Interrupt_SetVector(&SW3_Interrupt_Interrupt);
+    /* Set the ISR to point to the colourChange Interrupt. */
+    colourChange_SetVector(&colourChange_Interrupt);
 
     /* Set the priority. */
-    SW3_Interrupt_SetPriority((uint8)SW3_Interrupt_INTC_PRIOR_NUMBER);
+    colourChange_SetPriority((uint8)colourChange_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    SW3_Interrupt_Enable();
+    colourChange_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_StartEx
+* Function Name: colourChange_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -86,24 +86,24 @@ void SW3_Interrupt_Start(void)
 *   None
 *
 *******************************************************************************/
-void SW3_Interrupt_StartEx(cyisraddress address)
+void colourChange_StartEx(cyisraddress address)
 {
     /* For all we know the interrupt is active. */
-    SW3_Interrupt_Disable();
+    colourChange_Disable();
 
-    /* Set the ISR to point to the SW3_Interrupt Interrupt. */
-    SW3_Interrupt_SetVector(address);
+    /* Set the ISR to point to the colourChange Interrupt. */
+    colourChange_SetVector(address);
 
     /* Set the priority. */
-    SW3_Interrupt_SetPriority((uint8)SW3_Interrupt_INTC_PRIOR_NUMBER);
+    colourChange_SetPriority((uint8)colourChange_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    SW3_Interrupt_Enable();
+    colourChange_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_Stop
+* Function Name: colourChange_Stop
 ********************************************************************************
 *
 * Summary:
@@ -115,22 +115,22 @@ void SW3_Interrupt_StartEx(cyisraddress address)
 *   None
 *
 *******************************************************************************/
-void SW3_Interrupt_Stop(void)
+void colourChange_Stop(void)
 {
     /* Disable this interrupt. */
-    SW3_Interrupt_Disable();
+    colourChange_Disable();
 
     /* Set the ISR to point to the passive one. */
-    SW3_Interrupt_SetVector(&IntDefaultHandler);
+    colourChange_SetVector(&IntDefaultHandler);
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_Interrupt
+* Function Name: colourChange_Interrupt
 ********************************************************************************
 *
 * Summary:
-*   The default Interrupt Service Routine for SW3_Interrupt.
+*   The default Interrupt Service Routine for colourChange.
 *
 *   Add custom code between the coments to keep the next version of this file
 *   from over writting your code.
@@ -141,22 +141,36 @@ void SW3_Interrupt_Stop(void)
 *   None
 *
 *******************************************************************************/
-CY_ISR(SW3_Interrupt_Interrupt)
+CY_ISR(colourChange_Interrupt)
 {
     /*  Place your Interrupt code here. */
-    /* `#START SW3_Interrupt_Interrupt` */
+    /* `#START colourChange_Interrupt` */
+
+    CPU_SR_ALLOC();
+    
+    CPU_CRITICAL_ENTER();
+    OSIntEnter();
+    CPU_CRITICAL_EXIT();
+    
+    //stuff
+    OSTaskSemPost(
+        &error_TCB,
+        OS_OPT_POST_NONE,
+        &err
+    );
+    OSIntExit();
     /* `#END` */
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_SetVector
+* Function Name: colourChange_SetVector
 ********************************************************************************
 *
 * Summary:
-*   Change the ISR vector for the Interrupt. Note calling SW3_Interrupt_Start
+*   Change the ISR vector for the Interrupt. Note calling colourChange_Start
 *   will override any effect this method would have had. To set the vector 
-*   before the component has been started use SW3_Interrupt_StartEx instead.
+*   before the component has been started use colourChange_StartEx instead.
 *
 * Parameters:
 *   address: Address of the ISR to set in the interrupt vector table.
@@ -165,18 +179,18 @@ CY_ISR(SW3_Interrupt_Interrupt)
 *   None
 *
 *******************************************************************************/
-void SW3_Interrupt_SetVector(cyisraddress address)
+void colourChange_SetVector(cyisraddress address)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    ramVectorTable[CYINT_IRQ_BASE + (uint32)SW3_Interrupt__INTC_NUMBER] = address;
+    ramVectorTable[CYINT_IRQ_BASE + (uint32)colourChange__INTC_NUMBER] = address;
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_GetVector
+* Function Name: colourChange_GetVector
 ********************************************************************************
 *
 * Summary:
@@ -189,25 +203,25 @@ void SW3_Interrupt_SetVector(cyisraddress address)
 *   Address of the ISR in the interrupt vector table.
 *
 *******************************************************************************/
-cyisraddress SW3_Interrupt_GetVector(void)
+cyisraddress colourChange_GetVector(void)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    return ramVectorTable[CYINT_IRQ_BASE + (uint32)SW3_Interrupt__INTC_NUMBER];
+    return ramVectorTable[CYINT_IRQ_BASE + (uint32)colourChange__INTC_NUMBER];
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_SetPriority
+* Function Name: colourChange_SetPriority
 ********************************************************************************
 *
 * Summary:
-*   Sets the Priority of the Interrupt. Note calling SW3_Interrupt_Start
-*   or SW3_Interrupt_StartEx will override any effect this method 
+*   Sets the Priority of the Interrupt. Note calling colourChange_Start
+*   or colourChange_StartEx will override any effect this method 
 *   would have had. This method should only be called after 
-*   SW3_Interrupt_Start or SW3_Interrupt_StartEx has been called. To set 
+*   colourChange_Start or colourChange_StartEx has been called. To set 
 *   the initial priority for the component use the cydwr file in the tool.
 *
 * Parameters:
@@ -217,14 +231,14 @@ cyisraddress SW3_Interrupt_GetVector(void)
 *   None
 *
 *******************************************************************************/
-void SW3_Interrupt_SetPriority(uint8 priority)
+void colourChange_SetPriority(uint8 priority)
 {
-    *SW3_Interrupt_INTC_PRIOR = priority << 5;
+    *colourChange_INTC_PRIOR = priority << 5;
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_GetPriority
+* Function Name: colourChange_GetPriority
 ********************************************************************************
 *
 * Summary:
@@ -237,19 +251,19 @@ void SW3_Interrupt_SetPriority(uint8 priority)
 *   Priority of the interrupt. 0 - 7, 0 being the highest.
 *
 *******************************************************************************/
-uint8 SW3_Interrupt_GetPriority(void)
+uint8 colourChange_GetPriority(void)
 {
     uint8 priority;
 
 
-    priority = *SW3_Interrupt_INTC_PRIOR >> 5;
+    priority = *colourChange_INTC_PRIOR >> 5;
 
     return priority;
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_Enable
+* Function Name: colourChange_Enable
 ********************************************************************************
 *
 * Summary:
@@ -262,15 +276,15 @@ uint8 SW3_Interrupt_GetPriority(void)
 *   None
 *
 *******************************************************************************/
-void SW3_Interrupt_Enable(void)
+void colourChange_Enable(void)
 {
     /* Enable the general interrupt. */
-    *SW3_Interrupt_INTC_SET_EN = SW3_Interrupt__INTC_MASK;
+    *colourChange_INTC_SET_EN = colourChange__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_GetState
+* Function Name: colourChange_GetState
 ********************************************************************************
 *
 * Summary:
@@ -283,15 +297,15 @@ void SW3_Interrupt_Enable(void)
 *   1 if enabled, 0 if disabled.
 *
 *******************************************************************************/
-uint8 SW3_Interrupt_GetState(void)
+uint8 colourChange_GetState(void)
 {
     /* Get the state of the general interrupt. */
-    return ((*SW3_Interrupt_INTC_SET_EN & (uint32)SW3_Interrupt__INTC_MASK) != 0u) ? 1u:0u;
+    return ((*colourChange_INTC_SET_EN & (uint32)colourChange__INTC_MASK) != 0u) ? 1u:0u;
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_Disable
+* Function Name: colourChange_Disable
 ********************************************************************************
 *
 * Summary:
@@ -304,15 +318,15 @@ uint8 SW3_Interrupt_GetState(void)
 *   None
 *
 *******************************************************************************/
-void SW3_Interrupt_Disable(void)
+void colourChange_Disable(void)
 {
     /* Disable the general interrupt. */
-    *SW3_Interrupt_INTC_CLR_EN = SW3_Interrupt__INTC_MASK;
+    *colourChange_INTC_CLR_EN = colourChange__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_SetPending
+* Function Name: colourChange_SetPending
 ********************************************************************************
 *
 * Summary:
@@ -326,14 +340,14 @@ void SW3_Interrupt_Disable(void)
 *   None
 *
 *******************************************************************************/
-void SW3_Interrupt_SetPending(void)
+void colourChange_SetPending(void)
 {
-    *SW3_Interrupt_INTC_SET_PD = SW3_Interrupt__INTC_MASK;
+    *colourChange_INTC_SET_PD = colourChange__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: SW3_Interrupt_ClearPending
+* Function Name: colourChange_ClearPending
 ********************************************************************************
 *
 * Summary:
@@ -346,9 +360,9 @@ void SW3_Interrupt_SetPending(void)
 *   None
 *
 *******************************************************************************/
-void SW3_Interrupt_ClearPending(void)
+void colourChange_ClearPending(void)
 {
-    *SW3_Interrupt_INTC_CLR_PD = SW3_Interrupt__INTC_MASK;
+    *colourChange_INTC_CLR_PD = colourChange__INTC_MASK;
 }
 
 #endif /* End check for removal by optimization */

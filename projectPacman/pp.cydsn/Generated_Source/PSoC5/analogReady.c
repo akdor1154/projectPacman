@@ -145,19 +145,6 @@ CY_ISR(analogReady_Interrupt)
 {
     /*  Place your Interrupt code here. */
     /* `#START analogReady_Interrupt` */
-    CPU_SR_ALLOC();
-    
-    CPU_CRITICAL_ENTER();
-    OSIntEnter();
-    CPU_CRITICAL_EXIT();
-    
-    //stuff
-    OSTaskSemPost(
-        &Analog_Select_TCB,
-        OS_OPT_POST_NONE,
-        &err
-    );
-    OSIntExit();
     /* `#END` */
 }
 

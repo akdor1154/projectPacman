@@ -80,7 +80,7 @@ extern CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
 
 #define ERROR_TASK              ((CPU_CHAR *)"eprint")
 #define ERROR_PRIORITY          (6)
-#define ERROR_STACK_SIZE        (256)
+#define ERROR_STACK_SIZE        (128)
 #define ERROR_STACK_LIMIT       (64)
 
 extern OS_TCB error_TCB;
@@ -102,14 +102,6 @@ extern CPU_STK  Driving_Task_Stack[DRIVING_STACK_SIZE];
 extern OS_TCB   Driving_Control_TCB;
 extern CPU_STK  Driving_Control_Stack[DRIVING_CONTROL_STACK_SIZE];
 
-#define ANALOG_SELECT_TASK              ((CPU_CHAR *)"AnalogSelect")
-#define ANALOG_SELECT_PRIORITY          (2)
-#define ANALOG_SELECT_STACK_SIZE        (256)
-#define ANALOG_SELECT_STACK_LIMIT       (192)
-
-extern OS_TCB   Analog_Select_TCB;
-extern CPU_STK  Analog_Select_Stack[ANALOG_SELECT_STACK_SIZE];
-
 
 /*
 Forward definitions of all task start functions.
@@ -122,4 +114,3 @@ void Driving_Task(void*) ;
 
 void Driving_Control_Task(void*) ;
 
-void Analog_Select_Task(void*);

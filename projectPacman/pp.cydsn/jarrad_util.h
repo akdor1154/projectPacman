@@ -15,4 +15,8 @@
 #include <includes.h>
 #include <stdint.h>
 
-inline void delaySeconds(uint16_t seconds);
+OS_ERR util_err;
+
+inline void delaySeconds(uint16_t seconds) {
+    OSTimeDlyHMSM(0,0,seconds,0, OS_OPT_TIME_HMSM_NON_STRICT, &util_err);
+}

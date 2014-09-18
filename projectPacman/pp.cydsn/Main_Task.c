@@ -67,6 +67,28 @@ extern uint8_t gPix;
 extern uint8_t bPix;
 extern motorState_t motorState;
 
+
+uint8_t analogValues[4];
+
+uint8_t* colourUnder = &analogValues[0];
+uint8_t* objectUnder = &analogValues[1];
+uint8_t* proxLeft = &analogValues[2];
+uint8_t* proxRight = &analogValues[3];
+
+typedef struct {
+    uint8 channel;
+    uint8 TD;
+    uint8 (*dmaInit)(uint8, uint8, uint16, uint16);
+    reg8* dest;
+} SensorDMA;
+
+
+/* DMA Configuration for colourDMA */
+#define SensorDMA_BYTES_PER_BURST 1
+#define SensorDMA_REQUEST_PER_BURST 1
+#define SensorDMA_SRC_BASE (CYDEV_PERIPH_BASE)
+#define SensorDMA_DST_BASE (CYDEV_PERIPH_BASE)
+
 /*
  * Function:		Main_Task
  *
@@ -177,6 +199,31 @@ void Main_Task( void *p_arg )
     CyDmaChEnable(bDMA_Chan, 1);
 
     
+    uint8_t numSensors = 4;
+    SensorDMA sensorDMAs[] = {
+        {.dmaInit = &colourDMA_DmaInitialize, .dest = colourReg_Control_PTR},
+        {.dmaInit = &objectDMA_DmaInitialize, .dest = objectReg_Control_PTR},
+        {.dmaInit = &proxLeftDMA_DmaInitialize, .dest = proxLeftReg_Control_PTR},
+        {.dmaInit = &proxRightDMA_DmaInitialize, .dest = proxRightReg_Control_PTR}
+    };
+    
+    for (int i = 0; i<numSensors; i++) {
+        sensorDMAs[i].channel = (*sensorDMAs[i].dmaInit)(
+            SensorDMA_BYTES_PER_BURST,
+            SensorDMA_REQUEST_PER_BURST,
+            HI16(SensorDMA_SRC_BASE),
+            HI16(SensorDMA_DST_BASE)
+        );
+        
+        sensorDMAs[i].TD = CyDmaTdAllocate();
+        CyDmaTdSetConfiguration(sensorDMAs[i].TD, 1, sensorDMAs[i].TD, 0);
+        CyDmaTdSetAddress(sensorDMAs[i].TD, LO16((uint32)SensorADC_SAR_WRK0_PTR), LO16((uint32)sensorDMAs[i].dest));
+        CyDmaChSetInitialTd(sensorDMAs[i].channel, sensorDMAs[i].TD);
+        CyDmaChEnable(sensorDMAs[i].channel, 1);
+    }
+    
+    SensorADC_Start();
+    
     motorState = 0;
     
 	while (DEF_ON) {
@@ -194,7 +241,8 @@ void Main_Task( void *p_arg )
             &err
         );
         
-        
+        usbprint("proxLeft: %u\n proxRight: %u\n objectUnder:%u\n colourUnder:%u\n\n ",proxLeftTestReg_Read(),proxRightTestReg_Read(),objectTestReg_Read(),colourTestReg_Read());
+ 
         
 	    /*
         if (SensorADC_IsEndConversion(SensorADC_RETURN_STATUS)) {
