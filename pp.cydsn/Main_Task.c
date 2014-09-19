@@ -52,6 +52,7 @@
 #include "usbprint.h"
 #include "camera.h"
 #include "motorControl.h"
+#include "flipper.h"
 
 /* Main_Task TCB, start function and stack */
 OS_TCB	Main_Task_TCB;
@@ -144,7 +145,6 @@ void Main_Task( void *p_arg )
     CameraConfig();
     
     PWM_1_Start();
-    PWM_2_Start();
     
     
     LeftMotorPWM_Start();
@@ -154,7 +154,7 @@ void Main_Task( void *p_arg )
     changeMotorState(STATE_STOPPED);
     
     ServoPWM_Start();
-    
+    flipperUp();
     //SensorADC_Start();
     //SensorADC_StartConvert();
     //Count7_1_Start();
@@ -247,16 +247,6 @@ void Main_Task( void *p_arg )
         
         usbprint("proxLeft: %u\n proxRight: %u\n objectUnder:%u\n colourUnder:%u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),objectReg_Read(),colourReg_Read());
  
-        
-	    /*
-        if (SensorADC_IsEndConversion(SensorADC_RETURN_STATUS)) {
-            adcResult = (uint8_t)SensorADC_GetResult8();
-        } else {
-            adcResult = 3;
-        }
-        usbprint("adc result: %u",adcResult);
-        */
-        //usbprint("%u,%u,%u\n",rPix<<3,gPix<<2,bPix<<3);        
         
         switch (motorState) {
             case STATE_STOPPED: // stopped
