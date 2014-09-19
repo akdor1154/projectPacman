@@ -146,10 +146,14 @@ void Main_Task( void *p_arg )
     PWM_1_Start();
     PWM_2_Start();
     
+    
     LeftMotorPWM_Start();
     RightMotorPWM_Start();
     
+    
     changeMotorState(STATE_STOPPED);
+    
+    ServoPWM_Start();
     
     //SensorADC_Start();
     //SensorADC_StartConvert();
@@ -241,7 +245,7 @@ void Main_Task( void *p_arg )
             &err
         );
         
-        usbprint("proxLeft: %u\n proxRight: %u\n objectUnder:%u\n colourUnder:%u\n\n ",proxLeftTestReg_Read(),proxRightTestReg_Read(),objectTestReg_Read(),colourTestReg_Read());
+        usbprint("proxLeft: %u\n proxRight: %u\n objectUnder:%u\n colourUnder:%u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),objectReg_Read(),colourReg_Read());
  
         
 	    /*
