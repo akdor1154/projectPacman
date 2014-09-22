@@ -104,18 +104,19 @@ void main( void )
     int_pixelReady_Start();
     
     colourChange_Start();
+    objectChange_Start();
     
     
     //analogReady_Start();
     
     USB_Start(0,USB_DWR_VDDD_OPERATION);
-    for (USBtimeout = 0; USBtimeout <= 5; USBtimeout++) {    
+    for (USBtimeout = 0; USBtimeout <= 3; USBtimeout++) {    
         if (USB_GetConfiguration()) {
             USB_CDC_Init();
             gotUSB = 1;
             break;
         }
-        CyDelay(500);
+        CyDelay(100);
     }
     
     err = 0;
@@ -175,6 +176,22 @@ void main( void )
 		Driving_Control_Stack,
 		DRIVING_CONTROL_STACK_LIMIT,
 		DRIVING_CONTROL_STACK_SIZE,
+		NO_TASK_Q,
+		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
+		NO_TCB_EXT,
+		OS_OPT_TASK_STK_CHK,
+		&err );
+    
+    
+    OSTaskCreate(
+		&Flipper_Task_TCB,
+		FLIPPER_TASK,
+		Flipper_Task,
+		NO_TASK_ARG,
+		FLIPPER_PRIORITY,
+		Flipper_Task_Stack,
+		FLIPPER_STACK_LIMIT,
+		FLIPPER_STACK_SIZE,
 		NO_TASK_Q,
 		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
 		NO_TCB_EXT,

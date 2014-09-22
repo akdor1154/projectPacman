@@ -68,6 +68,7 @@ extern uint8_t gPix;
 extern uint8_t bPix;
 extern motorState_t motorState;
 
+extern uint8_t gotUSB;
 
 uint8_t analogValues[4];
 
@@ -152,8 +153,9 @@ void Main_Task( void *p_arg )
     
     
     changeMotorState(STATE_STOPPED);
-    
-    ServoPWM_Start();
+    if (!gotUSB) {
+        ServoPWM_Start();
+    }
     flipperUp();
     //SensorADC_Start();
     //SensorADC_StartConvert();

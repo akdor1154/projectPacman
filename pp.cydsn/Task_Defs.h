@@ -70,6 +70,7 @@ OSTaskCreate arguments for all tasks
 - stack size
 - stack limit
 */
+
 #define MAIN_TASK				((CPU_CHAR *)"Main")
 #define MAIN_TASK_PRIORITY		(4)
 #define MAIN_TASK_STACK_SIZE	(256)
@@ -102,6 +103,13 @@ extern CPU_STK  Driving_Task_Stack[DRIVING_STACK_SIZE];
 extern OS_TCB   Driving_Control_TCB;
 extern CPU_STK  Driving_Control_Stack[DRIVING_CONTROL_STACK_SIZE];
 
+#define FLIPPER_TASK              ((CPU_CHAR *)"Flipper")
+#define FLIPPER_PRIORITY          (2)
+#define FLIPPER_STACK_SIZE        (64)
+#define FLIPPER_STACK_LIMIT       (48)
+
+extern OS_TCB   Flipper_Task_TCB;
+extern CPU_STK  Flipper_Task_Stack[FLIPPER_STACK_SIZE];
 
 /*
 Forward definitions of all task start functions.
@@ -114,3 +122,4 @@ void Driving_Task(void*) ;
 
 void Driving_Control_Task(void*) ;
 
+void Flipper_Task(void*);

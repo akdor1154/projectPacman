@@ -17,3 +17,4 @@
 OS_ERR err;
 
 inline void delaySeconds(uint16_t seconds);
+inline void delayMS(uint16_t milliseconds);

@@ -10,9 +10,11 @@
 
 /* Include Micrium APIs and defines */
 #include <includes.h>
+#include <lib_math.h>
 
 /* Include PSoC system and component APIs and defines */
 #include <project.h>
+#include <stdlib.h>
 
 /* Include application function declarations and defines */
 #include <Task_Defs.h>
@@ -27,6 +29,8 @@ CPU_STK	Driving_Task_Stack[DRIVING_STACK_SIZE];
 
 OS_ERR err;			/* Hold OS call return code */
 CPU_TS ts;
+
+int randSeeded = 0;
 
 motorState_t motorState;
 
@@ -69,7 +73,9 @@ void setRightSpeed(int16_t speed) {
     MotorDirection_Write(directions);
     RightMotorPWM_WriteCompare(absSpeed);
 }
-    
+
+#define walkBottom (SLOWLEVEL - 32)
+#define walkTop (SLOWLEVEL + 32)
 
 void setStraightSpeed(uint8_t speed) {
     setLeftSpeed(speed);
@@ -91,8 +97,14 @@ void changeMotorState(motorState_t targetState) {
 }
 
 
-void Driving_Task(void* p_arg) {
-    (void)p_arg;
+void Driving_Task(void* UNUSED(p_arg)) {
+    int perturbation;
+    int16_t leftSpeed;
+    int16_t rightSpeed;
+    if (!randSeeded) {
+        Math_RandSetSeed(OSTimeGet(&err));
+        randSeeded = 1;
+    }
     switch (motorState) {
         case STATE_SLOW:
             startMoving();
@@ -104,6 +116,27 @@ void Driving_Task(void* p_arg) {
             turnOnSpot();
             break;
         case STATE_DEMO: 
+            startMoving();
+            leftSpeed = SLOWLEVEL;
+            rightSpeed = SLOWLEVEL;
+            while (DEF_ON) {
+                delaySeconds(1);
+                perturbation = (signed int) ( Math_Rand() & 0x1F ); // take the last 5 bits of a random number, equivalent to rand() % 32
+                usbprint("perturbation is %i\n",perturbation);
+                if (Math_Rand() & 1) {
+                    perturbation = -perturbation;
+                }
+                usbprint("flipped perturbation is %i\n",perturbation);
+                leftSpeed = leftSpeed - perturbation;
+                rightSpeed = rightSpeed + perturbation;
+                leftSpeed = (leftSpeed < walkBottom) ? walkBottom : leftSpeed;
+                rightSpeed = (rightSpeed < walkBottom) ? walkBottom : rightSpeed;
+                leftSpeed = (leftSpeed > walkTop) ? walkTop : leftSpeed;
+                rightSpeed = (rightSpeed > walkTop) ? walkTop : rightSpeed;
+                setLeftSpeed(leftSpeed);
+                setRightSpeed(rightSpeed);
+                usbprint("set speed to %i, %i",leftSpeed,rightSpeed);
+            }
             while (DEF_ON) {
                 turnOnSpot();
                 delaySeconds(1);

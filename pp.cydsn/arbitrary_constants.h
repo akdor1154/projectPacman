@@ -12,13 +12,18 @@
 
 /* [] END OF FILE */
 
-#include "flipper.h"
+#ifndef ARBCONSTS
+#define ARBCONSTS
+    
 
-void flipperUp() {
-    ServoPWM_WriteCompare(FLIPPER_UP);
-}
+#define FLIPPER_UP 62000
+#define FLIPPER_DOWN 61500
 
-void flipperDown() {
-    ServoPWM_WriteCompare(FLIPPER_DOWN);
-}
+#define FLIPPER_DOWN_DELAY_MS 180
+#define FLIPPER_DOWN_TIME_MS 400
 
+#define STOPLEVEL 0
+#define SLOWLEVEL 92
+#define STARTLEVEL 255
+
+#endif

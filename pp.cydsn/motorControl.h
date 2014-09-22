@@ -16,6 +16,7 @@
 
 #include <includes.h>
 #include "project.h"
+#include "arbitrary_constants.h"
     
 typedef enum {
     STATE_STOPPED,
@@ -25,9 +26,6 @@ typedef enum {
     STATE_DEMO 
 } motorState_t;
 
-#define STOPLEVEL 0
-#define SLOWLEVEL 127
-#define STARTLEVEL 255
 
 #define LEFT_FORWARD 0x01
 #define RIGHT_FORWARD 0x02

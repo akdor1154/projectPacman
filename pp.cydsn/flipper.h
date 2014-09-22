@@ -13,11 +13,10 @@
 /* [] END OF FILE */
 
 #include <device.h>
+#include "arbitrary_constants.h"
+
 #ifndef flipper_h
 #define flipper_h
-    
-#define FLIPPER_UP 61316
-#define FLIPPER_DOWN 62722
 
 void flipperUp();
 void flipperDown();
