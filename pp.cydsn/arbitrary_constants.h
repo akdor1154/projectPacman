@@ -25,5 +25,8 @@
 #define STOPLEVEL 0
 #define SLOWLEVEL 92
 #define STARTLEVEL 255
+    
+#define DODGE_INTERRUPT_THRESHOLD 55
+#define DODGE_THRESHOLD 35
 
 #endif

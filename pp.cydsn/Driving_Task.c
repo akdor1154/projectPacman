@@ -22,10 +22,7 @@
 #include "motorControl.h"
 #include "usbprint.h"
 #include "jarrad_util.h"
-
-/* Main_Task TCB, start function and stack */
-OS_TCB	Driving_Task_TCB;
-CPU_STK	Driving_Task_Stack[DRIVING_STACK_SIZE];
+#include "arbitrary_constants.h"
 
 OS_ERR err;			/* Hold OS call return code */
 CPU_TS ts;
@@ -82,9 +79,9 @@ void setStraightSpeed(uint8_t speed) {
     setRightSpeed(speed);
 }
 
-void turnOnSpot() {
-    setLeftSpeed(SLOWLEVEL);
-    setRightSpeed(-SLOWLEVEL);
+void turnOnSpot(int16_t speed) {
+    setLeftSpeed(speed);
+    setRightSpeed(-speed);
 }
 
 void changeMotorState(motorState_t targetState) {
@@ -96,12 +93,20 @@ void changeMotorState(motorState_t targetState) {
     );
 }
 
+OS_TCB	Driving_Task_TCB;
+CPU_STK	Driving_Task_Stack[DRIVING_STACK_SIZE];
 
 void Driving_Task(void* UNUSED(p_arg)) {
+    
     int perturbation;
+    RAND_NBR random;
+    
     int16_t leftSpeed;
     int16_t rightSpeed;
-    if (!randSeeded) {
+    
+    proxThreshold_Write(DODGE_INTERRUPT_THRESHOLD);
+    
+    if (!randSeeded) {    
         Math_RandSetSeed(OSTimeGet(&err));
         randSeeded = 1;
     }
@@ -113,7 +118,7 @@ void Driving_Task(void* UNUSED(p_arg)) {
             goFullSpeed();
             break;
         case STATE_TURNING:
-            turnOnSpot();
+            turnOnSpot(SLOWLEVEL);
             break;
         case STATE_DEMO: 
             startMoving();
@@ -121,9 +126,11 @@ void Driving_Task(void* UNUSED(p_arg)) {
             rightSpeed = SLOWLEVEL;
             while (DEF_ON) {
                 delaySeconds(1);
-                perturbation = (signed int) ( Math_Rand() & 0x1F ); // take the last 5 bits of a random number, equivalent to rand() % 32
+                random = Math_Rand(); // rand is alternating perfectly between even and odd numbers...
+                perturbation = (signed int) ( random & 0x1F ); // take the last 5 bits of a random number, equivalent to rand() % 32
+                
                 usbprint("perturbation is %i\n",perturbation);
-                if (Math_Rand() & 1) {
+                if (((random) ^ (random >> 4)) & 0x08) { // all I want is a random bit; why must I go and swear "screw it"; my face I want to hit; oh wouldn't it be lovely..
                     perturbation = -perturbation;
                 }
                 usbprint("flipped perturbation is %i\n",perturbation);
@@ -138,7 +145,7 @@ void Driving_Task(void* UNUSED(p_arg)) {
                 usbprint("set speed to %i, %i",leftSpeed,rightSpeed);
             }
             while (DEF_ON) {
-                turnOnSpot();
+                turnOnSpot(SLOWLEVEL);
                 delaySeconds(1);
                 startMoving();
                 delaySeconds(2);
@@ -151,4 +158,46 @@ void Driving_Task(void* UNUSED(p_arg)) {
     }
     
     OSTaskSuspend(NULL, &err);
+}
+
+OS_TCB	Dodgem_Task_TCB;
+CPU_STK	Dodgem_Task_Stack[DODGEM_STACK_SIZE];
+
+//when our proximity sensors fire, this task takes over the wheel(s).
+void Dodgem_Task(void* UNUSED(args)) {
+    OS_ERR taskErr;
+    CPU_TS taskTs;
+    
+    uint8_t proxLeft;
+    uint8_t proxRight;
+    
+    while (DEF_ON) {
+        OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &taskTs, &taskErr);
+        OSTaskSuspend(&Driving_Task_TCB, &taskErr);
+        
+        proxLeft = proxLeftReg_Read();
+        proxRight = proxRightReg_Read();
+        
+        if ((proxLeft > DODGE_THRESHOLD) && (proxRight > DODGE_THRESHOLD)) {
+            if (proxLeft > proxRight) {
+                usbprint("180 backwards CCW\n");
+                setLeftSpeed(-SLOWLEVEL);
+                setRightSpeed(-10);
+            } else {
+                usbprint("180 backwards CW\n");
+                setLeftSpeed(-10);
+                setRightSpeed(-SLOWLEVEL);
+            }
+            delayMS(1600);
+        } else if (proxLeft > DODGE_THRESHOLD) {
+            usbprint("holding right motor\n");
+            setRightSpeed(0);
+            delayMS(900);
+        } else if (proxRight > DODGE_THRESHOLD) {
+            usbprint("holding left motor\n");
+            setLeftSpeed(0);
+            delayMS(900);
+        }
+        OSTaskResume(&Driving_Task_TCB, &taskErr);
+    }
 }

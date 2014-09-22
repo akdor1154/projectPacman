@@ -53,6 +53,7 @@
 #include "camera.h"
 #include "motorControl.h"
 #include "flipper.h"
+#include "jarrad_util.h"
 
 /* Main_Task TCB, start function and stack */
 OS_TCB	Main_Task_TCB;
@@ -69,6 +70,7 @@ extern uint8_t bPix;
 extern motorState_t motorState;
 
 extern uint8_t gotUSB;
+extern colour targetColour;
 
 uint8_t analogValues[4];
 
@@ -110,11 +112,10 @@ typedef struct {
  *
  * Return:		None (infinite loop)
  */
-void Main_Task( void *p_arg )
+void Main_Task( void* UNUSED(p_arg) )
 {
 	OS_ERR err;			/* Hold OS call return code */
 	CPU_TS ts;
-	(void)p_arg;		/* no-op prevents warning about unused p_arg */
     
     //uint8_t adcResult;
     
@@ -231,6 +232,10 @@ void Main_Task( void *p_arg )
     SensorADC_Start();
     
     motorState = 0;
+    
+    //TODO FIX ME FIX ME FIX ME FIX ME!!!!!!1
+    targetColour = red;
+    //TODO IS IT FIXED YET?
     
 	while (DEF_ON) {
 		/* Delay 1s */

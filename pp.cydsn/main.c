@@ -50,6 +50,7 @@
 #include <Task_Defs.h>
 
 #include "usbprint.h"
+#include "jarrad_util.h"
 
 OS_ERR global_err;
 
@@ -71,9 +72,8 @@ uint8_t rPix;
 uint8_t gPix;
 uint8_t bPix;
 
-
-
-
+colour targetColour;
+colour lastSeenColour;
 
 
 void main( void )
@@ -105,18 +105,18 @@ void main( void )
     
     colourChange_Start();
     objectChange_Start();
-    
+    proxChange_Start();
     
     //analogReady_Start();
     
     USB_Start(0,USB_DWR_VDDD_OPERATION);
-    for (USBtimeout = 0; USBtimeout <= 3; USBtimeout++) {    
+    for (USBtimeout = 0; USBtimeout <= 5; USBtimeout++) {    
         if (USB_GetConfiguration()) {
             USB_CDC_Init();
             gotUSB = 1;
             break;
         }
-        CyDelay(100);
+        CyDelay(200);
     }
     
     err = 0;
@@ -197,6 +197,21 @@ void main( void )
 		NO_TCB_EXT,
 		OS_OPT_TASK_STK_CHK,
 		&err );
+    
+    OSTaskCreate(
+        &Dodgem_Task_TCB,
+        DODGEM_TASK,
+        Dodgem_Task,
+        NO_TASK_ARG,
+        DODGEM_PRIORITY,
+        Dodgem_Task_Stack,
+        DODGEM_STACK_LIMIT,
+        DODGEM_STACK_SIZE,
+        NO_TASK_Q,
+        DEFAULT_ROUND_ROBIN_TIME_QUANTA,
+        NO_TCB_EXT,
+        OS_OPT_TASK_STK_CHK,
+        &err );
     
 	/* Start multitasking (give control to uC/OS-III) - never returns */
     OSStart( &err );                                            

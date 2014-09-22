@@ -24,6 +24,11 @@
 #  define UNUSED(x) UNUSED_ ## x
 #endif
     
+typedef enum {
+    blue = 0x01,
+    red = 0x02
+} colour;
+
 OS_ERR util_err;
 
 inline void delaySeconds(uint16_t seconds) {

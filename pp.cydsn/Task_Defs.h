@@ -111,6 +111,14 @@ extern CPU_STK  Driving_Control_Stack[DRIVING_CONTROL_STACK_SIZE];
 extern OS_TCB   Flipper_Task_TCB;
 extern CPU_STK  Flipper_Task_Stack[FLIPPER_STACK_SIZE];
 
+#define DODGEM_TASK                 ((CPU_CHAR *)"Dodging")
+#define DODGEM_PRIORITY             (5)
+#define DODGEM_STACK_SIZE           (64)
+#define DODGEM_STACK_LIMIT          (48)
+
+extern OS_TCB Dodgem_Task_TCB;
+extern CPU_STK Dodgem_Task_Stack[DODGEM_STACK_SIZE];
+
 /*
 Forward definitions of all task start functions.
 */
@@ -123,3 +131,5 @@ void Driving_Task(void*) ;
 void Driving_Control_Task(void*) ;
 
 void Flipper_Task(void*);
+
+void Dodgem_Task(void*);

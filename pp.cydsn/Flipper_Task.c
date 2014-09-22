@@ -18,6 +18,9 @@
 #include "flipper.h"
 #include "jarrad_util.h"
 
+extern colour targetColour;
+extern colour lastSeenColour;
+
 extern uint8_t gotUSB;
 
 OS_TCB   Flipper_Task_TCB;
@@ -40,9 +43,11 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
     
     while (DEF_ON) {
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
-        delayMS(FLIPPER_DOWN_DELAY_MS);
-        flipperDown();
-        delayMS(FLIPPER_DOWN_TIME_MS);
-        flipperUp();
+        if (lastSeenColour != targetColour) {
+            delayMS(FLIPPER_DOWN_DELAY_MS);
+            flipperDown();
+            delayMS(FLIPPER_DOWN_TIME_MS);
+            flipperUp();
+        }
     }
 }

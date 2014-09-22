@@ -26,9 +26,9 @@
 *  Place your includes, defines and code here 
 ********************************************************************************/
 /* `#START colourChange_intc` */
-#include <includes.h>
-#include "Task_Defs.h"
-OS_ERR err;
+#include "colourStatus.h"
+#include "jarrad_util.h"
+extern colour lastSeenColour;
 /* `#END` */
 
 #ifndef CYINT_IRQ_BASE
@@ -146,19 +146,9 @@ CY_ISR(colourChange_Interrupt)
     /*  Place your Interrupt code here. */
     /* `#START colourChange_Interrupt` */
 
-    CPU_SR_ALLOC();
-    
-    CPU_CRITICAL_ENTER();
-    OSIntEnter();
-    CPU_CRITICAL_EXIT();
-    
-    //stuff
-    OSTaskSemPost(
-        &error_TCB,
-        OS_OPT_POST_NONE,
-        &err
-    );
-    OSIntExit();
+    uint8_t c = colourStatus_Status;
+    if (c & red) lastSeenColour = red;
+    else if (c & blue) lastSeenColour = blue;
     /* `#END` */
 }
 
