@@ -212,7 +212,7 @@ void Main_Task( void* UNUSED(p_arg) )
         {.dmaInit = &objectDMA_DmaInitialize, .dest = objectReg_Control_PTR},
         {.dmaInit = &proxLeftDMA_DmaInitialize, .dest = proxLeftReg_Control_PTR},
         {.dmaInit = &proxRightDMA_DmaInitialize, .dest = proxRightReg_Control_PTR}
-       // {.dmaInit = &proxCentreDMA_DmaInitialize, .dest = proxCentreReg_Control_PTR}
+        //{.dmaInit = &proxCentreDMA_DmaInitialize, .dest = proxCentreReg_Control_PTR}
     };
     
     for (int i = 0; i<numSensors; i++) {
