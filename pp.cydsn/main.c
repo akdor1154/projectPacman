@@ -105,7 +105,6 @@ void main( void )
     
     colourChange_Start();
     objectChange_Start();
-    proxChange_Start();
     
     //analogReady_Start();
     

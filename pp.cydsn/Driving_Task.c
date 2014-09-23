@@ -120,7 +120,8 @@ void Driving_Task(void* UNUSED(p_arg)) {
         case STATE_TURNING:
             turnOnSpot(SLOWLEVEL);
             break;
-        case STATE_DEMO: 
+        case STATE_DEMO:
+            proxChange_Start(); // enable the dodging interrupt
             startMoving();
             leftSpeed = SLOWLEVEL;
             rightSpeed = SLOWLEVEL;
@@ -153,6 +154,7 @@ void Driving_Task(void* UNUSED(p_arg)) {
             break;
         default:
         case STATE_STOPPED:
+            proxChange_Stop();
             stopMoving();
             break;
     }
@@ -173,8 +175,9 @@ void Dodgem_Task(void* UNUSED(args)) {
     
     while (DEF_ON) {
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &taskTs, &taskErr);
+        usbprint("pend error: %u\n",taskErr);
         OSTaskSuspend(&Driving_Task_TCB, &taskErr);
-        
+        usbprint("suspend error: %u\n",taskErr);
         proxLeft = proxLeftReg_Read();
         proxRight = proxRightReg_Read();
         
@@ -199,5 +202,6 @@ void Dodgem_Task(void* UNUSED(args)) {
             delayMS(900);
         }
         OSTaskResume(&Driving_Task_TCB, &taskErr);
+        usbprint("resume error: %u\n",taskErr);
     }
 }

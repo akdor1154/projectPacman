@@ -15,18 +15,24 @@
 #ifndef ARBCONSTS
 #define ARBCONSTS
     
-
+//these are the 'logic low' proportions, out of 65536 ticks per cycle, of the pwm cycle to the servo for the relevant state.
 #define FLIPPER_UP 62000
 #define FLIPPER_DOWN 61500
 
+//wait times to trigger the flipper -- down_delay is time before down, down_time is time before up again
 #define FLIPPER_DOWN_DELAY_MS 180
 #define FLIPPER_DOWN_TIME_MS 400
 
+//pwm duty cycles out of 255 for some useful motor speeds.
 #define STOPLEVEL 0
 #define SLOWLEVEL 92
 #define STARTLEVEL 255
-    
-#define DODGE_INTERRUPT_THRESHOLD 55
-#define DODGE_THRESHOLD 35
+
+//how much response the IR sensors need (low = far, high = close) before generating an interrupt
+#define DODGE_INTERRUPT_THRESHOLD 90
+//how much the IR sensors need for the interrupt routine to interpret there is a wall in front of a sensor.
+//you want this < INTERRUPT_THRESHOLD above. (if it's equal to the interrupt threshold,
+//then you will probably never detect "wall dead ahead", as one sensor will almost certainly always fire first).
+#define DODGE_THRESHOLD 45
 
 #endif
