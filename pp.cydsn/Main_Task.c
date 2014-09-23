@@ -206,13 +206,13 @@ void Main_Task( void* UNUSED(p_arg) )
     CyDmaChEnable(bDMA_Chan, 1);
 
     
-    uint8_t numSensors = 4;
+    uint8_t numSensors = 5;
     SensorDMA sensorDMAs[] = {
         {.dmaInit = &colourDMA_DmaInitialize, .dest = colourReg_Control_PTR},
         {.dmaInit = &objectDMA_DmaInitialize, .dest = objectReg_Control_PTR},
         {.dmaInit = &proxLeftDMA_DmaInitialize, .dest = proxLeftReg_Control_PTR},
-        {.dmaInit = &proxRightDMA_DmaInitialize, .dest = proxRightReg_Control_PTR}
-        //{.dmaInit = &proxCentreDMA_DmaInitialize, .dest = proxCentreReg_Control_PTR}
+        {.dmaInit = &proxRightDMA_DmaInitialize, .dest = proxRightReg_Control_PTR},
+        {.dmaInit = &proxCentreDMA_DmaInitialize, .dest = proxCentreReg_Control_PTR}
     };
     
     for (int i = 0; i<numSensors; i++) {
