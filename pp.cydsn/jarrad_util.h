@@ -31,12 +31,14 @@ typedef enum {
 
 OS_ERR util_err;
 
-inline void delaySeconds(uint16_t seconds) {
+inline OS_ERR delaySeconds(uint16_t seconds) {
     OSTimeDlyHMSM(0,0,seconds,0, OS_OPT_TIME_HMSM_NON_STRICT, &util_err);
+    return util_err;
 }
 
-inline void delayMS(uint16_t milliseconds) {
+inline OS_ERR delayMS(uint32_t milliseconds) {
     OSTimeDlyHMSM(0,0,0,milliseconds, OS_OPT_TIME_HMSM_NON_STRICT, &util_err);
+    return util_err;
 }
 
 #endif

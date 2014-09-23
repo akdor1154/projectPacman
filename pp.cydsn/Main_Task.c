@@ -212,6 +212,7 @@ void Main_Task( void* UNUSED(p_arg) )
         {.dmaInit = &objectDMA_DmaInitialize, .dest = objectReg_Control_PTR},
         {.dmaInit = &proxLeftDMA_DmaInitialize, .dest = proxLeftReg_Control_PTR},
         {.dmaInit = &proxRightDMA_DmaInitialize, .dest = proxRightReg_Control_PTR}
+       // {.dmaInit = &proxCentreDMA_DmaInitialize, .dest = proxCentreReg_Control_PTR}
     };
     
     for (int i = 0; i<numSensors; i++) {
@@ -252,7 +253,7 @@ void Main_Task( void* UNUSED(p_arg) )
             &err
         );
         
-        usbprint("proxLeft: %u\n proxRight: %u\n objectUnder:%u\n colourUnder:%u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),objectReg_Read(),colourReg_Read());
+        usbprint("proxLeft: %u\nproxRight: %u\nproxCentre: %u\nobjectUnder: %u\ncolourUnder: %u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),proxCentreReg_Read(),objectReg_Read(),colourReg_Read());
  
         
         switch (motorState) {

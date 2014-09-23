@@ -97,24 +97,24 @@ extern CPU_STK  Driving_Task_Stack[DRIVING_STACK_SIZE];
 
 #define DRIVING_CONTROL_TASK      ((CPU_CHAR *)"Driving Control")
 #define DRIVING_CONTROL_PRIORITY  (3)
-#define DRIVING_CONTROL_STACK_SIZE   (64)
-#define DRIVING_CONTROL_STACK_LIMIT  (48)
+#define DRIVING_CONTROL_STACK_SIZE   (96)
+#define DRIVING_CONTROL_STACK_LIMIT  (80)
 
 extern OS_TCB   Driving_Control_TCB;
 extern CPU_STK  Driving_Control_Stack[DRIVING_CONTROL_STACK_SIZE];
 
 #define FLIPPER_TASK              ((CPU_CHAR *)"Flipper")
 #define FLIPPER_PRIORITY          (2)
-#define FLIPPER_STACK_SIZE        (64)
-#define FLIPPER_STACK_LIMIT       (48)
+#define FLIPPER_STACK_SIZE        (128)
+#define FLIPPER_STACK_LIMIT       (96)
 
 extern OS_TCB   Flipper_Task_TCB;
 extern CPU_STK  Flipper_Task_Stack[FLIPPER_STACK_SIZE];
 
 #define DODGEM_TASK                 ((CPU_CHAR *)"Dodging")
 #define DODGEM_PRIORITY             (5)
-#define DODGEM_STACK_SIZE           (64)
-#define DODGEM_STACK_LIMIT          (48)
+#define DODGEM_STACK_SIZE           (256)
+#define DODGEM_STACK_LIMIT          (192)
 
 extern OS_TCB Dodgem_Task_TCB;
 extern CPU_STK Dodgem_Task_Stack[DODGEM_STACK_SIZE];

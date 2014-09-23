@@ -104,7 +104,8 @@ void Driving_Task(void* UNUSED(p_arg)) {
     int16_t leftSpeed;
     int16_t rightSpeed;
     
-    proxThreshold_Write(DODGE_INTERRUPT_THRESHOLD);
+    proxLateralThreshold_Write(DODGE_INTERRUPT_THRESHOLD);
+    proxCentreLow_Write(DODGE_INTERRUPT_THRESHOLD);
     
     if (!randSeeded) {    
         Math_RandSetSeed(OSTimeGet(&err));
@@ -121,7 +122,7 @@ void Driving_Task(void* UNUSED(p_arg)) {
             turnOnSpot(SLOWLEVEL);
             break;
         case STATE_DEMO:
-            proxChange_Start(); // enable the dodging interrupt
+            proxChange_Enable();
             startMoving();
             leftSpeed = SLOWLEVEL;
             rightSpeed = SLOWLEVEL;
@@ -154,7 +155,7 @@ void Driving_Task(void* UNUSED(p_arg)) {
             break;
         default:
         case STATE_STOPPED:
-            proxChange_Stop();
+            proxChange_Disable();
             stopMoving();
             break;
     }
@@ -173,11 +174,20 @@ void Dodgem_Task(void* UNUSED(args)) {
     uint8_t proxLeft;
     uint8_t proxRight;
     
+    int suspendedDriving;
+    
     while (DEF_ON) {
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &taskTs, &taskErr);
+        proxChange_Disable();
         usbprint("pend error: %u\n",taskErr);
+        suspendedDriving = 0;
         OSTaskSuspend(&Driving_Task_TCB, &taskErr);
-        usbprint("suspend error: %u\n",taskErr);
+        if (taskErr != OS_ERR_NONE) {
+            usbprint("suspend error: %u\n",taskErr);
+            suspendedDriving = 0;
+        } else {
+            suspendedDriving = 1;
+        }
         proxLeft = proxLeftReg_Read();
         proxRight = proxRightReg_Read();
         
@@ -201,7 +211,13 @@ void Dodgem_Task(void* UNUSED(args)) {
             setLeftSpeed(0);
             delayMS(900);
         }
-        OSTaskResume(&Driving_Task_TCB, &taskErr);
-        usbprint("resume error: %u\n",taskErr);
+        if (suspendedDriving) {
+            OSTaskResume(&Driving_Task_TCB, &taskErr);
+            if (taskErr != OS_ERR_NONE) {
+                usbprint("resume error: %u\n",taskErr);
+            }
+        }
+        OSTaskSemSet(NULL, 0, &taskErr);
+        proxChange_Enable();
     }
 }

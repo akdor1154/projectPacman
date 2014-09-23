@@ -103,6 +103,9 @@ void main( void )
     SW3_Interrupt_Start();
     int_pixelReady_Start();
     
+    proxChange_Start();
+    proxChange_Disable();
+    
     colourChange_Start();
     objectChange_Start();
     
@@ -117,6 +120,7 @@ void main( void )
         }
         CyDelay(200);
     }
+    usbprint("hello");
     
     err = 0;
 	/* Create the task - it will not run until OSStart */

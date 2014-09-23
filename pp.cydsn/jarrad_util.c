@@ -14,7 +14,6 @@
 
 #include "jarrad_util.h"
 
-OS_ERR err;
 
-inline void delaySeconds(uint16_t seconds);
-inline void delayMS(uint16_t milliseconds);
+inline OS_ERR delaySeconds(uint16_t seconds);
+inline OS_ERR delayMS(uint32_t milliseconds);

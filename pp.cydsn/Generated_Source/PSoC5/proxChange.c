@@ -145,6 +145,7 @@ CY_ISR(proxChange_Interrupt)
 {
     /*  Place your Interrupt code here. */
     /* `#START proxChange_Interrupt` */
+    proxChange_ClearPending();
     CPU_SR_ALLOC();
     
     CPU_CRITICAL_ENTER();

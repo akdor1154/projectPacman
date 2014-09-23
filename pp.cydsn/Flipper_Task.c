@@ -43,7 +43,7 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
     
     while (DEF_ON) {
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
-        if (lastSeenColour != targetColour) {
+        if (lastSeenColour != ColourSelectReg_Read()) {
             delayMS(FLIPPER_DOWN_DELAY_MS);
             flipperDown();
             delayMS(FLIPPER_DOWN_TIME_MS);

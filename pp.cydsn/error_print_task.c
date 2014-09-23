@@ -49,15 +49,8 @@ void error_print_task( void *p_arg )
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
         
         
-        uint8_t c = colourStatus_Read();
-        if (c & 0x01) {
-            usbprint("colour is blue\n");
-        }
-        if (c & 0x02) {
-            usbprint ("colour is red\n");
-        }
-        usbprint ("fired colourchange\n");
-            
+        usbprint("proxLeft: %u\n proxRight: %u\n objectUnder:%u\n colourUnder:%u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),objectReg_Read(),colourReg_Read());
+ 
     }
     
     
