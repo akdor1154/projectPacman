@@ -44,7 +44,7 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
     
     while (DEF_ON) {
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
-        //objectChange_Disable();
+        objectChange_Disable();
         colour colourSelection = ColourSelectReg_Read();
         usbprint("lastSeenColour is %u, selection is %u\n",lastSeenColour,colourSelection);
         if (((uint8_t)lastSeenColour) != colourSelection) {
@@ -54,6 +54,6 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
             flipperUp();
         }
         OSTaskSemSet(NULL, 0, &err);
-        //objectChange_Enable();
+        objectChange_Enable();
     }
 }

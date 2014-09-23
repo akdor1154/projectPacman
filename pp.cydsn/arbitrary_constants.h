@@ -20,7 +20,7 @@
 #define FLIPPER_DOWN 61500
 
 //wait times to trigger the flipper -- down_delay is time before down, down_time is time before up again
-#define FLIPPER_DOWN_DELAY_MS 150
+#define FLIPPER_DOWN_DELAY_MS 175
 #define FLIPPER_DOWN_TIME_MS 400
 
 //pwm duty cycles out of 255 for some useful motor speeds.

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\Source Files\usbprint.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\Source Files\Flipper_Task.c">
 <ExpandedNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
@@ -241,9 +241,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\ProxCentre\ProxCentre.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ProxCentre\ProxCentre.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ProxCentre\ProxCentre_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\proxCentreChange</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\proxCentreChange\proxCentreChange.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\proxCentreChange\proxCentreChange.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\proxCentreDMA</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\proxCentreDMA\proxCentreDMA_dma.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\proxCentreDMA\proxCentreDMA_dma.h</v>
@@ -648,7 +645,6 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\pixelRegG.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\pixelRegR.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ProxCentre.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\proxCentreChange.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\proxCentreDMA_dma.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\proxCentreLow.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\proxCentreReg.lst</v>
