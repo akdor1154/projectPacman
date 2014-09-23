@@ -146,9 +146,18 @@ CY_ISR(colourChange_Interrupt)
     /*  Place your Interrupt code here. */
     /* `#START colourChange_Interrupt` */
 
+    CPU_SR_ALLOC();
+    
+    CPU_CRITICAL_ENTER();
+    OSIntEnter();
+    CPU_CRITICAL_EXIT();
+    
+    //stuff
     uint8_t c = colourStatus_Status;
     if (c & red) lastSeenColour = red;
     else if (c & blue) lastSeenColour = blue;
+    
+    OSIntExit();
     /* `#END` */
 }
 

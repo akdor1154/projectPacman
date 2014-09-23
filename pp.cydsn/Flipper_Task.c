@@ -17,6 +17,7 @@
 #include "Task_Defs.h"
 #include "flipper.h"
 #include "jarrad_util.h"
+#include "usbprint.h"
 
 extern colour targetColour;
 extern colour lastSeenColour;
@@ -43,11 +44,16 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
     
     while (DEF_ON) {
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
-        if (lastSeenColour != ColourSelectReg_Read()) {
+        //objectChange_Disable();
+        colour colourSelection = ColourSelectReg_Read();
+        usbprint("lastSeenColour is %u, selection is %u\n",lastSeenColour,colourSelection);
+        if (((uint8_t)lastSeenColour) != colourSelection) {
             delayMS(FLIPPER_DOWN_DELAY_MS);
             flipperDown();
             delayMS(FLIPPER_DOWN_TIME_MS);
             flipperUp();
         }
+        OSTaskSemSet(NULL, 0, &err);
+        //objectChange_Enable();
     }
 }

@@ -74,7 +74,7 @@ OSTaskCreate arguments for all tasks
 #define MAIN_TASK				((CPU_CHAR *)"Main")
 #define MAIN_TASK_PRIORITY		(4)
 #define MAIN_TASK_STACK_SIZE	(256)
-#define MAIN_TASK_STACK_LIMIT	(64)
+#define MAIN_TASK_STACK_LIMIT	(192)
 
 extern OS_TCB	Main_Task_TCB;
 extern CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
@@ -82,7 +82,7 @@ extern CPU_STK	Main_Task_Stack[MAIN_TASK_STACK_SIZE];
 #define ERROR_TASK              ((CPU_CHAR *)"eprint")
 #define ERROR_PRIORITY          (6)
 #define ERROR_STACK_SIZE        (128)
-#define ERROR_STACK_LIMIT       (64)
+#define ERROR_STACK_LIMIT       (96)
 
 extern OS_TCB error_TCB;
 extern CPU_STK  error_stack[ERROR_STACK_SIZE];

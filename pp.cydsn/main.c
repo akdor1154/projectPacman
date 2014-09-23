@@ -99,17 +99,6 @@ void main( void )
     
     CYGlobalIntEnable;
     
-    SW2_Interrupt_Start();
-    SW3_Interrupt_Start();
-    int_pixelReady_Start();
-    
-    proxChange_Start();
-    proxChange_Disable();
-    
-    colourChange_Start();
-    objectChange_Start();
-    
-    //analogReady_Start();
     
     USB_Start(0,USB_DWR_VDDD_OPERATION);
     for (USBtimeout = 0; USBtimeout <= 5; USBtimeout++) {    
@@ -121,6 +110,17 @@ void main( void )
         CyDelay(200);
     }
     usbprint("hello");
+    
+    SW2_Interrupt_Start();
+    SW3_Interrupt_Start();
+    //int_pixelReady_Start();
+    
+    
+    colourChange_Start();
+    objectChange_Start();
+    
+    //analogReady_Start();
+    
     
     err = 0;
 	/* Create the task - it will not run until OSStart */

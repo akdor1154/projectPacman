@@ -105,7 +105,7 @@ void Driving_Task(void* UNUSED(p_arg)) {
     int16_t rightSpeed;
     
     proxLateralThreshold_Write(DODGE_INTERRUPT_THRESHOLD);
-    proxCentreLow_Write(DODGE_INTERRUPT_THRESHOLD);
+    proxCentreLow_Write(DODGE_HEADON_INTERRUPT_THRESHOLD);
     
     if (!randSeeded) {    
         Math_RandSetSeed(OSTimeGet(&err));
@@ -122,6 +122,7 @@ void Driving_Task(void* UNUSED(p_arg)) {
             turnOnSpot(SLOWLEVEL);
             break;
         case STATE_DEMO:
+            proxChange_Start();
             proxChange_Enable();
             startMoving();
             leftSpeed = SLOWLEVEL;
@@ -173,6 +174,7 @@ void Dodgem_Task(void* UNUSED(args)) {
     
     uint8_t proxLeft;
     uint8_t proxRight;
+    uint8_t proxCentre;
     
     int suspendedDriving;
     
@@ -190,8 +192,9 @@ void Dodgem_Task(void* UNUSED(args)) {
         }
         proxLeft = proxLeftReg_Read();
         proxRight = proxRightReg_Read();
+        proxCentre = proxCentreReg_Read();
         
-        if ((proxLeft > DODGE_THRESHOLD) && (proxRight > DODGE_THRESHOLD)) {
+        if (proxCentre > DODGE_HEADON_THRESHOLD) {
             if (proxLeft > proxRight) {
                 usbprint("180 backwards CCW\n");
                 setLeftSpeed(-SLOWLEVEL);

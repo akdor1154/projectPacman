@@ -30,9 +30,11 @@
 
 //how much response the IR sensors need (low = far, high = close) before generating an interrupt
 #define DODGE_INTERRUPT_THRESHOLD 90
+#define DODGE_HEADON_INTERRUPT_THRESHOLD 80
 //how much the IR sensors need for the interrupt routine to interpret there is a wall in front of a sensor.
 //you want this < INTERRUPT_THRESHOLD above. (if it's equal to the interrupt threshold,
 //then you will probably never detect "wall dead ahead", as one sensor will almost certainly always fire first).
 #define DODGE_THRESHOLD 45
+#define DODGE_HEADON_THRESHOLD 40
 
 #endif

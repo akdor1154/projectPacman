@@ -170,8 +170,7 @@ void Main_Task( void* UNUSED(p_arg) )
     #define DMA_DST_BASE (CYDEV_SRAM_BASE)
     #define DMA_BYTES_PER_BURST 1
     #define DMA_REQUEST_PER_BURST 1
-
-    /* DMA Configuration for yDMA */
+    /*
     rDMA_Chan = rDMA_DmaInitialize(DMA_BYTES_PER_BURST, DMA_REQUEST_PER_BURST, 
         HI16(DMA_SRC_BASE), HI16(DMA_DST_BASE));
     rDMA_TD[0] = CyDmaTdAllocate();
@@ -180,10 +179,6 @@ void Main_Task( void* UNUSED(p_arg) )
     CyDmaChSetInitialTd(rDMA_Chan, rDMA_TD[0]);
     CyDmaChEnable(rDMA_Chan, 1);
     
-    /* Variable declarations for cbDMA */
-    /* Move these variable declarations to the top of the function */
-
-    /* DMA Configuration for cbDMA */
     gDMA_Chan = gDMA_DmaInitialize(DMA_BYTES_PER_BURST, DMA_REQUEST_PER_BURST, 
         HI16(DMA_SRC_BASE), HI16(DMA_DST_BASE));
     gDMA_TD[0] = CyDmaTdAllocate();
@@ -192,11 +187,6 @@ void Main_Task( void* UNUSED(p_arg) )
     CyDmaChSetInitialTd(gDMA_Chan, gDMA_TD[0]);
     CyDmaChEnable(gDMA_Chan, 1);
 
-    
-    /* Variable declarations for crDMA */
-    /* Move these variable declarations to the top of the function */
-
-    /* DMA Configuration for crDMA */
     bDMA_Chan = bDMA_DmaInitialize(DMA_BYTES_PER_BURST, DMA_REQUEST_PER_BURST, 
         HI16(DMA_SRC_BASE), HI16(DMA_DST_BASE));
     bDMA_TD[0] = CyDmaTdAllocate();
@@ -205,7 +195,7 @@ void Main_Task( void* UNUSED(p_arg) )
     CyDmaChSetInitialTd(bDMA_Chan, bDMA_TD[0]);
     CyDmaChEnable(bDMA_Chan, 1);
 
-    
+    */
     uint8_t numSensors = 5;
     SensorDMA sensorDMAs[] = {
         {.dmaInit = &colourDMA_DmaInitialize, .dest = colourReg_Control_PTR},
@@ -253,7 +243,7 @@ void Main_Task( void* UNUSED(p_arg) )
             &err
         );
         
-        usbprint("proxLeft: %u\nproxRight: %u\nproxCentre: %u\nobjectUnder: %u\ncolourUnder: %u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),proxCentreReg_Read(),objectReg_Read(),colourReg_Read());
+        usbprint("Left: %u\nRight: %u\nCentre: %u\nobject: %u\ncolour: %u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),proxCentreReg_Read(),objectReg_Read(),colourReg_Read());
  
         
         switch (motorState) {
