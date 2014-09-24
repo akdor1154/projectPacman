@@ -27,6 +27,7 @@
 ********************************************************************************/
 /* `#START objectChange_intc` */
 #include <includes.h>
+#include <device.h>
 #include "Task_Defs.h"
 OS_ERR err;
 /* `#END` */
@@ -145,13 +146,11 @@ CY_ISR(objectChange_Interrupt)
 {
     /*  Place your Interrupt code here. */
     /* `#START objectChange_Interrupt` */
-
     CPU_SR_ALLOC();
     
     CPU_CRITICAL_ENTER();
     OSIntEnter();
     CPU_CRITICAL_EXIT();
-    
     //stuff
     OSTaskSemPost(
         &Flipper_Task_TCB,
