@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: objectChange.c  
+* File Name: objectSecondChange.c  
 * Version 1.70
 *
 *  Description:
@@ -18,16 +18,15 @@
 
 #include <cydevice_trm.h>
 #include <CyLib.h>
-#include <objectChange.h>
+#include <objectSecondChange.h>
 
-#if !defined(objectChange__REMOVED) /* Check for removal by optimization */
+#if !defined(objectSecondChange__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-/* `#START objectChange_intc` */
+/* `#START objectSecondChange_intc` */
 #include <includes.h>
-#include <device.h>
 #include "Task_Defs.h"
 OS_ERR err;
 /* `#END` */
@@ -44,7 +43,7 @@ CY_ISR_PROTO(IntDefaultHandler);
 
 
 /*******************************************************************************
-* Function Name: objectChange_Start
+* Function Name: objectSecondChange_Start
 ********************************************************************************
 *
 * Summary:
@@ -57,24 +56,24 @@ CY_ISR_PROTO(IntDefaultHandler);
 *   None
 *
 *******************************************************************************/
-void objectChange_Start(void)
+void objectSecondChange_Start(void)
 {
     /* For all we know the interrupt is active. */
-    objectChange_Disable();
+    objectSecondChange_Disable();
 
-    /* Set the ISR to point to the objectChange Interrupt. */
-    objectChange_SetVector(&objectChange_Interrupt);
+    /* Set the ISR to point to the objectSecondChange Interrupt. */
+    objectSecondChange_SetVector(&objectSecondChange_Interrupt);
 
     /* Set the priority. */
-    objectChange_SetPriority((uint8)objectChange_INTC_PRIOR_NUMBER);
+    objectSecondChange_SetPriority((uint8)objectSecondChange_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    objectChange_Enable();
+    objectSecondChange_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_StartEx
+* Function Name: objectSecondChange_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -87,24 +86,24 @@ void objectChange_Start(void)
 *   None
 *
 *******************************************************************************/
-void objectChange_StartEx(cyisraddress address)
+void objectSecondChange_StartEx(cyisraddress address)
 {
     /* For all we know the interrupt is active. */
-    objectChange_Disable();
+    objectSecondChange_Disable();
 
-    /* Set the ISR to point to the objectChange Interrupt. */
-    objectChange_SetVector(address);
+    /* Set the ISR to point to the objectSecondChange Interrupt. */
+    objectSecondChange_SetVector(address);
 
     /* Set the priority. */
-    objectChange_SetPriority((uint8)objectChange_INTC_PRIOR_NUMBER);
+    objectSecondChange_SetPriority((uint8)objectSecondChange_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    objectChange_Enable();
+    objectSecondChange_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_Stop
+* Function Name: objectSecondChange_Stop
 ********************************************************************************
 *
 * Summary:
@@ -116,22 +115,22 @@ void objectChange_StartEx(cyisraddress address)
 *   None
 *
 *******************************************************************************/
-void objectChange_Stop(void)
+void objectSecondChange_Stop(void)
 {
     /* Disable this interrupt. */
-    objectChange_Disable();
+    objectSecondChange_Disable();
 
     /* Set the ISR to point to the passive one. */
-    objectChange_SetVector(&IntDefaultHandler);
+    objectSecondChange_SetVector(&IntDefaultHandler);
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_Interrupt
+* Function Name: objectSecondChange_Interrupt
 ********************************************************************************
 *
 * Summary:
-*   The default Interrupt Service Routine for objectChange.
+*   The default Interrupt Service Routine for objectSecondChange.
 *
 *   Add custom code between the coments to keep the next version of this file
 *   from over writting your code.
@@ -142,10 +141,10 @@ void objectChange_Stop(void)
 *   None
 *
 *******************************************************************************/
-CY_ISR(objectChange_Interrupt)
+CY_ISR(objectSecondChange_Interrupt)
 {
     /*  Place your Interrupt code here. */
-    /* `#START objectChange_Interrupt` */
+    /* `#START objectSecondChange_Interrupt` */
     CPU_SR_ALLOC();
     
     CPU_CRITICAL_ENTER();
@@ -163,13 +162,13 @@ CY_ISR(objectChange_Interrupt)
 
 
 /*******************************************************************************
-* Function Name: objectChange_SetVector
+* Function Name: objectSecondChange_SetVector
 ********************************************************************************
 *
 * Summary:
-*   Change the ISR vector for the Interrupt. Note calling objectChange_Start
+*   Change the ISR vector for the Interrupt. Note calling objectSecondChange_Start
 *   will override any effect this method would have had. To set the vector 
-*   before the component has been started use objectChange_StartEx instead.
+*   before the component has been started use objectSecondChange_StartEx instead.
 *
 * Parameters:
 *   address: Address of the ISR to set in the interrupt vector table.
@@ -178,18 +177,18 @@ CY_ISR(objectChange_Interrupt)
 *   None
 *
 *******************************************************************************/
-void objectChange_SetVector(cyisraddress address)
+void objectSecondChange_SetVector(cyisraddress address)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    ramVectorTable[CYINT_IRQ_BASE + (uint32)objectChange__INTC_NUMBER] = address;
+    ramVectorTable[CYINT_IRQ_BASE + (uint32)objectSecondChange__INTC_NUMBER] = address;
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_GetVector
+* Function Name: objectSecondChange_GetVector
 ********************************************************************************
 *
 * Summary:
@@ -202,25 +201,25 @@ void objectChange_SetVector(cyisraddress address)
 *   Address of the ISR in the interrupt vector table.
 *
 *******************************************************************************/
-cyisraddress objectChange_GetVector(void)
+cyisraddress objectSecondChange_GetVector(void)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    return ramVectorTable[CYINT_IRQ_BASE + (uint32)objectChange__INTC_NUMBER];
+    return ramVectorTable[CYINT_IRQ_BASE + (uint32)objectSecondChange__INTC_NUMBER];
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_SetPriority
+* Function Name: objectSecondChange_SetPriority
 ********************************************************************************
 *
 * Summary:
-*   Sets the Priority of the Interrupt. Note calling objectChange_Start
-*   or objectChange_StartEx will override any effect this method 
+*   Sets the Priority of the Interrupt. Note calling objectSecondChange_Start
+*   or objectSecondChange_StartEx will override any effect this method 
 *   would have had. This method should only be called after 
-*   objectChange_Start or objectChange_StartEx has been called. To set 
+*   objectSecondChange_Start or objectSecondChange_StartEx has been called. To set 
 *   the initial priority for the component use the cydwr file in the tool.
 *
 * Parameters:
@@ -230,14 +229,14 @@ cyisraddress objectChange_GetVector(void)
 *   None
 *
 *******************************************************************************/
-void objectChange_SetPriority(uint8 priority)
+void objectSecondChange_SetPriority(uint8 priority)
 {
-    *objectChange_INTC_PRIOR = priority << 5;
+    *objectSecondChange_INTC_PRIOR = priority << 5;
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_GetPriority
+* Function Name: objectSecondChange_GetPriority
 ********************************************************************************
 *
 * Summary:
@@ -250,19 +249,19 @@ void objectChange_SetPriority(uint8 priority)
 *   Priority of the interrupt. 0 - 7, 0 being the highest.
 *
 *******************************************************************************/
-uint8 objectChange_GetPriority(void)
+uint8 objectSecondChange_GetPriority(void)
 {
     uint8 priority;
 
 
-    priority = *objectChange_INTC_PRIOR >> 5;
+    priority = *objectSecondChange_INTC_PRIOR >> 5;
 
     return priority;
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_Enable
+* Function Name: objectSecondChange_Enable
 ********************************************************************************
 *
 * Summary:
@@ -275,15 +274,15 @@ uint8 objectChange_GetPriority(void)
 *   None
 *
 *******************************************************************************/
-void objectChange_Enable(void)
+void objectSecondChange_Enable(void)
 {
     /* Enable the general interrupt. */
-    *objectChange_INTC_SET_EN = objectChange__INTC_MASK;
+    *objectSecondChange_INTC_SET_EN = objectSecondChange__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_GetState
+* Function Name: objectSecondChange_GetState
 ********************************************************************************
 *
 * Summary:
@@ -296,15 +295,15 @@ void objectChange_Enable(void)
 *   1 if enabled, 0 if disabled.
 *
 *******************************************************************************/
-uint8 objectChange_GetState(void)
+uint8 objectSecondChange_GetState(void)
 {
     /* Get the state of the general interrupt. */
-    return ((*objectChange_INTC_SET_EN & (uint32)objectChange__INTC_MASK) != 0u) ? 1u:0u;
+    return ((*objectSecondChange_INTC_SET_EN & (uint32)objectSecondChange__INTC_MASK) != 0u) ? 1u:0u;
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_Disable
+* Function Name: objectSecondChange_Disable
 ********************************************************************************
 *
 * Summary:
@@ -317,15 +316,15 @@ uint8 objectChange_GetState(void)
 *   None
 *
 *******************************************************************************/
-void objectChange_Disable(void)
+void objectSecondChange_Disable(void)
 {
     /* Disable the general interrupt. */
-    *objectChange_INTC_CLR_EN = objectChange__INTC_MASK;
+    *objectSecondChange_INTC_CLR_EN = objectSecondChange__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_SetPending
+* Function Name: objectSecondChange_SetPending
 ********************************************************************************
 *
 * Summary:
@@ -339,14 +338,14 @@ void objectChange_Disable(void)
 *   None
 *
 *******************************************************************************/
-void objectChange_SetPending(void)
+void objectSecondChange_SetPending(void)
 {
-    *objectChange_INTC_SET_PD = objectChange__INTC_MASK;
+    *objectSecondChange_INTC_SET_PD = objectSecondChange__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: objectChange_ClearPending
+* Function Name: objectSecondChange_ClearPending
 ********************************************************************************
 *
 * Summary:
@@ -359,9 +358,9 @@ void objectChange_SetPending(void)
 *   None
 *
 *******************************************************************************/
-void objectChange_ClearPending(void)
+void objectSecondChange_ClearPending(void)
 {
-    *objectChange_INTC_CLR_PD = objectChange__INTC_MASK;
+    *objectSecondChange_INTC_CLR_PD = objectSecondChange__INTC_MASK;
 }
 
 #endif /* End check for removal by optimization */

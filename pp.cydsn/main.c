@@ -117,7 +117,8 @@ void main( void )
     
     
     colourChange_Start();
-    objectChange_Start();
+    objectFirstChange_Start();
+    objectSecondChange_Start();
     
     //analogReady_Start();
     

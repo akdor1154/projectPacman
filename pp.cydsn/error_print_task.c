@@ -48,7 +48,7 @@ void error_print_task( void *p_arg )
     	&err );*/
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
         
-        usbprint("Left: %u\nRight: %u\nCentre: %u\nobject: %u\ncolour: %u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),proxCentreReg_Read(),objectReg_Read(),colourReg_Read());
+        usbprint("Left: %u\nRight: %u\nCentre: %u\nobject1: %u\nobject2: %u\ncolour: %u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),proxCentreReg_Read(),objectFirstReg_Read(),objectSecondReg_Read(),colourReg_Read());
  
     }
     

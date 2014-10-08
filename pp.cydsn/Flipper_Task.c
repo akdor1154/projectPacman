@@ -27,6 +27,8 @@ extern uint8_t gotUSB;
 OS_TCB   Flipper_Task_TCB;
 CPU_STK  Flipper_Task_Stack[FLIPPER_STACK_SIZE];
 
+OS_TICK objectFirstTicks;
+int objectFirstCheck;
 
 void flipperUp() {
     if (gotUSB) return;
@@ -41,19 +43,36 @@ void flipperDown() {
 void Flipper_Task(void* UNUSED(taskArgs)) {
     CPU_TS ts;
     OS_ERR err;
-    
+    OS_TICK objectSecondTicks;
+    OS_TICK deltaTicks;
+    OS_TICK maxTicks = 1000000;
+    objectFirstCheck = 0;
     while (DEF_ON) {
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
-        objectChange_Disable();
+        objectSecondChange_Disable();
+        
+        if (!objectFirstCheck) {
+            usbprint("triggered objectSecond without objectFirst\n");
+            continue; // if objectFirst hasn't triggered, ignore
+        }
+        objectSecondTicks = OSTimeGet(&err);
+        deltaTicks = objectSecondTicks - objectFirstTicks;
+        objectFirstCheck = 0;
+        if (deltaTicks > maxTicks) {
+            usbprint("waited %u ticks, which is longer than our max of %u",deltaTicks,maxTicks);
+            continue; // ignore stupid wait times
+        
+        }
+        usbprint("all triggered successfully, waiting for %u ticks",deltaTicks);
         colour colourSelection = ColourSelectReg_Read();
         usbprint("lastSeenColour is %u, selection is %u\n",lastSeenColour,colourSelection);
-        if (((uint8_t)lastSeenColour) != colourSelection) {
-            delayMS(FLIPPER_DOWN_DELAY_MS);
+        if (lastSeenColour != colourSelection) {
+            OSTimeDly(deltaTicks, OS_OPT_TIME_DLY, &err);
             flipperDown();
             delayMS(FLIPPER_DOWN_TIME_MS);
             flipperUp();
         }
         OSTaskSemSet(NULL, 0, &err);
-        objectChange_Enable();
+        objectSecondChange_Enable();
     }
 }
