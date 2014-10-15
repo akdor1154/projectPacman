@@ -37,4 +37,10 @@
 #define DODGE_THRESHOLD 45
 #define DODGE_HEADON_THRESHOLD 40
 
+#define WAITRATIO_NUM 3
+#define WAITRATIO_DENOM 2
+
+#define WAITRATIO_OFFSET 0
+
+    
 #endif

@@ -17,7 +17,7 @@
 
 #define CAM_ADDRESS 0x21
 #define ce(n,X) err = X; if (err != cami2c_MSTR_NO_ERROR) { errSrc = n; return (errSrc << 8) | err; }
-
+#if 0
 uint16_t SccbWrite(uint8_t addr, uint8_t byte) {
     /*SccbWritePhase1(id, addr);
     int i;
@@ -107,5 +107,6 @@ void CameraConfig() {
     //SccbWrite(0x60,0x09,0x04); //Slave Mode
     //SccbRead(0x60,0x12);
     */
-  
 }
+
+ #endif 

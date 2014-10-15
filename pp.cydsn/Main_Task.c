@@ -118,14 +118,14 @@ void Main_Task( void* UNUSED(p_arg) )
 	CPU_TS ts;
     
     //uint8_t adcResult;
-    
+    /*
     uint8 rDMA_Chan;
     uint8 rDMA_TD[1];
     uint8 gDMA_Chan;
     uint8 gDMA_TD[1];
     uint8 bDMA_Chan;
     uint8 bDMA_TD[1];
-    
+    */
     //uint8_t magicToggle;
     
     
@@ -144,7 +144,7 @@ void Main_Task( void* UNUSED(p_arg) )
     CPU_IntDisMeasMaxCurReset();
 #endif
     usbprint("blah\n\n");
-    CameraConfig();
+    //CameraConfig();
     
     PWM_1_Start();
     
@@ -196,7 +196,7 @@ void Main_Task( void* UNUSED(p_arg) )
     CyDmaChEnable(bDMA_Chan, 1);
 
     */
-    uint8_t numSensors = 5;
+    uint8_t numSensors = 6;
     SensorDMA sensorDMAs[] = {
         {.dmaInit = &colourDMA_DmaInitialize, .dest = colourReg_Control_PTR},
         {.dmaInit = &objectFirstDMA_DmaInitialize, .dest = objectFirstReg_Control_PTR},

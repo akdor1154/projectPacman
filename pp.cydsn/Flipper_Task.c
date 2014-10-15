@@ -18,6 +18,7 @@
 #include "flipper.h"
 #include "jarrad_util.h"
 #include "usbprint.h"
+#include "arbitrary_constants.h"
 
 extern colour targetColour;
 extern colour lastSeenColour;
@@ -45,7 +46,7 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
     OS_ERR err;
     OS_TICK objectSecondTicks;
     OS_TICK deltaTicks;
-    OS_TICK maxTicks = 1000000;
+    OS_TICK maxTicks = 1200;
     objectFirstCheck = 0;
     while (DEF_ON) {
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
@@ -67,6 +68,8 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
         colour colourSelection = ColourSelectReg_Read();
         usbprint("lastSeenColour is %u, selection is %u\n",lastSeenColour,colourSelection);
         if (lastSeenColour != colourSelection) {
+            deltaTicks = (deltaTicks / WAITRATIO_DENOM) * WAITRATIO_NUM;
+            deltaTicks += WAITRATIO_OFFSET;
             OSTimeDly(deltaTicks, OS_OPT_TIME_DLY, &err);
             flipperDown();
             delayMS(FLIPPER_DOWN_TIME_MS);
