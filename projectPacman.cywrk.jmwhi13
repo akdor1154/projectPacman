@@ -100,9 +100,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\analogReady</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\analogReady\analogReady.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\analogReady\analogReady.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colorRed_Low</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colorRed_Low\colorRed_Low.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colorRed_Low\colorRed_Low.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ColorUnder</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ColorUnder\ColorUnder.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ColorUnder\ColorUnder.h</v>
@@ -116,6 +113,9 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\colourDMA</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\colourDMA\colourDMA_dma.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\colourDMA\colourDMA_dma.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\colourRed_Low</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\colourRed_Low\colourRed_Low.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\colourRed_Low\colourRed_Low.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\colourReg</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\colourReg\colourReg.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\colourReg\colourReg.h</v>
@@ -318,13 +318,13 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\B1</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\B2</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\Bootloadable_1</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colorRed_Low</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colorRed_Low\colorRed_Low.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colorRed_Low\colorRed_Low.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ColorUnder</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ColorUnder\ColorUnder.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ColorUnder\ColorUnder.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\ColorUnder\ColorUnder_aliases.h</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\colourBlue_High</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\colourBlue_High\colourBlue_High.c</v>
+<v>projectPacman\pp\Generated_Source\PSoC5\colourBlue_High\colourBlue_High.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\lastPixel\lastPixel.cysym">
@@ -392,11 +392,11 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\bsp.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\camera.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Cm3Start.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colorRed_Low.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ColorUnder.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourBlue_High.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourChange.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourDMA_dma.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourRed_Low.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourReg.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ColourSelectPin.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ColourSelectReg.lst</v>
@@ -540,11 +540,11 @@
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\bsp.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\camera.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Cm3Start.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colorRed_Low.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ColorUnder.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourBlue_High.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourChange.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourDMA_dma.lst</v>
+<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourRed_Low.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourReg.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ColourSelectPin.lst</v>
 <v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ColourSelectReg.lst</v>
@@ -671,13 +671,6 @@
 <name v=".\pp.cydsn\arbitrary_constants.h" />
 <name v=".\pp.cydsn\Generated_Source\PSoC5\proxChange.c" />
 <name v=".\pp.cydsn\main.c" />
-<name v=".\pp.cydsn\lastPixel\lastPixel.cysym" />
-<name v=".\pp.cydsn\lastPixel\lastPixel.v" />
-<name v=".\pp.cydsn\PixelRegRGB\PixelRegRGB.v" />
-<name v=".\pp.cydsn\codegentemp\pp.v" />
-<name v=".\pp.cydsn\PixelRegRGB\PixelRegRGB.cysym" />
-<name v=".\pp.cydsn\camera.c" />
-<name v=".\pp.cydsn\camera.h" />
 <name v=".\pp.cydsn\Flipper_Task.c" />
 </OpenDocs>
 <config v="Release" />

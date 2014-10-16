@@ -17,3 +17,4 @@
 
 inline OS_ERR delaySeconds(uint16_t seconds);
 inline OS_ERR delayMS(uint32_t milliseconds);
+inline void statusReport();

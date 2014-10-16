@@ -20,7 +20,6 @@
 #include "usbprint.h"
 #include "arbitrary_constants.h"
 
-extern colour targetColour;
 extern colour lastSeenColour;
 
 extern uint8_t gotUSB;
@@ -61,20 +60,29 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
         objectFirstCheck = 0;
         if (deltaTicks > maxTicks) {
             usbprint("waited %u ticks, which is longer than our max of %u",deltaTicks,maxTicks);
+            OSTaskSemSet(NULL, 0, &err);
+            objectSecondChange_Enable();
             continue; // ignore stupid wait times
         
         }
+        led3_toggler_Write(1);
         usbprint("all triggered successfully, waiting for %u ticks",deltaTicks);
         colour colourSelection = ColourSelectReg_Read();
         usbprint("lastSeenColour is %u, selection is %u\n",lastSeenColour,colourSelection);
         if (lastSeenColour != colourSelection) {
+            led4_toggler_Write(1);
+            usbprint("triggering because difference detected\n");
             deltaTicks = (deltaTicks / WAITRATIO_DENOM) * WAITRATIO_NUM;
             deltaTicks += WAITRATIO_OFFSET;
             OSTimeDly(deltaTicks, OS_OPT_TIME_DLY, &err);
             flipperDown();
             delayMS(FLIPPER_DOWN_TIME_MS);
             flipperUp();
+        } else {
+            usbprint("not triggering because already target colour\n");
         }
+        led3_toggler_Write(0);
+        led4_toggler_Write(0);
         OSTaskSemSet(NULL, 0, &err);
         objectSecondChange_Enable();
     }

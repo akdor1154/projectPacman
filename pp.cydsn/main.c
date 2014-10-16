@@ -110,18 +110,7 @@ void main( void )
         CyDelay(200);
     }
     usbprint("hello");
-    
-    SW2_Interrupt_Start();
-    SW3_Interrupt_Start();
-    //int_pixelReady_Start();
-    
-    
-    colourChange_Start();
-    objectFirstChange_Start();
-    objectSecondChange_Start();
-    
-    //analogReady_Start();
-    
+
     
     err = 0;
 	/* Create the task - it will not run until OSStart */

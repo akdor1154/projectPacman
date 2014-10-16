@@ -23,6 +23,7 @@
 #include <Task_Defs.h>
 
 #include "usbprint.h"
+#include "jarrad_util.h"
 
 /* Main_Task TCB, start function and stack */
 OS_TCB	error_TCB;
@@ -48,8 +49,8 @@ void error_print_task( void *p_arg )
     	&err );*/
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err);
         
-        usbprint("Left: %u\nRight: %u\nCentre: %u\nobject1: %u\nobject2: %u\ncolour: %u\n\n ",proxLeftReg_Read(),proxRightReg_Read(),proxCentreReg_Read(),objectFirstReg_Read(),objectSecondReg_Read(),colourReg_Read());
- 
+        statusReport();
+
     }
     
     

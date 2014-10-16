@@ -117,18 +117,7 @@ void Main_Task( void* UNUSED(p_arg) )
 	OS_ERR err;			/* Hold OS call return code */
 	CPU_TS ts;
     
-    //uint8_t adcResult;
-    /*
-    uint8 rDMA_Chan;
-    uint8 rDMA_TD[1];
-    uint8 gDMA_Chan;
-    uint8 gDMA_TD[1];
-    uint8 bDMA_Chan;
-    uint8 bDMA_TD[1];
-    */
-    //uint8_t magicToggle;
-    
-    
+
     
 	/* Perform BSP post-initialization functions */
 	BSP_PostInit();
@@ -143,25 +132,16 @@ void Main_Task( void* UNUSED(p_arg) )
 #ifdef CPU_CFG_INT_DIS_MEAS_EN
     CPU_IntDisMeasMaxCurReset();
 #endif
+
     usbprint("blah\n\n");
-    //CameraConfig();
-    
-    PWM_1_Start();
-    
-    
-    LeftMotorPWM_Start();
-    RightMotorPWM_Start();
     
     
     changeMotorState(STATE_STOPPED);
     if (!gotUSB) {
         ServoPWM_Start();
     }
+    
     flipperUp();
-    //SensorADC_Start();
-    //SensorADC_StartConvert();
-    //Count7_1_Start();
-    //adcResult = 0;
 
     /* Variable declarations for yDMA */
     /* Move these variable declarations to the top of the function */
@@ -170,32 +150,7 @@ void Main_Task( void* UNUSED(p_arg) )
     #define DMA_DST_BASE (CYDEV_SRAM_BASE)
     #define DMA_BYTES_PER_BURST 1
     #define DMA_REQUEST_PER_BURST 1
-    /*
-    rDMA_Chan = rDMA_DmaInitialize(DMA_BYTES_PER_BURST, DMA_REQUEST_PER_BURST, 
-        HI16(DMA_SRC_BASE), HI16(DMA_DST_BASE));
-    rDMA_TD[0] = CyDmaTdAllocate();
-    CyDmaTdSetConfiguration(rDMA_TD[0], 1, rDMA_TD[0], 0);
-    CyDmaTdSetAddress(rDMA_TD[0], LO16((uint32)pixelRegR_Status_PTR), LO16((uint32)&rPix));
-    CyDmaChSetInitialTd(rDMA_Chan, rDMA_TD[0]);
-    CyDmaChEnable(rDMA_Chan, 1);
-    
-    gDMA_Chan = gDMA_DmaInitialize(DMA_BYTES_PER_BURST, DMA_REQUEST_PER_BURST, 
-        HI16(DMA_SRC_BASE), HI16(DMA_DST_BASE));
-    gDMA_TD[0] = CyDmaTdAllocate();
-    CyDmaTdSetConfiguration(gDMA_TD[0], 1, gDMA_TD[0], 0);
-    CyDmaTdSetAddress(gDMA_TD[0], LO16((uint32)pixelRegG_Status_PTR), LO16((uint32)&gPix));
-    CyDmaChSetInitialTd(gDMA_Chan, gDMA_TD[0]);
-    CyDmaChEnable(gDMA_Chan, 1);
 
-    bDMA_Chan = bDMA_DmaInitialize(DMA_BYTES_PER_BURST, DMA_REQUEST_PER_BURST, 
-        HI16(DMA_SRC_BASE), HI16(DMA_DST_BASE));
-    bDMA_TD[0] = CyDmaTdAllocate();
-    CyDmaTdSetConfiguration(bDMA_TD[0], 1, bDMA_TD[0], 0);
-    CyDmaTdSetAddress(bDMA_TD[0], LO16((uint32)pixelRegB_Status_PTR), LO16((uint32)&bPix));
-    CyDmaChSetInitialTd(bDMA_Chan, bDMA_TD[0]);
-    CyDmaChEnable(bDMA_Chan, 1);
-
-    */
     uint8_t numSensors = 6;
     SensorDMA sensorDMAs[] = {
         {.dmaInit = &colourDMA_DmaInitialize, .dest = colourReg_Control_PTR},
@@ -221,20 +176,30 @@ void Main_Task( void* UNUSED(p_arg) )
         CyDmaChEnable(sensorDMAs[i].channel, 1);
     }
     
-    SensorADC_Start();
     
     motorState = 0;
     
-    //TODO FIX ME FIX ME FIX ME FIX ME!!!!!!1
-    targetColour = red;
-    //TODO IS IT FIXED YET?
+    colourBlue_High_Write(BLUE_MAX);
+    colourRed_Low_Write(RED_MIN);
+    
+    
+    
+    PWM_1_Start();
+    LeftMotorPWM_Start();
+    RightMotorPWM_Start();
+    
+    SensorADC_Start();
+    
+    //enable all interrupts
+    SW2_Interrupt_Start();
+    SW3_Interrupt_Start();
+    colourChange_Start();
+    objectFirstChange_Start();
+    objectSecondChange_Start();
+    
+    
     
 	while (DEF_ON) {
-		/* Delay 1s */
-		/*OSTimeDly(
-			tenthSecond,
-           	OS_OPT_TIME_DLY,
-			&err );*/
 		
         usbprint("waiting...\n");
         OSTaskSemPend(

@@ -42,5 +42,7 @@
 
 #define WAITRATIO_OFFSET 0
 
+#define RED_MIN 35
+#define BLUE_MAX 15
     
 #endif
