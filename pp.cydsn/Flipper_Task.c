@@ -53,6 +53,8 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
         
         if (!objectFirstCheck) {
             usbprint("triggered objectSecond without objectFirst\n");
+            OSTaskSemSet(NULL, 0, &err);
+            objectSecondChange_Enable();
             continue; // if objectFirst hasn't triggered, ignore
         }
         objectSecondTicks = OSTimeGet(&err);
@@ -72,7 +74,7 @@ void Flipper_Task(void* UNUSED(taskArgs)) {
         if (lastSeenColour != colourSelection) {
             led4_toggler_Write(1);
             usbprint("triggering because difference detected\n");
-            deltaTicks = (deltaTicks / WAITRATIO_DENOM) * WAITRATIO_NUM;
+            deltaTicks = (deltaTicks * WAITRATIO_NUM) / WAITRATIO_DENOM;
             deltaTicks += WAITRATIO_OFFSET;
             OSTimeDly(deltaTicks, OS_OPT_TIME_DLY, &err);
             flipperDown();

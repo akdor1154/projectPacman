@@ -25,7 +25,7 @@
 
 //pwm duty cycles out of 255 for some useful motor speeds.
 #define STOPLEVEL 0
-#define SLOWLEVEL 92
+#define SLOWLEVEL 120
 #define STARTLEVEL 255
 
 //how much response the IR sensors need (low = far, high = close) before generating an interrupt
@@ -37,10 +37,10 @@
 #define DODGE_THRESHOLD 45
 #define DODGE_HEADON_THRESHOLD 40
 
-#define WAITRATIO_NUM 3
-#define WAITRATIO_DENOM 2
-
-#define WAITRATIO_OFFSET 0
+#define WAITRATIO_NUM 113
+#define WAITRATIO_DENOM 64
+    
+#define WAITRATIO_OFFSET 8
 
 #define RED_MIN 35
 #define BLUE_MAX 15
