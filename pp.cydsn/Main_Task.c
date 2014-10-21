@@ -227,6 +227,9 @@ void Main_Task( void* UNUSED(p_arg) )
     colourBlue_High_Write(BLUE_MAX);
     colourRed_Low_Write(RED_MIN);
     
+    //set puck detection threshold
+    object_Low_Write(PUCK_THRESHOLD);
+    
     //start PWMs
     PWM_1_Start();
     LeftMotorPWM_Start();

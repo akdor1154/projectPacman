@@ -16,7 +16,7 @@
 #define ARBCONSTS
     
 //these are the 'logic low' proportions, out of 65536 ticks per cycle, of the pwm cycle to the servo for the relevant state.
-#define FLIPPER_UP 62000
+#define FLIPPER_UP 61900
 #define FLIPPER_DOWN 61500
 
 //wait times to trigger the flipper -- down_delay is time before down, down_time is time before up again
@@ -37,12 +37,18 @@
 #define DODGE_THRESHOLD 45
 #define DODGE_HEADON_THRESHOLD 40
 
-#define WAITRATIO_NUM 113
-#define WAITRATIO_DENOM 64
+#define WAITRATIO_NUM 16
+#define WAITRATIO_DENOM 9
     
-#define WAITRATIO_OFFSET 8
+#define WAITRATIO_OFFSET 0
 
 #define RED_MIN 35
 #define BLUE_MAX 15
+
+#define PUCK_THRESHOLD 160
+    
+#define U_TURN_TIME_MS 1400
+
+#define SWERVE_TIME_MS 750
     
 #endif

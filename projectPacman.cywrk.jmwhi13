@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\Header Files\arbitrary_constants.h">
 <ExpandedNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
@@ -278,17 +278,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\SW3_Interrupt</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>projectPacman</v>
-<v>projectPacman\pp</v>
-<v>projectPacman\pp\TopDesign.cysch</v>
-<v>projectPacman\pp\pp.cydwr</v>
-<v>projectPacman\pp\APP-CFG</v>
-<v>projectPacman\pp\APP-CFG\app_cfg.h</v>
-<v>projectPacman\pp\APP-CFG\cpu_cfg.h</v>
-<v>projectPacman\pp\APP-CFG\includes.h</v>
-<v>projectPacman\pp\APP-CFG\os_app_hooks.c</v>
-<v>projectPacman\pp\APP-CFG\os_app_hooks.h</v>
-<v>projectPacman\pp\APP-CFG\os_cfg.h</v>
 <v>projectPacman\pp\APP-CFG\os_cfg_app.h</v>
 <v>projectPacman\pp\Header Files</v>
 <v>projectPacman\pp\Header Files\arbitrary_constants.h</v>
@@ -325,11 +314,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\colourBlue_High</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\colourBlue_High\colourBlue_High.c</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\colourBlue_High\colourBlue_High.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourChange</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourChange\colourChange.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourChange\colourChange.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourDMA</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourDMA\colourDMA_dma.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\lastPixel\lastPixel.cysym">
@@ -534,56 +518,6 @@
 <VisibleNodeIds>
 <v>projectPacman</v>
 <v>projectPacman\pp</v>
-<v>projectPacman\pp\CortexM3</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\analogReady.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\B1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\B2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Bootloadable_1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\bsp.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\camera.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Cm3Start.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ColorUnder.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourBlue_High.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourChange.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourDMA_dma.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourRed_Low.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourReg.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ColourSelectPin.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\ColourSelectReg.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\colourStatus.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cpu_a.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cpu_bsp.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cpu_c.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cpu_core.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CyBootAsmGnu.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cybootloader.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CyDmac.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cyfitter_cfg.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CyFlash.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CyLib.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cymetadata.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cyPm.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CyslowClock.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\CySpc.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\cyutils.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\D1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\D3.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\D4.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Driving_Control_Task.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Driving_Task.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\error_print_task.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\Flipper_Task.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\flipperPWM.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\jarrad_util.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\led1_toggler.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\LED2.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\led3_toggler.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\led4_toggler.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\LeftMotorInput1.lst</v>
-<v>projectPacman\pp\CortexM3\ARM_GCC_473\Release\Listing Files\LeftMotorInput1N.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -612,6 +546,7 @@
 <v>projectPacman\pp\CyStatusReg_v1_80</v>
 <v>projectPacman\pp\Debouncer_v1_0</v>
 <v>projectPacman\pp\DigitalComp_v1_0</v>
+<v>projectPacman\pp\EdgeDetect_v1_0</v>
 <v>projectPacman\pp\Gnd_v1_0</v>
 <v>projectPacman\pp\LED_v1_0</v>
 <v>projectPacman\pp\LUT_v1_50</v>
@@ -643,6 +578,7 @@
 <v>projectPacman\pp\CyStatusReg_v1_80</v>
 <v>projectPacman\pp\Debouncer_v1_0</v>
 <v>projectPacman\pp\DigitalComp_v1_0</v>
+<v>projectPacman\pp\EdgeDetect_v1_0</v>
 <v>projectPacman\pp\Gnd_v1_0</v>
 <v>projectPacman\pp\LED_v1_0</v>
 <v>projectPacman\pp\LUT_v1_50</v>

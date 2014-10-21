@@ -180,7 +180,7 @@ void Dodgem_Task(void* UNUSED(args)) {
     
     while (DEF_ON) {
         OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &taskTs, &taskErr);
-        proxChange_Disable();
+        //proxChange_Disable();
         usbprint("pend error: %u\n",taskErr);
         suspendedDriving = 0;
         OSTaskSuspend(&Driving_Task_TCB, &taskErr);
@@ -188,7 +188,7 @@ void Dodgem_Task(void* UNUSED(args)) {
             usbprint("suspend error: %u\n",taskErr);
             suspendedDriving = 0;
         } else {
-            suspendedDriving = 1;
+            suspendedDriving += 1;
         }
         proxLeft = proxLeftReg_Read();
         proxRight = proxRightReg_Read();
@@ -204,23 +204,25 @@ void Dodgem_Task(void* UNUSED(args)) {
                 setLeftSpeed(-10);
                 setRightSpeed(-SLOWLEVEL);
             }
-            delayMS(1600);
+            delayMS(U_TURN_TIME_MS);
         } else if (proxLeft > DODGE_THRESHOLD) {
             usbprint("holding right motor\n");
-            setRightSpeed(0);
-            delayMS(900);
+            setRightSpeed(-1);
+            delayMS(SWERVE_TIME_MS);
         } else if (proxRight > DODGE_THRESHOLD) {
             usbprint("holding left motor\n");
-            setLeftSpeed(0);
-            delayMS(900);
+            setLeftSpeed(-1);
+            delayMS(SWERVE_TIME_MS);
         }
-        if (suspendedDriving) {
+        OSSchedLock(&err);
+        for (int i = 0; i<suspendedDriving; i++) {
             OSTaskResume(&Driving_Task_TCB, &taskErr);
             if (taskErr != OS_ERR_NONE) {
                 usbprint("resume error: %u\n",taskErr);
             }
         }
-        OSTaskSemSet(NULL, 0, &taskErr);
-        proxChange_Enable();
+        OSSchedUnlock(&err);
+        //OSTaskSemSet(NULL, 0, &taskErr);
+        //proxChange_Enable();
     }
 }

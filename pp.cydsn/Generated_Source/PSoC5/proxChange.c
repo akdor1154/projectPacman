@@ -158,6 +158,8 @@ CY_ISR(proxChange_Interrupt)
         OS_OPT_POST_NONE,
         &err
     );
+    OSTimeDlyResume(&Dodgem_Task_TCB, &err);
+    proxChange_Enable();
     OSIntExit();
     /* `#END` */
 }
