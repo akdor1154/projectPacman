@@ -29,6 +29,9 @@ CPU_TS ts;
 
 int randSeeded = 0;
 
+int perturbation = 0;
+int lastPerturbation = 0;
+
 motorState_t motorState;
 
 void startMoving() {
@@ -128,7 +131,6 @@ void Driving_Task(void* UNUSED(p_arg)) {
             leftSpeed = SLOWLEVEL;
             rightSpeed = SLOWLEVEL;
             while (DEF_ON) {
-                delaySeconds(1);
                 random = Math_Rand(); // rand is alternating perfectly between even and odd numbers...
                 perturbation = (signed int) ( random & 0x1F ); // take the last 5 bits of a random number, equivalent to rand() % 32
                 
@@ -136,7 +138,10 @@ void Driving_Task(void* UNUSED(p_arg)) {
                 if (((random) ^ (random >> 4)) & 0x08) { // all I want is a random bit; why must I go and swear "screw it"; my face I want to hit; oh wouldn't it be lovely..
                     perturbation = -perturbation;
                 }
+                perturbation += (lastPerturbation/2);
                 usbprint("flipped perturbation is %i\n",perturbation);
+                delaySeconds(1);
+                OSSchedLock(&err);
                 leftSpeed = leftSpeed - perturbation;
                 rightSpeed = rightSpeed + perturbation;
                 leftSpeed = (leftSpeed < walkBottom) ? walkBottom : leftSpeed;
@@ -145,7 +150,9 @@ void Driving_Task(void* UNUSED(p_arg)) {
                 rightSpeed = (rightSpeed > walkTop) ? walkTop : rightSpeed;
                 setLeftSpeed(leftSpeed);
                 setRightSpeed(rightSpeed);
+                OSSchedUnlock(&err);
                 usbprint("set speed to %i, %i",leftSpeed,rightSpeed);
+                lastPerturbation = perturbation;
             }
             while (DEF_ON) {
                 turnOnSpot(SLOWLEVEL);
@@ -216,6 +223,8 @@ void Dodgem_Task(void* UNUSED(args)) {
         }
         OSSchedLock(&err);
         for (int i = 0; i<suspendedDriving; i++) {
+            perturbation = 0;
+            lastPerturbation = 0;
             OSTaskResume(&Driving_Task_TCB, &taskErr);
             if (taskErr != OS_ERR_NONE) {
                 usbprint("resume error: %u\n",taskErr);

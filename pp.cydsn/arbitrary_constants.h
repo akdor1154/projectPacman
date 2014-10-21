@@ -40,7 +40,7 @@
 #define WAITRATIO_NUM 16
 #define WAITRATIO_DENOM 9
     
-#define WAITRATIO_OFFSET 0
+#define WAITRATIO_OFFSET 30
 
 #define RED_MIN 35
 #define BLUE_MAX 15
