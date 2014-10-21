@@ -117,39 +117,83 @@ void Main_Task( void* UNUSED(p_arg) )
 	OS_ERR err;			/* Hold OS call return code */
 	CPU_TS ts;
     
-
-    
 	/* Perform BSP post-initialization functions */
 	BSP_PostInit();
     
 	/* Perform PSoC Tick Initialization */
     BSP_CPU_TickInit();
 
-#if (OS_CFG_STAT_TASK_EN > 0u)
+    #if (OS_CFG_STAT_TASK_EN > 0u)
     OSStatTaskCPUUsageInit(&err);
-#endif    
+    #endif    
 
-#ifdef CPU_CFG_INT_DIS_MEAS_EN
+    #ifdef CPU_CFG_INT_DIS_MEAS_EN
     CPU_IntDisMeasMaxCurReset();
-#endif
+    #endif
 
-    usbprint("blah\n\n");
+    OSTaskCreate(
+		&error_TCB,
+		ERROR_TASK,
+		error_print_task,
+		NO_TASK_ARG,
+		ERROR_PRIORITY,
+		error_stack,
+		ERROR_STACK_LIMIT,
+		ERROR_STACK_SIZE,
+		NO_TASK_Q,
+		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
+		NO_TCB_EXT,
+		OS_OPT_TASK_STK_CHK,
+		&err );
     
+    OSTaskCreate(
+		&Driving_Control_TCB,
+		DRIVING_CONTROL_TASK,
+		Driving_Control_Task,
+		NO_TASK_ARG,
+		DRIVING_CONTROL_PRIORITY,
+		Driving_Control_Stack,
+		DRIVING_CONTROL_STACK_LIMIT,
+		DRIVING_CONTROL_STACK_SIZE,
+		NO_TASK_Q,
+		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
+		NO_TCB_EXT,
+		OS_OPT_TASK_STK_CHK,
+		&err );
+    
+    OSTaskCreate(
+		&Flipper_Task_TCB,
+		FLIPPER_TASK,
+		Flipper_Task,
+		NO_TASK_ARG,
+		FLIPPER_PRIORITY,
+		Flipper_Task_Stack,
+		FLIPPER_STACK_LIMIT,
+		FLIPPER_STACK_SIZE,
+		NO_TASK_Q,
+		DEFAULT_ROUND_ROBIN_TIME_QUANTA,
+		NO_TCB_EXT,
+		OS_OPT_TASK_STK_CHK,
+		&err );
+    
+    OSTaskCreate(
+        &Dodgem_Task_TCB,
+        DODGEM_TASK,
+        Dodgem_Task,
+        NO_TASK_ARG,
+        DODGEM_PRIORITY,
+        Dodgem_Task_Stack,
+        DODGEM_STACK_LIMIT,
+        DODGEM_STACK_SIZE,
+        NO_TASK_Q,
+        DEFAULT_ROUND_ROBIN_TIME_QUANTA,
+        NO_TCB_EXT,
+        OS_OPT_TASK_STK_CHK,
+        &err );
+    
+    usbprint("tasks created\n\n");
     
     changeMotorState(STATE_STOPPED);
-    if (!gotUSB) {
-        ServoPWM_Start();
-    }
-    
-    flipperUp();
-
-    /* Variable declarations for yDMA */
-    /* Move these variable declarations to the top of the function */
-
-    #define DMA_SRC_BASE (CYDEV_PERIPH_BASE)
-    #define DMA_DST_BASE (CYDEV_SRAM_BASE)
-    #define DMA_BYTES_PER_BURST 1
-    #define DMA_REQUEST_PER_BURST 1
 
     uint8_t numSensors = 6;
     SensorDMA sensorDMAs[] = {
@@ -176,18 +220,24 @@ void Main_Task( void* UNUSED(p_arg) )
         CyDmaChEnable(sensorDMAs[i].channel, 1);
     }
     
-    
+    //make sure we are stopped at init
     motorState = 0;
     
+    //set our colour thresholds
     colourBlue_High_Write(BLUE_MAX);
     colourRed_Low_Write(RED_MIN);
     
-    
-    
+    //start PWMs
     PWM_1_Start();
     LeftMotorPWM_Start();
     RightMotorPWM_Start();
     
+    //servo likes to pull huge currents from its data line if it doesn't have power -.-
+    if (!gotUSB) ServoPWM_Start();
+    
+    flipperUp();
+    
+    //start the ADC
     SensorADC_Start();
     
     //enable all interrupts
@@ -197,7 +247,7 @@ void Main_Task( void* UNUSED(p_arg) )
     objectFirstChange_Start();
     objectSecondChange_Start();
     
-    
+    changeMotorState(STATE_DEMO);
     
 	while (DEF_ON) {
 		
