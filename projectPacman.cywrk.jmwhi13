@@ -278,6 +278,21 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\SW3_Interrupt</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>projectPacman</v>
+<v>projectPacman\pp</v>
+<v>projectPacman\pp\TopDesign.cysch</v>
+<v>projectPacman\pp\pp.cydwr</v>
+<v>projectPacman\pp\APP-CFG</v>
+<v>projectPacman\pp\APP-CFG\app_cfg.h</v>
+<v>projectPacman\pp\APP-CFG\cpu_cfg.h</v>
+<v>projectPacman\pp\APP-CFG\includes.h</v>
+<v>projectPacman\pp\APP-CFG\os_app_hooks.c</v>
+<v>projectPacman\pp\APP-CFG\os_app_hooks.h</v>
+<v>projectPacman\pp\APP-CFG\os_cfg.h</v>
+<v>projectPacman\pp\APP-CFG\os_cfg_app.h</v>
+<v>projectPacman\pp\Header Files</v>
+<v>projectPacman\pp\Header Files\arbitrary_constants.h</v>
+<v>projectPacman\pp\Header Files\camera.h</v>
 <v>projectPacman\pp\Header Files\device.h</v>
 <v>projectPacman\pp\Header Files\flipper.h</v>
 <v>projectPacman\pp\Header Files\jarrad_util.h</v>
@@ -311,21 +326,6 @@
 <v>projectPacman\pp\Generated_Source\PSoC5\colourBlue_High\colourBlue_High.h</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\colourChange</v>
 <v>projectPacman\pp\Generated_Source\PSoC5\colourChange\colourChange.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourChange\colourChange.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourDMA</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourDMA\colourDMA_dma.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourDMA\colourDMA_dma.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourRed_Low</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourRed_Low\colourRed_Low.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourRed_Low\colourRed_Low.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourReg</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourReg\colourReg.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\colourReg\colourReg.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\ColourSelectPin</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\ColourSelectPin\ColourSelectPin.c</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\ColourSelectPin\ColourSelectPin.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\ColourSelectPin\ColourSelectPin_aliases.h</v>
-<v>projectPacman\pp\Generated_Source\PSoC5\ColourSelectReg</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="projectPacman\pp\lastPixel\lastPixel.cysym">
@@ -668,12 +668,7 @@
 <name v=".\pp.cydsn\Driving_Task.c" />
 <name v=".\pp.cydsn\Task_Defs.h" />
 <name v=".\pp.cydsn\Driving_Control_Task.c" />
-<name v=".\pp.cydsn\error_print_task.c" />
-<name v=".\pp.cydsn\jarrad_util.h" />
-<name v=".\pp.cydsn\jarrad_util.c" />
-<name v=".\pp.cydsn\Generated_Source\PSoC5\colourChange.c" />
 <name v=".\pp.cydsn\arbitrary_constants.h" />
-<name v=".\pp.cydsn\Generated_Source\PSoC5\proxChange.c" />
 <name v=".\pp.cydsn\main.c" />
 <name v=".\pp.cydsn\Flipper_Task.c" />
 </OpenDocs>

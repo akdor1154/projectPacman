@@ -31,23 +31,25 @@
 //how much response the IR sensors need (low = far, high = close) before generating an interrupt
 #define DODGE_INTERRUPT_THRESHOLD 90
 #define DODGE_HEADON_INTERRUPT_THRESHOLD 80
+
 //how much the IR sensors need for the interrupt routine to interpret there is a wall in front of a sensor.
 //you want this < INTERRUPT_THRESHOLD above. (if it's equal to the interrupt threshold,
 //then you will probably never detect "wall dead ahead", as one sensor will almost certainly always fire first).
 #define DODGE_THRESHOLD 45
-#define DODGE_HEADON_THRESHOLD 40
+#define DODGE_HEADON_THRESHOLD 36
 
-#define WAITRATIO_NUM 16
+#define WAITRATIO_NUM 15
 #define WAITRATIO_DENOM 9
     
-#define WAITRATIO_OFFSET 30
+#define WAITRATIO_OFFSET 55
 
 #define RED_MIN 35
 #define BLUE_MAX 15
 
 #define PUCK_THRESHOLD 160
-    
-#define U_TURN_TIME_MS 1400
+
+#define U_TURN_REVERSE_TIME_MS 300
+#define U_TURN_TIME_MS 1100
 
 #define SWERVE_TIME_MS 750
     

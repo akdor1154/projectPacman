@@ -77,7 +77,7 @@ void setRightSpeed(int16_t speed) {
 #define walkBottom (SLOWLEVEL - 32)
 #define walkTop (SLOWLEVEL + 32)
 
-void setStraightSpeed(uint8_t speed) {
+void setStraightSpeed(int16_t speed) {
     setLeftSpeed(speed);
     setRightSpeed(speed);
 }
@@ -202,6 +202,10 @@ void Dodgem_Task(void* UNUSED(args)) {
         proxCentre = proxCentreReg_Read();
         
         if (proxCentre > DODGE_HEADON_THRESHOLD) {
+            proxChange_Disable();
+            setStraightSpeed(-SLOWLEVEL);
+            delayMS(U_TURN_REVERSE_TIME_MS);
+            proxChange_Enable();
             if (proxLeft > proxRight) {
                 usbprint("180 backwards CCW\n");
                 setLeftSpeed(-SLOWLEVEL);

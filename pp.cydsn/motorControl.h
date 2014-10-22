@@ -38,7 +38,7 @@ void stopMoving();
 
 void changeMotorState(motorState_t targetState);
 
-void setStraightSpeed(uint8_t speed);
+void setStraightSpeed(int16_t speed);
 void setLeftSpeed(int16_t speed);
 void setRightSpeed(int16_t speed);
 void turnOnSpot(int16_t speed);
